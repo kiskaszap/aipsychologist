@@ -8,6 +8,8 @@
  * handles various functions related to speech synthesis and avatar interaction.
  */
 // import "./Avatar.css";
+
+//SEGG
 import React from "react";
 import * as SpeechSDK from "microsoft-cognitiveservices-speech-sdk";
 import { createAvatarSynthesizer, createWebRTCConnection } from "./Utility";
