@@ -87,10 +87,16 @@ function Chat() {
     <div className="flex flex-col h-full p-4">
       <MainContainer>
         <ChatContainer>
-          <MessageList>
+          <MessageList
+            typingIndicator={
+              typing ? (
+                <TypingIndicator content="Psychologist is typing" />
+              ) : null
+            }
+          >
             {messages.map((message, index) => (
               <div
-                className={`mb-5 w-3/4 ${
+                className={`mb-8 w-3/4 ${
                   message.sender === "user" ? "ml-auto " : ""
                 }`}
               >
@@ -107,9 +113,7 @@ function Chat() {
               </div>
             ))}
           </MessageList>
-          <TypingIndicator
-            content={typing ? "Psychologist is typing..." : null}
-          />
+
           <MessageInput placeholder="Type message here" onSend={handleSend} />
         </ChatContainer>
       </MainContainer>

@@ -5,10 +5,7 @@ import Chat from "../../Components/Chat/Chat";
 function Dashboard() {
   return (
     <Layout>
-      <div
-        style={{ height: "calc(100vh - 6rem)" }}
-        className="mt-3 border border-red-500"
-      >
+      <div style={{ height: "calc(100vh - 6rem)" }} className="mt-3">
         <Chat />
       </div>
     </Layout>
