@@ -89,21 +89,21 @@ function Chat() {
         <ChatContainer>
           <MessageList>
             {messages.map((message, index) => (
-              // Wrapping each message in a flex container for alignment
               <div
-                key={index}
-                className={`flex w-full ${
-                  message.sender === "user" ? "justify-end" : "justify-start"
+                className={`mb-5 w-3/4 ${
+                  message.sender === "user" ? "ml-auto " : ""
                 }`}
               >
-                <div
-                  className={`max-w-1/2 p-2 rounded-lg ${
-                    message.sender === "user" ? "bg-blue-100" : "bg-gray-100"
-                  }`}
-                >
-                  <p className="text-sm">{message.message}</p>
-                  <p className="text-xs text-right">{message.sentTime}</p>
-                </div>
+                <Message
+                  key={index}
+                  model={{
+                    message: message.message,
+                    sentTime: message.sentTime,
+                    sender: message.sender,
+                    direction:
+                      message.sender === "user" ? "outgoing" : "incoming",
+                  }}
+                />
               </div>
             ))}
           </MessageList>
