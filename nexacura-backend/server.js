@@ -11,6 +11,8 @@ const registration = require("./routes/Registration");
 const login = require("./routes/Login");
 const User = require("./routes/User");
 const SpeechToText = require("./routes/SpeechToText");
+const ChatSession = require("./routes/ChatSession");
+const PastConversation = require("./routes/PastConversation");
 
 // instantiate the global middlewares
 new GlobalMiddlewares(express);
@@ -21,6 +23,8 @@ express.use("/registration", new registration().router);
 express.use("/login", new login().router);
 express.use("/user", new User().router);
 express.use("/speechToText", new SpeechToText().router);
+express.use("/chat", new ChatSession().router);
+express.use("/pastConversation", new PastConversation().router);
 
 // create a route for the home page
 express.get("/", (req, res) => {

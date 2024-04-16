@@ -1,6 +1,6 @@
 /* The Login class handles user authentication by checking email existence, verifying passwords, and
 setting user session data. */
-const BaseRoute = require("../routes/Baseroute");
+const BaseRoute = require("./Baseroute");
 const EmailChecker = require("../utilities/EmailChecker");
 const Authentification = require("../utilities/Authentification");
 
@@ -30,6 +30,7 @@ class Login extends BaseRoute {
           } else {
             const { password, ...userData } = getUserData;
             request.session.user = userData;
+            console.log(request.session.user._id, "Login.js");
             response.json({
               isAuthenticated: true,
               message: userData,

@@ -1,0 +1,6 @@
+{
+  "ignore": ["uploads/*", "logs/*"],
+  "watch": ["*.js"],
+  "ext": "js,json",
+  "exec": "node start server.js"
+}

@@ -11,7 +11,7 @@ class DynamicFolderCreator {
   createFolder() {
     let dynamicFolder;
     let folderPath;
-    console.log(this.request.session.user, "session data");
+    // console.log(this.request.session.user, "session data");
 
     if (this.request.session.user.email) {
       dynamicFolder = this.request.session.user._id;
