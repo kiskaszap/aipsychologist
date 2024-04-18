@@ -4,6 +4,7 @@ const express = require("express")();
 const GlobalMiddlewares = require("./middlewares/global");
 // Import the dotenv package
 require("dotenv").config();
+
 // Import the database connection
 const DatabaseConnection = require("./db/DatabaseConnection");
 // Import the routes
@@ -13,6 +14,7 @@ const User = require("./routes/User");
 const SpeechToText = require("./routes/SpeechToText");
 const ChatSession = require("./routes/ChatSession");
 const PastConversation = require("./routes/PastConversation");
+const StripeConfig = require("./routes/StripeConfig");
 
 // instantiate the global middlewares
 new GlobalMiddlewares(express);
@@ -25,6 +27,7 @@ express.use("/user", new User().router);
 express.use("/speechToText", new SpeechToText().router);
 express.use("/chat", new ChatSession().router);
 express.use("/pastConversation", new PastConversation().router);
+express.use("/stripe", new StripeConfig().router);
 
 // create a route for the home page
 express.get("/", (req, res) => {

@@ -10,13 +10,44 @@ import React from "react";
 import { FaCheck } from "react-icons/fa";
 import OutlineButton from "../Button/OutlineButton";
 import Text from "../Text/Text";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import axios from "axios";
 
-function SubscriptionCard({ name, price, duration, benefits, popular }) {
+function SubscriptionCard({ name, price, duration, benefits, popular, id }) {
+  const navigate = useNavigate();
+
+  const handleSelectPlan = () => {
+    console.log(id); // Correctly logs the ID when the button is clicked.
+
+    axios
+      .post(
+        "http://localhost:4000/stripe",
+        { item: [id] },
+        {
+          headers: { "Content-Type": "application/json" },
+          withCredentials: true, // Correctly allows cookies to be sent along with the request.
+        }
+      )
+      .then((res) => {
+        if (res.status === 200) {
+          // Check if the HTTP status code is 200 for success.
+          return res.data; // Use res.data to access the response body.
+        } else {
+          throw new Error("Network response was not ok.");
+        }
+      })
+      .then((data) => {
+        window.location.href = data.url; // Assuming data.url is the redirect URL from your server.
+      })
+      .catch((error) => {
+        console.error("Error during plan selection:", error);
+      });
+  };
+
   return (
     <div
       className={`shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] rounded-md overflow-hidden transition-all duration-500 hover:scale-105 ${
-        popular ? "" : ""
+        popular ? "ring ring-primary" : ""
       }`}
     >
       <div className="text-center p-4 bg-gradient-to-r from-primary to-[#11a5e9]">
@@ -36,18 +67,12 @@ function SubscriptionCard({ name, price, duration, benefits, popular }) {
             </li>
           ))}
         </ul>
-        <NavLink to="/register">
-          <OutlineButton
-            borderColor="border-primary"
-            hoverBorderColor="hover:border-secondary"
-            textColor="text-white"
-            hoverTextColor="hover:text-secondary"
-            buttonText="Select Plan"
-            hoverBackgroundColor="hover:bg-transparent"
-            backgroundColor="bg-primary"
-            width="w-full mt-4"
-          />
-        </NavLink>
+        <button
+          onClick={handleSelectPlan}
+          className="outline-button w-full mt-4 border-primary hover:border-secondary text-white hover:text-secondary bg-primary hover:bg-transparent"
+        >
+          Select Plan
+        </button>
       </div>
     </div>
   );

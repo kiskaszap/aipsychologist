@@ -31,7 +31,11 @@ function PricingComponent() {
           <div className="text-center"></div>
           <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-8 mt-6 max-sm:max-w-sm max-sm:mx-auto">
             {subscriptions.map((subscription) => (
-              <SubscriptionCard key={subscription.id} {...subscription} />
+              <SubscriptionCard
+                key={subscription.id}
+                {...subscription}
+                id={subscription.id}
+              />
             ))}
           </div>
         </div>
