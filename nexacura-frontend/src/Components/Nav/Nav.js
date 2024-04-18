@@ -10,6 +10,7 @@ import React from "react";
 import DefaultNav from "./DefaultNav";
 import DashboardNav from "./DashboardNav";
 import authenticationContext from "../../context/authenticationContext";
+import checkSessionCookie from "../../context/CheckCookie";
 
 function Nav() {
   const {
@@ -17,7 +18,11 @@ function Nav() {
   } = React.useContext(authenticationContext);
   return (
     <React.Fragment>
-      {isAuthenticated ? <DashboardNav /> : <DefaultNav />}
+      {isAuthenticated || localStorage.getItem("NexaCuraIsAuthenticated") ? (
+        <DashboardNav />
+      ) : (
+        <DefaultNav />
+      )}
     </React.Fragment>
   );
 }

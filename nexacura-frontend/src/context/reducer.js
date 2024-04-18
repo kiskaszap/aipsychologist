@@ -23,9 +23,11 @@ function reducer(state, action) {
         user: action.payload.user,
       };
     case "DASHBOARD_LOGOUT":
+      localStorage.removeItem("NexaCuraIsAuthenticated");
       return {
         ...state,
         isAuthenticated: false,
+
         user: {
           ...state.user,
         },

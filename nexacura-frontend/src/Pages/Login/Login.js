@@ -30,7 +30,14 @@ function Login() {
         withCredentials: true,
       });
       console.log("Response:", response.data);
-      if (response.data.isAuthenticated) {
+      localStorage.setItem(
+        "NexaCuraIsAuthenticated",
+        response.data.isAuthenticated
+      );
+      if (
+        response.data.isAuthenticated ||
+        localStorage.getItem("NexaCuraIsAuthenticated")
+      ) {
         // Redirect to dashboard
         navigate("/");
         reset();
