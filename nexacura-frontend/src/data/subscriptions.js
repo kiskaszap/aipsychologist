@@ -1,11 +1,11 @@
 const subscriptions = [
   {
     id: 1,
-    name: "Focus Hour",
+    name: "Focus hour",
     price: "$10",
-    duration: "1 day",
+    duration: "1 hour",
     benefits: [
-      "Unlimited sessions per day",
+      "Try out our service",
       "Normal response speed",
       "Available 24/7",
     ],

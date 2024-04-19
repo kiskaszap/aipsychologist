@@ -29,11 +29,22 @@ function Login() {
       const response = await axios.post("http://localhost:4000/login", data, {
         withCredentials: true,
       });
-      console.log("Response:", response.data);
+      console.log("Response:", response.data.message.name);
       localStorage.setItem(
         "NexaCuraIsAuthenticated",
         response.data.isAuthenticated
       );
+      localStorage.setItem(
+        "userData",
+        JSON.stringify({
+          name: response.data.message.name, // Assuming 'name' is part of the user data
+          image: response.data.message.image, // Assuming 'image' is a URL or base64 string
+          email: response.data.message.email,
+          bio: response.data.message.bio,
+          profession: response.data.message.profession, // Assuming 'email' is part of the user data
+        })
+      );
+
       if (
         response.data.isAuthenticated ||
         localStorage.getItem("NexaCuraIsAuthenticated")

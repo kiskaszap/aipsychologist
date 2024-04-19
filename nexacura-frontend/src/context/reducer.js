@@ -24,6 +24,9 @@ function reducer(state, action) {
       };
     case "DASHBOARD_LOGOUT":
       localStorage.removeItem("NexaCuraIsAuthenticated");
+      localStorage.removeItem("userData");
+      localStorage.removeItem("isAuthenticated");
+
       return {
         ...state,
         isAuthenticated: false,

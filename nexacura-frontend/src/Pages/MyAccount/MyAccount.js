@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useState, useEffect } from "react";
 import Layout from "../../Components/Dashboard/Layout";
 import Text from "../../Components/Text/Text";
 import OutlineButton from "../../Components/Button/OutlineButton";
@@ -11,67 +11,60 @@ const InputField = ({
   type,
   placeholder,
   value,
-  handlechange,
-  name,
-  required,
+  handleChange,
+  readOnly = false,
 }) => {
   return (
     <div className="w-full">
-      <label htmlFor={id} className=" block text-sm font-medium text-gray-500">
+      <label htmlFor={id} className="block text-sm font-medium text-gray-500">
         {label}
       </label>
       <input
         type={type}
         id={id}
-        className={`px-4 py-3.5 bg-gray-100 text-[#333] w-full text-sm border rounded-md focus:border-primary outline-none mt-2 mb-4`}
+        className="px-4 py-3.5 bg-gray-100 text-[#333] w-full text-sm border rounded-md focus:border-primary outline-none mt-2 mb-4"
         placeholder={placeholder}
         value={value}
-        name={name}
-        onChange={handlechange}
-        readOnly={type === "email" ? true : false}
+        onChange={handleChange}
+        readOnly={readOnly}
       />
     </div>
   );
 };
 
 function MyAccount() {
-  const { initial, dispatch } = React.useContext(authenticationContext);
-  const isAuthenticated = initial.isAuthenticated;
-  const [user, setUser] = React.useState({
-    name: initial.user.name,
-    email: initial.user.email,
-    image: initial.user.image,
-    profession: initial.user.profession,
-    bio: initial.user.bio,
-    isAuthenticated: isAuthenticated,
-  });
-  const [file, setFile] = React.useState(null);
-  const [bulb, setBulb] = React.useState(false);
+  const { initial, dispatch } = useContext(authenticationContext);
+  const [user, setUser] = useState(initial.user);
+  const [file, setFile] = useState(null);
+  const [bulb, setBulb] = useState(false);
 
-  function handlechange(e) {
+  useEffect(() => {
+    const storedUserData = localStorage.getItem("userData");
+    if (storedUserData) {
+      setUser(JSON.parse(storedUserData));
+    }
+  }, []);
+
+  function handleChange(e) {
     setUser((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   }
-  function handleFileChange(e) {
-    // create a bolb url for the image
-    const url = URL.createObjectURL(e.target.files[0]);
-    setFile(url);
-    setBulb(true);
-    setUser((prev) => ({
-      ...prev,
-      image: e.target.files[0],
-    }));
 
-    //setFile(e.target.files[0]);
+  function handleFileChange(e) {
+    const file = e.target.files[0];
+    if (file) {
+      const url = URL.createObjectURL(file);
+      setFile(url); // Set blob URL for image preview
+      setBulb(true); // Turn on bulb to indicate a new image is being previewed
+      setUser((prev) => ({ ...prev, image: url })); // Update user state with new image for instant feedback
+    }
   }
-  React.useEffect(() => {}, [user]);
 
   async function onSubmit(e) {
     e.preventDefault();
-
     const formData = new FormData();
     formData.append("name", user.name);
     formData.append("email", user.email);
-    formData.append("image", user.image); // Assuming 'image' is the field name expected by your server
+    formData.append("image", user.image);
     formData.append("profession", user.profession);
     formData.append("bio", user.bio);
 
@@ -86,16 +79,17 @@ function MyAccount() {
           withCredentials: true,
         }
       );
-      // console.log(response.data);
       dispatch({
         type: "PROFILE_UPDATE",
         payload: {
-          isAuthenticated: true,
           user: response.data.user,
         },
       });
+      localStorage.setItem("userData", JSON.stringify(response.data.user));
+      setUser(response.data.user);
+      setBulb(false); // Turn off bulb after successful upload
     } catch (error) {
-      console.log(error);
+      console.error("Error updating profile:", error);
     }
   }
 
@@ -112,7 +106,7 @@ function MyAccount() {
               <div className="flex flex-col items-center space-y-5 sm:flex-row sm:space-y-0">
                 <img
                   className="h-40 w-40 rounded-full object-cover p-1"
-                  src={user.isAuthenticated && !bulb ? user.image : file}
+                  src={bulb ? file : user.image}
                   alt="Bordered avatar"
                 />
                 <input
@@ -121,72 +115,61 @@ function MyAccount() {
                   onChange={handleFileChange}
                 />
               </div>
-
-              <div className=" items-center text-[#202142] sm:mt-10">
-                <div className=" flex w-full flex-col items-center space-x-0 space-y-2  sm:flex-row sm:space-x-4 sm:space-y-0">
-                  {/* Input fields using the InputField component */}
-
-                  <InputField
-                    id="last_name"
-                    label="Your full name"
-                    type="text"
-                    placeholder="Your full name"
-                    name="name"
-                    value={user.isAuthenticated ? user.name : ""}
-                    handlechange={handlechange}
-                    required
-                  />
-                </div>
-
-                <InputField
-                  id="email"
-                  label="Your email"
-                  type="email"
-                  placeholder="your.email@mail.com"
-                  name="email"
-                  value={user.isAuthenticated ? user.email : ""}
-                  required
+              <InputField
+                id="name"
+                label="Your full name"
+                type="text"
+                placeholder="Your full name"
+                name="name"
+                value={user.name || ""}
+                handleChange={handleChange}
+              />
+              <InputField
+                id="email"
+                label="Your email"
+                type="email"
+                placeholder="your.email@mail.com"
+                name="email"
+                value={user.email || ""}
+                handleChange={handleChange}
+                readOnly={true}
+              />
+              <InputField
+                id="profession"
+                label="Profession"
+                type="text"
+                placeholder="Your profession"
+                name="profession"
+                value={user.profession || ""}
+                handleChange={handleChange}
+              />
+              <div className="mb-6">
+                <label
+                  htmlFor="bio"
+                  className="mb-2 block text-sm font-medium text-gray-500"
+                >
+                  Bio
+                </label>
+                <textarea
+                  id="bio"
+                  rows="4"
+                  className="px-4 py-3.5 bg-gray-100 text-[#333] w-full text-sm border rounded-md focus:border-primary outline-none"
+                  placeholder="Write your bio here..."
+                  value={user.bio || ""}
+                  name="bio"
+                  onChange={handleChange}
+                ></textarea>
+              </div>
+              <div className="flex justify-end">
+                <OutlineButton
+                  borderColor="border-primary"
+                  hoverBorderColor="hover:border-primary"
+                  textColor="text-white"
+                  hoverTextColor="hover:text-primary"
+                  buttonText="Save"
+                  hoverBackgroundColor="hover:bg-transparent"
+                  backgroundColor="bg-primary"
                 />
-                <InputField
-                  id="profession"
-                  label="Profession"
-                  type="text"
-                  placeholder="your profession"
-                  name="profession"
-                  value={user.isAuthenticated ? user.profession : ""}
-                  handlechange={handlechange}
-                  required
-                />
-
-                <div className="mb-6">
-                  <label
-                    htmlFor="message"
-                    className="mb-2 block text-sm font-medium text-gray-500"
-                  >
-                    Bio
-                  </label>
-                  <textarea
-                    id="message"
-                    rows="4"
-                    className={`px-4 py-3.5 bg-gray-100 text-[#333] w-full text-sm border rounded-md focus:border-primary outline-none $`}
-                    placeholder="Write your bio here..."
-                    value={user.isAuthenticated ? user.bio : ""}
-                    name="bio"
-                    onChange={handlechange}
-                  ></textarea>
-                </div>
-
-                <div className="flex justify-end">
-                  <OutlineButton
-                    borderColor="border-primary"
-                    hoverBorderColor="hover:border-primary"
-                    textColor="text-white"
-                    hoverTextColor="hover:text-primary"
-                    buttonText="Save"
-                    hoverBackgroundColor="hover:bg-transparent"
-                    backgroundColor="bg-primary"
-                  />
-                </div>
               </div>
             </form>
           </div>

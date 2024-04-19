@@ -15,6 +15,87 @@
       "message": "Hello Balint, it's nice to hear from you. How are you feeling today? How can I assist you?",
       "sentTime": "Just now",
       "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi Sophia, it`s Balint",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello Balint, it's nice to hear from you. How are you feeling today? How can I assist you?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Do you know my name?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Yes, Balint. I remember details from our previous conversations to better assist you. How are you doing today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi Sophia, it`s Balint",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello Balint, it's nice to hear from you. How are you feeling today? How can I assist you?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi Sophia, it`s Balint",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello Balint, it's nice to hear from you. How are you feeling today? How can I assist you?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Do you know my name?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Yes, Balint. I remember details from our previous conversations to better assist you. How are you doing today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Do you know my name?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Yes, I remember details from our past conversations. How are you feeling today Balint?",
+      "sentTime": "Just now",
+      "sender": "agent"
     }
   ]
 }

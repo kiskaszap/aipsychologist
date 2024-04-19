@@ -10,7 +10,6 @@ import React from "react";
 import DefaultNav from "./DefaultNav";
 import DashboardNav from "./DashboardNav";
 import authenticationContext from "../../context/authenticationContext";
-import checkSessionCookie from "../../context/CheckCookie";
 
 function Nav() {
   const {

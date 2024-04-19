@@ -1,20 +1,34 @@
-import React from "react";
+import React, { useContext, useState, useEffect } from "react";
 import Text from "../Text/Text";
 import authenticationContext from "../../context/authenticationContext";
 
 function ProfileDashNav() {
-  const { initial } = React.useContext(authenticationContext);
-  const isAuthenticated = initial.isAuthenticated;
-  // console.log("Data:", initial);
+  const { initial } = useContext(authenticationContext);
+  const [localUserData, setLocalUserData] = useState(null);
+
+  useEffect(() => {
+    const userData = localStorage.getItem("userData");
+    if (userData) {
+      setLocalUserData(JSON.parse(userData));
+    }
+  }, []);
+
+  const isAuthenticated = initial.isAuthenticated || localUserData;
+  const user = isAuthenticated
+    ? initial.user.name
+      ? initial.user
+      : localUserData
+    : {};
+
   return (
     <div className="flex gap-x-3 items-center justify-end">
       <img
-        src={isAuthenticated ? initial.user.image : ""}
+        src={user.image || ""}
         alt="profile"
         className="rounded-full h-10 w-10"
       />
       <Text size="lg" weight="bold" className="text-primary font-medium">
-        {isAuthenticated ? initial.user.name : ""}
+        {user.name || ""}
       </Text>
     </div>
   );
