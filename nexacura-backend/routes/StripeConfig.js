@@ -1,5 +1,5 @@
 const BaseRoute = require("./BaseRoute");
-const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
+const stripe = require("stripe")(process.env.STRIPE_TEST_KEY);
 
 class StripeConfig extends BaseRoute {
   constructor() {

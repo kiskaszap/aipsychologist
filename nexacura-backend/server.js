@@ -15,6 +15,7 @@ const SpeechToText = require("./routes/SpeechToText");
 const ChatSession = require("./routes/ChatSession");
 const PastConversation = require("./routes/PastConversation");
 const StripeConfig = require("./routes/StripeConfig");
+const StripeWebhook = require("./routes/WebHook");
 
 // instantiate the global middlewares
 new GlobalMiddlewares(express);
@@ -28,6 +29,7 @@ express.use("/speechToText", new SpeechToText().router);
 express.use("/chat", new ChatSession().router);
 express.use("/pastConversation", new PastConversation().router);
 express.use("/stripe", new StripeConfig().router);
+express.use("/webhook", new StripeWebhook().router);
 
 // create a route for the home page
 express.get("/", (req, res) => {
