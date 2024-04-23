@@ -27,6 +27,11 @@ class UserRegistration extends BaseRoute {
             bio: "",
             image: "",
             profession: "",
+            subscription: {
+              type: null, // No subscription type by default
+              expiry: null, // No expiry date by default
+              active: false, // Subscription is not active by default
+            },
           }).save();
           response.status(201).json({
             isRegistered: true,

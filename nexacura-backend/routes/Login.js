@@ -30,7 +30,7 @@ class Login extends BaseRoute {
           } else {
             const { password, ...userData } = getUserData;
             request.session.user = userData;
-            console.log(request.session.user._id, "Login.js");
+
             response.json({
               isAuthenticated: true,
               message: userData,

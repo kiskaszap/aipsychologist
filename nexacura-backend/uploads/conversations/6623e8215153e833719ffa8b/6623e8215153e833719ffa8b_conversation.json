@@ -1,0 +1,134 @@
+{
+  "conversation": [
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m feeling okay",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "That's good to hear. Is there something on your mind that you would like to talk about or explore together today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m feeling okay",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "That's good to hear. Is there something on your mind that you would like to talk about or explore together today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Yes, I have some problem",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm here to listen and offer support. What seems to be the issue troubling you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m feeling okay",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "That's good to hear. Is there something on your mind that you would like to talk about or explore together today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Yes, I have some problem",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm here to listen and offer support. What seems to be the issue troubling you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m being bullied",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm really sorry to hear that you're going through this. Bullying can be a very challenging experience. It's important to remember that the problem is with the bullies, not with you. Have you tried talking to someone about what's been happening?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    }
+  ]
+}

@@ -135,7 +135,10 @@ function Login() {
                 <div className="flex items-center"></div>
                 <div>
                   <Text className="text-lg text-gray-500">
-                    <NavLink to="/register" className="text-primary text-sm">
+                    <NavLink
+                      to="/reset-password"
+                      className="text-primary text-sm"
+                    >
                       Forgot password?
                     </NavLink>
                   </Text>

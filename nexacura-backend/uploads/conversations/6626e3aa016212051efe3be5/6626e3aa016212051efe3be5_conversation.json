@@ -1,0 +1,1082 @@
+{
+  "conversation": [
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi I feel a bit low",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. Can you tell me more about what's been going on that has made you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi I feel a bit low",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. Can you tell me more about what's been going on that has made you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I was bullied in school",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you were bullied in school. Bullying can have a significant impact on our mental health. How has this experience affected you and how are you coping with it?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi I feel a bit low",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. Can you tell me more about what's been going on that has made you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi I feel a bit low",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. Can you tell me more about what's been going on that has made you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I was bullied in school",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you were bullied in school. Bullying can have a significant impact on our mental health. How has this experience affected you and how are you coping with it?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m not sure, my crush seen it and she was laughing as well",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "That sounds really tough. It must have been very hurtful to have your crush witness the bullying and not intervene. Have you had a chance to talk to your crush about how you felt when she laughed?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi I feel a bit low",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. Can you tell me more about what's been going on that has made you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi I feel a bit low",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. Can you tell me more about what's been going on that has made you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I was bullied in school",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you were bullied in school. Bullying can have a significant impact on our mental health. How has this experience affected you and how are you coping with it?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m not sure, my crush seen it and she was laughing as well",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "That sounds really tough. It must have been very hurtful to have your crush witness the bullying and not intervene. Have you had a chance to talk to your crush about how you felt when she laughed?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, she doesn`t even know that I have a crush on her",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It sounds like there are a lot of complex emotions involved in this situation. It's completely understandable that you may feel hurt and confused by your crush's reaction. Have you thought about expressing your feelings to your crush and addressing what happened at school?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi I feel a bit low",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. Can you tell me more about what's been going on that has made you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi I feel a bit low",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. Can you tell me more about what's been going on that has made you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I was bullied in school",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you were bullied in school. Bullying can have a significant impact on our mental health. How has this experience affected you and how are you coping with it?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m not sure, my crush seen it and she was laughing as well",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "That sounds really tough. It must have been very hurtful to have your crush witness the bullying and not intervene. Have you had a chance to talk to your crush about how you felt when she laughed?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, she doesn`t even know that I have a crush on her",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It sounds like there are a lot of complex emotions involved in this situation. It's completely understandable that you may feel hurt and confused by your crush's reaction. Have you thought about expressing your feelings to your crush and addressing what happened at school?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "After this one? No!",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's completely understandable that you may not feel ready to talk to your crush about your feelings right now. It's important to prioritize your own well-being in situations like this. Have you been able to confide in someone you trust about what happened and how you're feeling?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi I feel a bit low",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. Can you tell me more about what's been going on that has made you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi I feel a bit low",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. Can you tell me more about what's been going on that has made you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I was bullied in school",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you were bullied in school. Bullying can have a significant impact on our mental health. How has this experience affected you and how are you coping with it?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m not sure, my crush seen it and she was laughing as well",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "That sounds really tough. It must have been very hurtful to have your crush witness the bullying and not intervene. Have you had a chance to talk to your crush about how you felt when she laughed?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, she doesn`t even know that I have a crush on her",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It sounds like there are a lot of complex emotions involved in this situation. It's completely understandable that you may feel hurt and confused by your crush's reaction. Have you thought about expressing your feelings to your crush and addressing what happened at school?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "After this one? No!",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's completely understandable that you may not feel ready to talk to your crush about your feelings right now. It's important to prioritize your own well-being in situations like this. Have you been able to confide in someone you trust about what happened and how you're feeling?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, you are the first one",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm glad you reached out to me. It's important to have someone to talk to about these difficult experiences. Talking about your feelings with someone you trust can help you process what happened and figure out how to move forward. How have you been taking care of yourself since this incident occurred?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi I feel a bit low",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. Can you tell me more about what's been going on that has made you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi I feel a bit low",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. Can you tell me more about what's been going on that has made you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I was bullied in school",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you were bullied in school. Bullying can have a significant impact on our mental health. How has this experience affected you and how are you coping with it?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m not sure, my crush seen it and she was laughing as well",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "That sounds really tough. It must have been very hurtful to have your crush witness the bullying and not intervene. Have you had a chance to talk to your crush about how you felt when she laughed?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, she doesn`t even know that I have a crush on her",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It sounds like there are a lot of complex emotions involved in this situation. It's completely understandable that you may feel hurt and confused by your crush's reaction. Have you thought about expressing your feelings to your crush and addressing what happened at school?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "After this one? No!",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's completely understandable that you may not feel ready to talk to your crush about your feelings right now. It's important to prioritize your own well-being in situations like this. Have you been able to confide in someone you trust about what happened and how you're feeling?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, you are the first one",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm glad you reached out to me. It's important to have someone to talk to about these difficult experiences. Talking about your feelings with someone you trust can help you process what happened and figure out how to move forward. How have you been taking care of yourself since this incident occurred?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "It happened only an hour ago",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's still very fresh in your mind then. It's completely normal to feel upset in a situation like this. One thing you could do in the meantime is to take some deep breaths and try to ground yourself. Have you tried any relaxation techniques to help calm your mind and body?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi I feel a bit low",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. Can you tell me more about what's been going on that has made you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi I feel a bit low",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. Can you tell me more about what's been going on that has made you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I was bullied in school",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you were bullied in school. Bullying can have a significant impact on our mental health. How has this experience affected you and how are you coping with it?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m not sure, my crush seen it and she was laughing as well",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "That sounds really tough. It must have been very hurtful to have your crush witness the bullying and not intervene. Have you had a chance to talk to your crush about how you felt when she laughed?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, she doesn`t even know that I have a crush on her",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It sounds like there are a lot of complex emotions involved in this situation. It's completely understandable that you may feel hurt and confused by your crush's reaction. Have you thought about expressing your feelings to your crush and addressing what happened at school?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "After this one? No!",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's completely understandable that you may not feel ready to talk to your crush about your feelings right now. It's important to prioritize your own well-being in situations like this. Have you been able to confide in someone you trust about what happened and how you're feeling?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, you are the first one",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm glad you reached out to me. It's important to have someone to talk to about these difficult experiences. Talking about your feelings with someone you trust can help you process what happened and figure out how to move forward. How have you been taking care of yourself since this incident occurred?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "It happened only an hour ago",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's still very fresh in your mind then. It's completely normal to feel upset in a situation like this. One thing you could do in the meantime is to take some deep breaths and try to ground yourself. Have you tried any relaxation techniques to help calm your mind and body?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, I want to fight back tomorrow",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's natural to feel anger and a desire to stand up for yourself after being bullied. However, it's important to approach the situation thoughtfully. Retaliating physically or verbally may escalate the situation further. Have you thought about discussing what happened with a teacher or school counselor to address the bullying in a safe and effective way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi I feel a bit low",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. Can you tell me more about what's been going on that has made you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi I feel a bit low",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. Can you tell me more about what's been going on that has made you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I was bullied in school",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you were bullied in school. Bullying can have a significant impact on our mental health. How has this experience affected you and how are you coping with it?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m not sure, my crush seen it and she was laughing as well",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "That sounds really tough. It must have been very hurtful to have your crush witness the bullying and not intervene. Have you had a chance to talk to your crush about how you felt when she laughed?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, she doesn`t even know that I have a crush on her",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It sounds like there are a lot of complex emotions involved in this situation. It's completely understandable that you may feel hurt and confused by your crush's reaction. Have you thought about expressing your feelings to your crush and addressing what happened at school?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "After this one? No!",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's completely understandable that you may not feel ready to talk to your crush about your feelings right now. It's important to prioritize your own well-being in situations like this. Have you been able to confide in someone you trust about what happened and how you're feeling?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, you are the first one",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm glad you reached out to me. It's important to have someone to talk to about these difficult experiences. Talking about your feelings with someone you trust can help you process what happened and figure out how to move forward. How have you been taking care of yourself since this incident occurred?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "It happened only an hour ago",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's still very fresh in your mind then. It's completely normal to feel upset in a situation like this. One thing you could do in the meantime is to take some deep breaths and try to ground yourself. Have you tried any relaxation techniques to help calm your mind and body?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, I want to fight back tomorrow",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's natural to feel anger and a desire to stand up for yourself after being bullied. However, it's important to approach the situation thoughtfully. Retaliating physically or verbally may escalate the situation further. Have you thought about discussing what happened with a teacher or school counselor to address the bullying in a safe and effective way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m afraid the bullying will just continue and will be more harder",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Your fear of the bullying escalating is completely valid, and it's understandable that you want to protect yourself. It's important to address the bullying in a way that ensures your safety and well-being. Have you considered reaching out to a trusted adult or authority figure at your school to discuss the bullying and come up with a plan to stop it?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi I feel a bit low",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. Can you tell me more about what's been going on that has made you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi I feel a bit low",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. Can you tell me more about what's been going on that has made you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I was bullied in school",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you were bullied in school. Bullying can have a significant impact on our mental health. How has this experience affected you and how are you coping with it?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m not sure, my crush seen it and she was laughing as well",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "That sounds really tough. It must have been very hurtful to have your crush witness the bullying and not intervene. Have you had a chance to talk to your crush about how you felt when she laughed?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, she doesn`t even know that I have a crush on her",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It sounds like there are a lot of complex emotions involved in this situation. It's completely understandable that you may feel hurt and confused by your crush's reaction. Have you thought about expressing your feelings to your crush and addressing what happened at school?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "After this one? No!",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's completely understandable that you may not feel ready to talk to your crush about your feelings right now. It's important to prioritize your own well-being in situations like this. Have you been able to confide in someone you trust about what happened and how you're feeling?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, you are the first one",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm glad you reached out to me. It's important to have someone to talk to about these difficult experiences. Talking about your feelings with someone you trust can help you process what happened and figure out how to move forward. How have you been taking care of yourself since this incident occurred?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "It happened only an hour ago",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's still very fresh in your mind then. It's completely normal to feel upset in a situation like this. One thing you could do in the meantime is to take some deep breaths and try to ground yourself. Have you tried any relaxation techniques to help calm your mind and body?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, I want to fight back tomorrow",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's natural to feel anger and a desire to stand up for yourself after being bullied. However, it's important to approach the situation thoughtfully. Retaliating physically or verbally may escalate the situation further. Have you thought about discussing what happened with a teacher or school counselor to address the bullying in a safe and effective way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m afraid the bullying will just continue and will be more harder",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Your fear of the bullying escalating is completely valid, and it's understandable that you want to protect yourself. It's important to address the bullying in a way that ensures your safety and well-being. Have you considered reaching out to a trusted adult or authority figure at your school to discuss the bullying and come up with a plan to stop it?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, I think I`ll just fight back",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I understand that you may feel like fighting back is the only solution you have right now. However, responding with physical or verbal aggression might not resolve the situation peacefully. It's important to prioritize your safety and well-being. Have you thought about other ways to handle the situation, such as seeking help from a teacher or counselor at your school?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi I feel a bit low",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. Can you tell me more about what's been going on that has made you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi I feel a bit low",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. Can you tell me more about what's been going on that has made you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I was bullied in school",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you were bullied in school. Bullying can have a significant impact on our mental health. How has this experience affected you and how are you coping with it?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m not sure, my crush seen it and she was laughing as well",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "That sounds really tough. It must have been very hurtful to have your crush witness the bullying and not intervene. Have you had a chance to talk to your crush about how you felt when she laughed?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, she doesn`t even know that I have a crush on her",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It sounds like there are a lot of complex emotions involved in this situation. It's completely understandable that you may feel hurt and confused by your crush's reaction. Have you thought about expressing your feelings to your crush and addressing what happened at school?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "After this one? No!",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's completely understandable that you may not feel ready to talk to your crush about your feelings right now. It's important to prioritize your own well-being in situations like this. Have you been able to confide in someone you trust about what happened and how you're feeling?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, you are the first one",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm glad you reached out to me. It's important to have someone to talk to about these difficult experiences. Talking about your feelings with someone you trust can help you process what happened and figure out how to move forward. How have you been taking care of yourself since this incident occurred?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "It happened only an hour ago",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's still very fresh in your mind then. It's completely normal to feel upset in a situation like this. One thing you could do in the meantime is to take some deep breaths and try to ground yourself. Have you tried any relaxation techniques to help calm your mind and body?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, I want to fight back tomorrow",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's natural to feel anger and a desire to stand up for yourself after being bullied. However, it's important to approach the situation thoughtfully. Retaliating physically or verbally may escalate the situation further. Have you thought about discussing what happened with a teacher or school counselor to address the bullying in a safe and effective way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m afraid the bullying will just continue and will be more harder",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Your fear of the bullying escalating is completely valid, and it's understandable that you want to protect yourself. It's important to address the bullying in a way that ensures your safety and well-being. Have you considered reaching out to a trusted adult or authority figure at your school to discuss the bullying and come up with a plan to stop it?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, I think I`ll just fight back",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I understand that you may feel like fighting back is the only solution you have right now. However, responding with physical or verbal aggression might not resolve the situation peacefully. It's important to prioritize your safety and well-being. Have you thought about other ways to handle the situation, such as seeking help from a teacher or counselor at your school?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, snitches get stiches",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I understand your concerns about being labeled as a \"snitch.\" It can be challenging to navigate these social dynamics in school. However, it's crucial to prioritize your own well-being and safety above worrying about what others may think. Is there someone you trust, like a family member or friend, who you can talk to about what's been happening?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi I feel a bit low",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. Can you tell me more about what's been going on that has made you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi I feel a bit low",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. Can you tell me more about what's been going on that has made you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I was bullied in school",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you were bullied in school. Bullying can have a significant impact on our mental health. How has this experience affected you and how are you coping with it?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m not sure, my crush seen it and she was laughing as well",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "That sounds really tough. It must have been very hurtful to have your crush witness the bullying and not intervene. Have you had a chance to talk to your crush about how you felt when she laughed?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, she doesn`t even know that I have a crush on her",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It sounds like there are a lot of complex emotions involved in this situation. It's completely understandable that you may feel hurt and confused by your crush's reaction. Have you thought about expressing your feelings to your crush and addressing what happened at school?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "After this one? No!",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's completely understandable that you may not feel ready to talk to your crush about your feelings right now. It's important to prioritize your own well-being in situations like this. Have you been able to confide in someone you trust about what happened and how you're feeling?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, you are the first one",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm glad you reached out to me. It's important to have someone to talk to about these difficult experiences. Talking about your feelings with someone you trust can help you process what happened and figure out how to move forward. How have you been taking care of yourself since this incident occurred?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "It happened only an hour ago",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's still very fresh in your mind then. It's completely normal to feel upset in a situation like this. One thing you could do in the meantime is to take some deep breaths and try to ground yourself. Have you tried any relaxation techniques to help calm your mind and body?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, I want to fight back tomorrow",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's natural to feel anger and a desire to stand up for yourself after being bullied. However, it's important to approach the situation thoughtfully. Retaliating physically or verbally may escalate the situation further. Have you thought about discussing what happened with a teacher or school counselor to address the bullying in a safe and effective way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m afraid the bullying will just continue and will be more harder",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Your fear of the bullying escalating is completely valid, and it's understandable that you want to protect yourself. It's important to address the bullying in a way that ensures your safety and well-being. Have you considered reaching out to a trusted adult or authority figure at your school to discuss the bullying and come up with a plan to stop it?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, I think I`ll just fight back",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I understand that you may feel like fighting back is the only solution you have right now. However, responding with physical or verbal aggression might not resolve the situation peacefully. It's important to prioritize your safety and well-being. Have you thought about other ways to handle the situation, such as seeking help from a teacher or counselor at your school?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, snitches get stiches",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I understand your concerns about being labeled as a \"snitch.\" It can be challenging to navigate these social dynamics in school. However, it's crucial to prioritize your own well-being and safety above worrying about what others may think. Is there someone you trust, like a family member or friend, who you can talk to about what's been happening?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "A friend maybe but he said to fight back as well",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's understandable that your friend may also feel strongly about standing up for yourself. However, it's important to consider all possible outcomes and choose the best course of action for your well-being. Have you thought about discussing your concerns with your friend and expressing your feelings about wanting to handle the situation differently?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    }
+  ]
+}

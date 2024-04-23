@@ -51,6 +51,7 @@ function MyAccount() {
 
   function handleFileChange(e) {
     const file = e.target.files[0];
+    console.log(file);
     if (file) {
       const url = URL.createObjectURL(file);
       setFile(url); // Set blob URL for image preview
@@ -60,6 +61,7 @@ function MyAccount() {
   }
 
   async function onSubmit(e) {
+    console.log(user.image);
     e.preventDefault();
     const formData = new FormData();
     formData.append("name", user.name);
@@ -99,22 +101,11 @@ function MyAccount() {
         <main className=" h-full w-full py-1  xl:w-4/5 ">
           <div className="w-full  sm:max-w-xl sm:rounded-lg">
             <Text className="text-2xl font-bold sm:text-xl text-primary">
-              Public Profile
+              Profile
             </Text>
 
             <form className="mx-auto mt-5 grid max-w-2xl" onSubmit={onSubmit}>
-              <div className="flex flex-col items-center space-y-5 sm:flex-row sm:space-y-0">
-                <img
-                  className="h-40 w-40 rounded-full object-cover p-1"
-                  src={bulb ? file : user.image}
-                  alt="Bordered avatar"
-                />
-                <input
-                  type="file"
-                  className="w-full py-2 px-4 bg-gray-100 text-[#333] text-sm border rounded-md focus:border-primary outline-none"
-                  onChange={handleFileChange}
-                />
-              </div>
+              <div className="flex flex-col items-center space-y-5 sm:flex-row sm:space-y-0"></div>
               <InputField
                 id="name"
                 label="Your full name"

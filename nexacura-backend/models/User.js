@@ -10,6 +10,17 @@ const userSchema = new mongoose.Schema({
   profession: String,
   bio: String,
   image: String,
+  subscription: {
+    type: {
+      type: String, // Type of subscription (e.g., 'hourly', 'weekly', 'monthly')
+      enum: ["hourly", "weekly", "monthly"],
+    },
+    expiry: Date, // When does the subscription expire
+    active: {
+      type: Boolean, // Is the subscription currently active
+      default: false,
+    },
+  },
 });
 
 const User = mongoose.model("users", userSchema);

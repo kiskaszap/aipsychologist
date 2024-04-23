@@ -1,0 +1,1273 @@
+{
+  "conversation": [
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m fine, thank you how are you?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm just a computer program, so I don't have feelings, but I'm here to help you. What's on your mind today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m fine, thank you how are you?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm just a computer program, so I don't have feelings, but I'm here to help you. What's on your mind today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I feel a bit low today",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. It's completely natural to have ups and downs in our mood. Can you tell me more about what's been making you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m fine, thank you how are you?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm just a computer program, so I don't have feelings, but I'm here to help you. What's on your mind today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m fine, thank you how are you?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm just a computer program, so I don't have feelings, but I'm here to help you. What's on your mind today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I feel a bit low today",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. It's completely natural to have ups and downs in our mood. Can you tell me more about what's been making you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Yes, I was bullied today",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you were bullied. That's a really tough experience to go through. It's important to remember that bullying says more about the person doing the bullying than it does about you. Have you talked to anyone about what happened?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m fine, thank you how are you?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm just a computer program, so I don't have feelings, but I'm here to help you. What's on your mind today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m fine, thank you how are you?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm just a computer program, so I don't have feelings, but I'm here to help you. What's on your mind today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I feel a bit low today",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. It's completely natural to have ups and downs in our mood. Can you tell me more about what's been making you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Yes, I was bullied today",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you were bullied. That's a really tough experience to go through. It's important to remember that bullying says more about the person doing the bullying than it does about you. Have you talked to anyone about what happened?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Someone pushed me down the stairs",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm so sorry to hear that you were physically harmed. That must have been really frightening and painful. Your safety is the most important thing, so if you haven't already, please seek medical attention if needed. It's also important to report this incident to the appropriate authorities so that it can be properly addressed. Is there someone you trust who you can talk to about what happened?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m fine, thank you how are you?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm just a computer program, so I don't have feelings, but I'm here to help you. What's on your mind today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m fine, thank you how are you?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm just a computer program, so I don't have feelings, but I'm here to help you. What's on your mind today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I feel a bit low today",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. It's completely natural to have ups and downs in our mood. Can you tell me more about what's been making you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Yes, I was bullied today",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you were bullied. That's a really tough experience to go through. It's important to remember that bullying says more about the person doing the bullying than it does about you. Have you talked to anyone about what happened?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Someone pushed me down the stairs",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm so sorry to hear that you were physically harmed. That must have been really frightening and painful. Your safety is the most important thing, so if you haven't already, please seek medical attention if needed. It's also important to report this incident to the appropriate authorities so that it can be properly addressed. Is there someone you trust who you can talk to about what happened?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Well I guess I can talk to my aunt",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's great to hear that you have someone you trust to talk to. Talking about your feelings and experiences with someone who cares about you can be really helpful. Your aunt can provide support and comfort during this difficult time. Remember, it's okay to ask for help when you need it. Is there anything specific you would like to discuss with your aunt or any support you need right now?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m fine, thank you how are you?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm just a computer program, so I don't have feelings, but I'm here to help you. What's on your mind today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m fine, thank you how are you?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm just a computer program, so I don't have feelings, but I'm here to help you. What's on your mind today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I feel a bit low today",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. It's completely natural to have ups and downs in our mood. Can you tell me more about what's been making you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Yes, I was bullied today",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you were bullied. That's a really tough experience to go through. It's important to remember that bullying says more about the person doing the bullying than it does about you. Have you talked to anyone about what happened?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Someone pushed me down the stairs",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm so sorry to hear that you were physically harmed. That must have been really frightening and painful. Your safety is the most important thing, so if you haven't already, please seek medical attention if needed. It's also important to report this incident to the appropriate authorities so that it can be properly addressed. Is there someone you trust who you can talk to about what happened?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Well I guess I can talk to my aunt",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's great to hear that you have someone you trust to talk to. Talking about your feelings and experiences with someone who cares about you can be really helpful. Your aunt can provide support and comfort during this difficult time. Remember, it's okay to ask for help when you need it. Is there anything specific you would like to discuss with your aunt or any support you need right now?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Yes, I feel emberrassed",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Feeling embarrassed after such a traumatic experience is completely normal. It's important to remember that the embarrassment is not your fault. You did not deserve to be treated that way. Your feelings are valid and it's okay to feel this way. Talking to your aunt about how you're feeling can help you process these emotions and receive the support you need. It might also be helpful to consider reaching out to a mental health professional for additional support. Remember, you deserve to feel safe and respected. ",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m fine, thank you how are you?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm just a computer program, so I don't have feelings, but I'm here to help you. What's on your mind today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m fine, thank you how are you?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm just a computer program, so I don't have feelings, but I'm here to help you. What's on your mind today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I feel a bit low today",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. It's completely natural to have ups and downs in our mood. Can you tell me more about what's been making you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Yes, I was bullied today",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you were bullied. That's a really tough experience to go through. It's important to remember that bullying says more about the person doing the bullying than it does about you. Have you talked to anyone about what happened?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Someone pushed me down the stairs",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm so sorry to hear that you were physically harmed. That must have been really frightening and painful. Your safety is the most important thing, so if you haven't already, please seek medical attention if needed. It's also important to report this incident to the appropriate authorities so that it can be properly addressed. Is there someone you trust who you can talk to about what happened?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Well I guess I can talk to my aunt",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's great to hear that you have someone you trust to talk to. Talking about your feelings and experiences with someone who cares about you can be really helpful. Your aunt can provide support and comfort during this difficult time. Remember, it's okay to ask for help when you need it. Is there anything specific you would like to discuss with your aunt or any support you need right now?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Yes, I feel emberrassed",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Feeling embarrassed after such a traumatic experience is completely normal. It's important to remember that the embarrassment is not your fault. You did not deserve to be treated that way. Your feelings are valid and it's okay to feel this way. Talking to your aunt about how you're feeling can help you process these emotions and receive the support you need. It might also be helpful to consider reaching out to a mental health professional for additional support. Remember, you deserve to feel safe and respected. ",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Everyone else was laughing",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm really sorry to hear that others were laughing during such a difficult and painful moment for you. It's unfortunate that they reacted in that way, and it's not a reflection of your worth as a person. People often react inappropriately to situations they don't understand. Your feelings are still valid, and it's important to focus on taking care of yourself during this time. Surround yourself with supportive and understanding people who can help you navigate through this challenging experience. Remember, you are not alone in this.",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m fine, thank you how are you?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm just a computer program, so I don't have feelings, but I'm here to help you. What's on your mind today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m fine, thank you how are you?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm just a computer program, so I don't have feelings, but I'm here to help you. What's on your mind today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I feel a bit low today",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. It's completely natural to have ups and downs in our mood. Can you tell me more about what's been making you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Yes, I was bullied today",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you were bullied. That's a really tough experience to go through. It's important to remember that bullying says more about the person doing the bullying than it does about you. Have you talked to anyone about what happened?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Someone pushed me down the stairs",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm so sorry to hear that you were physically harmed. That must have been really frightening and painful. Your safety is the most important thing, so if you haven't already, please seek medical attention if needed. It's also important to report this incident to the appropriate authorities so that it can be properly addressed. Is there someone you trust who you can talk to about what happened?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Well I guess I can talk to my aunt",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's great to hear that you have someone you trust to talk to. Talking about your feelings and experiences with someone who cares about you can be really helpful. Your aunt can provide support and comfort during this difficult time. Remember, it's okay to ask for help when you need it. Is there anything specific you would like to discuss with your aunt or any support you need right now?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Yes, I feel emberrassed",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Feeling embarrassed after such a traumatic experience is completely normal. It's important to remember that the embarrassment is not your fault. You did not deserve to be treated that way. Your feelings are valid and it's okay to feel this way. Talking to your aunt about how you're feeling can help you process these emotions and receive the support you need. It might also be helpful to consider reaching out to a mental health professional for additional support. Remember, you deserve to feel safe and respected. ",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Everyone else was laughing",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm really sorry to hear that others were laughing during such a difficult and painful moment for you. It's unfortunate that they reacted in that way, and it's not a reflection of your worth as a person. People often react inappropriately to situations they don't understand. Your feelings are still valid, and it's important to focus on taking care of yourself during this time. Surround yourself with supportive and understanding people who can help you navigate through this challenging experience. Remember, you are not alone in this.",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "How can I get over it?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's completely understandable that you want to find ways to move forward from this negative experience. Here are some suggestions that may help you in processing and moving on from what happened:\n\n1. **Talk about it**: It's important to express your feelings and thoughts about the incident. Talking to someone you trust, like your aunt or a therapist, can help you process your emotions and gain perspective on the situation.\n\n2. **Self-care**: Engage in activities that help you relax and bring you comfort. This can include things like exercise, meditation, spending time with loved ones, or engaging in hobbies that you enjoy.\n\n3. **Seek professional help**: Speaking with a therapist or counselor can provide you with the tools and support needed to work through the emotional impact of the bullying incident.\n\n4. **Reflect and reframe**: Try to reframe the situation in a more positive light by focusing on your strengths, resilience, and the support you have around you. Reflect on what you've learned from this experience and how it can make you stronger.\n\n5. **Practice self-compassion**: Be kind to yourself and practice self-compassion. Remind yourself that you deserve love, understanding, and respect, especially during difficult times.\n\nRecovering from a traumatic experience like this takes time, so be patient with yourself. Remember, you are a valuable and deserving individual, and you have the strength to overcome this.",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m fine, thank you how are you?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm just a computer program, so I don't have feelings, but I'm here to help you. What's on your mind today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m fine, thank you how are you?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm just a computer program, so I don't have feelings, but I'm here to help you. What's on your mind today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I feel a bit low today",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. It's completely natural to have ups and downs in our mood. Can you tell me more about what's been making you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Yes, I was bullied today",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you were bullied. That's a really tough experience to go through. It's important to remember that bullying says more about the person doing the bullying than it does about you. Have you talked to anyone about what happened?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Someone pushed me down the stairs",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm so sorry to hear that you were physically harmed. That must have been really frightening and painful. Your safety is the most important thing, so if you haven't already, please seek medical attention if needed. It's also important to report this incident to the appropriate authorities so that it can be properly addressed. Is there someone you trust who you can talk to about what happened?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Well I guess I can talk to my aunt",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's great to hear that you have someone you trust to talk to. Talking about your feelings and experiences with someone who cares about you can be really helpful. Your aunt can provide support and comfort during this difficult time. Remember, it's okay to ask for help when you need it. Is there anything specific you would like to discuss with your aunt or any support you need right now?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Yes, I feel emberrassed",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Feeling embarrassed after such a traumatic experience is completely normal. It's important to remember that the embarrassment is not your fault. You did not deserve to be treated that way. Your feelings are valid and it's okay to feel this way. Talking to your aunt about how you're feeling can help you process these emotions and receive the support you need. It might also be helpful to consider reaching out to a mental health professional for additional support. Remember, you deserve to feel safe and respected. ",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Everyone else was laughing",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm really sorry to hear that others were laughing during such a difficult and painful moment for you. It's unfortunate that they reacted in that way, and it's not a reflection of your worth as a person. People often react inappropriately to situations they don't understand. Your feelings are still valid, and it's important to focus on taking care of yourself during this time. Surround yourself with supportive and understanding people who can help you navigate through this challenging experience. Remember, you are not alone in this.",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "How can I get over it?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's completely understandable that you want to find ways to move forward from this negative experience. Here are some suggestions that may help you in processing and moving on from what happened:\n\n1. **Talk about it**: It's important to express your feelings and thoughts about the incident. Talking to someone you trust, like your aunt or a therapist, can help you process your emotions and gain perspective on the situation.\n\n2. **Self-care**: Engage in activities that help you relax and bring you comfort. This can include things like exercise, meditation, spending time with loved ones, or engaging in hobbies that you enjoy.\n\n3. **Seek professional help**: Speaking with a therapist or counselor can provide you with the tools and support needed to work through the emotional impact of the bullying incident.\n\n4. **Reflect and reframe**: Try to reframe the situation in a more positive light by focusing on your strengths, resilience, and the support you have around you. Reflect on what you've learned from this experience and how it can make you stronger.\n\n5. **Practice self-compassion**: Be kind to yourself and practice self-compassion. Remind yourself that you deserve love, understanding, and respect, especially during difficult times.\n\nRecovering from a traumatic experience like this takes time, so be patient with yourself. Remember, you are a valuable and deserving individual, and you have the strength to overcome this.",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m talking to you",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm here to provide support and guidance, and I'm glad you reached out to talk to me. It's important to express your thoughts and feelings, even if it's with a virtual assistant like me. Remember, processing emotions and seeking help, even through digital platforms, is a positive step towards healing. If you have any specific questions or if there's anything else you'd like to talk about, feel free to share. You are not alone in this, and I'm here to support you.",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m fine, thank you how are you?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm just a computer program, so I don't have feelings, but I'm here to help you. What's on your mind today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi sophia",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m fine, thank you how are you?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm just a computer program, so I don't have feelings, but I'm here to help you. What's on your mind today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I feel a bit low today",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling low. It's completely natural to have ups and downs in our mood. Can you tell me more about what's been making you feel this way?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Yes, I was bullied today",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you were bullied. That's a really tough experience to go through. It's important to remember that bullying says more about the person doing the bullying than it does about you. Have you talked to anyone about what happened?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Someone pushed me down the stairs",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm so sorry to hear that you were physically harmed. That must have been really frightening and painful. Your safety is the most important thing, so if you haven't already, please seek medical attention if needed. It's also important to report this incident to the appropriate authorities so that it can be properly addressed. Is there someone you trust who you can talk to about what happened?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Well I guess I can talk to my aunt",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's great to hear that you have someone you trust to talk to. Talking about your feelings and experiences with someone who cares about you can be really helpful. Your aunt can provide support and comfort during this difficult time. Remember, it's okay to ask for help when you need it. Is there anything specific you would like to discuss with your aunt or any support you need right now?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Yes, I feel emberrassed",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Feeling embarrassed after such a traumatic experience is completely normal. It's important to remember that the embarrassment is not your fault. You did not deserve to be treated that way. Your feelings are valid and it's okay to feel this way. Talking to your aunt about how you're feeling can help you process these emotions and receive the support you need. It might also be helpful to consider reaching out to a mental health professional for additional support. Remember, you deserve to feel safe and respected. ",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Everyone else was laughing",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm really sorry to hear that others were laughing during such a difficult and painful moment for you. It's unfortunate that they reacted in that way, and it's not a reflection of your worth as a person. People often react inappropriately to situations they don't understand. Your feelings are still valid, and it's important to focus on taking care of yourself during this time. Surround yourself with supportive and understanding people who can help you navigate through this challenging experience. Remember, you are not alone in this.",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "How can I get over it?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's completely understandable that you want to find ways to move forward from this negative experience. Here are some suggestions that may help you in processing and moving on from what happened:\n\n1. **Talk about it**: It's important to express your feelings and thoughts about the incident. Talking to someone you trust, like your aunt or a therapist, can help you process your emotions and gain perspective on the situation.\n\n2. **Self-care**: Engage in activities that help you relax and bring you comfort. This can include things like exercise, meditation, spending time with loved ones, or engaging in hobbies that you enjoy.\n\n3. **Seek professional help**: Speaking with a therapist or counselor can provide you with the tools and support needed to work through the emotional impact of the bullying incident.\n\n4. **Reflect and reframe**: Try to reframe the situation in a more positive light by focusing on your strengths, resilience, and the support you have around you. Reflect on what you've learned from this experience and how it can make you stronger.\n\n5. **Practice self-compassion**: Be kind to yourself and practice self-compassion. Remind yourself that you deserve love, understanding, and respect, especially during difficult times.\n\nRecovering from a traumatic experience like this takes time, so be patient with yourself. Remember, you are a valuable and deserving individual, and you have the strength to overcome this.",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m talking to you",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm here to provide support and guidance, and I'm glad you reached out to talk to me. It's important to express your thoughts and feelings, even if it's with a virtual assistant like me. Remember, processing emotions and seeking help, even through digital platforms, is a positive step towards healing. If you have any specific questions or if there's anything else you'd like to talk about, feel free to share. You are not alone in this, and I'm here to support you.",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "could you tell me please if I can hit back?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I understand that you may be feeling angry and frustrated after being bullied and physically harmed. However, responding with physical violence is not the best course of action. Retaliating with violence can escalate the situation and lead to further harm, both for yourself and others involved. It's important to prioritize your safety and well-being in any situation.\n\nInstead of resorting to violence, you can consider the following options:\n\n1. **Seek help**: Report the bullying and physical harm to a trusted adult, teacher, employer, or authority figure. They can help address the situation and ensure your safety.\n\n2. **Focus on self-care**: Take care of yourself emotionally and physically. Engage in activities that help you feel calm and supported.\n\n3. **Seek support**: Reach out to friends, family, or a mental health professional for emotional support and guidance on how to cope with the situation.\n\n4. **Know your rights**: Understand that you have the right to be safe and free from harm. Seeking help from authorities can help protect your well-being.\n\nRemember, it's important to address the situation in a way that prioritizes your safety and well-being. Responding with violence may create more harm than good. If you're feeling overwhelmed or unsure of what to do, it might be helpful to talk to a trusted adult or counselor for guidance on how to navigate this challenging situation.",
+      "sentTime": "Just now",
+      "sender": "agent"
+    }
+  ]
+}

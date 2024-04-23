@@ -16,7 +16,9 @@ const ChatSession = require("./routes/ChatSession");
 const PastConversation = require("./routes/PastConversation");
 const StripeConfig = require("./routes/StripeConfig");
 const StripeWebhook = require("./routes/WebHook");
+const CheckSubscription = require("./routes/CheckSubscription");
 
+express.use("/webhook", new StripeWebhook().router);
 // instantiate the global middlewares
 new GlobalMiddlewares(express);
 // instantiate the database connection
@@ -29,7 +31,7 @@ express.use("/speechToText", new SpeechToText().router);
 express.use("/chat", new ChatSession().router);
 express.use("/pastConversation", new PastConversation().router);
 express.use("/stripe", new StripeConfig().router);
-express.use("/webhook", new StripeWebhook().router);
+express.use("/checkSubscription", new CheckSubscription().router);
 
 // create a route for the home page
 express.get("/", (req, res) => {

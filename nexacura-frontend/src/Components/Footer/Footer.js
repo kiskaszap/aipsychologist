@@ -104,10 +104,12 @@ function Footer() {
             >
               <Text size="txtPoppinsRegular14">Contact</Text>
             </NavLink>
-
-            <Text className="text-white" size="txtPoppinsRegular14">
-              Privacy Policy
-            </Text>
+            <NavLink
+              className={({ isActive }) => `${color(isActive)} ${style}`}
+              to="/privacy"
+            >
+              <Text size="txtPoppinsRegular14">Privacy Policy</Text>
+            </NavLink>
           </div>
         </div>
       </div>

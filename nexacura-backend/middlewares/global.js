@@ -38,6 +38,16 @@ class GlobalMiddlewares {
     );
 
     this.app.use(express.static("uploads"));
+
+    this.app.use(
+      express.json({
+        verify: (req, res, buf) => {
+          if (req.originalUrl.startsWith("/webhook")) {
+            req.rawBody = buf.toString();
+          }
+        },
+      })
+    );
   }
 }
 

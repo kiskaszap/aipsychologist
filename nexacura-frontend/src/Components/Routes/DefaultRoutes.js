@@ -10,6 +10,9 @@ import SelectPlan from "../../Pages/SelectPlan/SelectPlan";
 import VerifyingEmail from "../../Pages/VerifyingEmail/VerifyingEmail";
 import VerifiedEmail from "../../Pages/VerifiedEmail/VerifiedEmail";
 import Nav from "../Nav/Nav";
+import Terms from "../../Pages/Terms/Terms";
+import Privacy from "../../Pages/Privacy/Privacy";
+import ResetPassword from "../../Pages/ResetPassword/ResetPassword";
 
 function DefaultRoutes() {
   return (
@@ -25,6 +28,9 @@ function DefaultRoutes() {
           <Route path="/select-plan" element={<SelectPlan />} />
           <Route path="/verifying-email" element={<VerifyingEmail />} />
           <Route path="/verified-email" element={<VerifiedEmail />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
         </Route>
       </Routes>
     </BrowserRouter>

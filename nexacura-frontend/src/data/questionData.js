@@ -36,7 +36,7 @@ const payment = [
     key: 3,
     question: "What is your refund policy?",
     answer:
-      "If you're not satisfied with your session, we offer a refund within 24 hours of the session's completion. Please contact our support team with your request and details of your session.",
+      "If our server was down, we offer a refund within 72 hours of the session's completion. Please contact our support team with your request and details of your session.",
   },
 ];
 
@@ -45,7 +45,7 @@ const registration = [
     key: 1,
     question: "How do I sign up for the app?",
     answer:
-      "Signing up is easy! Download the app from your app store, select the 'Sign Up' option, and follow the instructions to create your account. You'll need to provide some basic information and verify your email address.",
+      "Signing up is easy!Navigate to the top of the page, select the 'Try now' option, and follow the instructions to create your account. You'll need to provide some basic information and verify your email address.",
   },
   {
     key: 2,
@@ -73,13 +73,13 @@ const privacy = [
     key: 2,
     question: "Who has access to my personal information?",
     answer:
-      "Your personal information is only accessible to essential personnel and is used to provide you with services. We do not sell or share your data with third parties without your explicit consent.",
+      "Your personal information is only accessible to essential personnel and is used to provide you with services. We do not sell or share your data with third parties.",
   },
   {
     key: 3,
     question: "Can I delete my data?",
     answer:
-      "Yes, you have the right to request the deletion of your data at any time. Contact our support team, and they will assist you with the process.",
+      "Yes, you have the right to request the deletion of your data at any time. After registration you can navigate to the My Account and you can delete your profile including every conversation you had with our AI Psychologist.",
   },
 ];
 

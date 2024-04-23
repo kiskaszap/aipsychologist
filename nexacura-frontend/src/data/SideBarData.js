@@ -1,11 +1,12 @@
-import { FaVideo, FaMedal, FaUser } from "react-icons/fa";
+import { FaMedal, FaUser } from "react-icons/fa";
 import { MdLiveHelp } from "react-icons/md";
 import { BiSolidExit } from "react-icons/bi";
+import { IoChatboxEllipses } from "react-icons/io5";
 
 export const sidebarItems = [
   {
-    icon: FaVideo,
-    label: "Video",
+    icon: IoChatboxEllipses,
+    label: "Chat",
     colour: "hover:bg-primary bg-blue-200",
     onClick: () => console.log("Video clicked"),
   },

@@ -1,26 +1,100 @@
 const BaseRoute = require("./BaseRoute");
 const stripe = require("stripe")(process.env.STRIPE_TEST_KEY);
-const bodyParser = require("body-parser");
+const express = require("express");
+const User = require("../models/User");
 
 class StripeWebhook extends BaseRoute {
   constructor() {
     super();
-    this.endpointSecret = process.env.STRIPE_WEBHOOK_SECRET; // Your Stripe webhook secret
     this.initializeRoutes();
   }
 
   initializeRoutes() {
     this.router.post(
       "/",
-      bodyParser.raw({ type: "application/json" }), // Use raw body parser for webhook handling
+      express.raw({ type: "*/*" }),
+      async (request, response) => {
+        const sig = request.headers["stripe-signature"];
+        const rawBody = request.body;
 
-      async (req, res) => {
-        console.log(req.body.id);
-        console.log(req.body.data.object.object);
-        console.log(req.body.data.object.amount_captured);
-        console.log(req.body.data.object.paid);
-        console.log(req.body.data.object.status);
-        res.json({ success: true });
+        let event;
+        const endpointSecret =
+          "whsec_2b56554e84a4b91d08b2013999b55de05ad382a3cb3a890158c1e3862f954f82";
+
+        try {
+          event = stripe.webhooks.constructEvent(rawBody, sig, endpointSecret);
+        } catch (err) {
+          response.status(400).send(`Webhook Error: ${err.message}`);
+          console.log(err.message);
+          return;
+        }
+
+        // Handle the event
+        switch (event.type) {
+          case "checkout.session.created":
+            break;
+          case "payment_intent.succeeded":
+            break;
+          case "charge.succeeded":
+            break;
+          case "payment_intent.created":
+            // Handle payment intent created event
+
+            break;
+          case "checkout.session.completed":
+            const checkoutSessionCompleted = event.data.object;
+            console.log(checkoutSessionCompleted.metadata.userId);
+            console.log(checkoutSessionCompleted.amount_total);
+            console.log(checkoutSessionCompleted.payment_status);
+            console.log(checkoutSessionCompleted.status);
+
+            if (
+              checkoutSessionCompleted.payment_status === "paid" &&
+              checkoutSessionCompleted.status === "complete" &&
+              checkoutSessionCompleted.metadata.userId
+            ) {
+              console.log("Payment is successful");
+
+              // Calculate subscription type and expiry date based on the charged amount
+              let subscriptionType;
+              let expiryDate;
+              if (checkoutSessionCompleted.amount_total === 1000) {
+                subscriptionType = "hourly";
+                expiryDate = new Date();
+                expiryDate.setMinutes(expiryDate.getMinutes() + 60); // Expires 60 minutes later
+              } else if (checkoutSessionCompleted.amount_total === 4000) {
+                subscriptionType = "weekly";
+                expiryDate = new Date();
+                expiryDate.setDate(expiryDate.getDate() + 7); // Expires a week later
+              } else if (checkoutSessionCompleted.amount_total === 10000) {
+                subscriptionType = "monthly";
+                expiryDate = new Date();
+                expiryDate.setMonth(expiryDate.getMonth() + 1); // Expires a month later
+              }
+
+              // Update the user's subscription status in the database
+              const user = await User.findById(
+                checkoutSessionCompleted.metadata.userId
+              );
+              if (user) {
+                user.subscription.type = subscriptionType;
+                user.subscription.expiry = expiryDate;
+                user.subscription.active = true;
+                await user.save();
+                console.log("User subscription status updated successfully");
+              } else {
+                console.log("User not found");
+              }
+            }
+            break;
+
+          // Add more cases for other event types as needed
+          default:
+            console.log(`Unhandled event type ${event.type}`);
+        }
+
+        // Return a 200 response to acknowledge receipt of the event
+        response.sendStatus(200);
       }
     );
   }

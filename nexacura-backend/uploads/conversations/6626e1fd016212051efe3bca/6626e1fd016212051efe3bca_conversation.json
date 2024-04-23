@@ -1,0 +1,347 @@
+{
+  "conversation": [
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, I`m seeking some help",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Of course! I'm here to help. Can you tell me a bit more about what's been going on? How old are you, and what's been on your mind lately?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, I`m seeking some help",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Of course! I'm here to help. Can you tell me a bit more about what's been going on? How old are you, and what's been on your mind lately?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m 14 years old and I have a crush on someone but I fear of being rejected",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's completely normal to feel nervous about expressing your feelings to someone you have a crush on. Have you talked to anyone about these feelings, like a friend or family member? How do you think this person feels about you?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, I`m seeking some help",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Of course! I'm here to help. Can you tell me a bit more about what's been going on? How old are you, and what's been on your mind lately?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m 14 years old and I have a crush on someone but I fear of being rejected",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's completely normal to feel nervous about expressing your feelings to someone you have a crush on. Have you talked to anyone about these feelings, like a friend or family member? How do you think this person feels about you?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, I didn`t try to talk to anyone just to you. I think he didn`t even noticed me yet",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I see. It's common to feel unnoticed or invisible when you have a crush on someone. Have you thought about ways to start a conversation or get to know this person better? It might help to take small steps to interact with them to see if there is a connection. What are some things you have in common with this person?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, I`m seeking some help",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Of course! I'm here to help. Can you tell me a bit more about what's been going on? How old are you, and what's been on your mind lately?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m 14 years old and I have a crush on someone but I fear of being rejected",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's completely normal to feel nervous about expressing your feelings to someone you have a crush on. Have you talked to anyone about these feelings, like a friend or family member? How do you think this person feels about you?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, I didn`t try to talk to anyone just to you. I think he didn`t even noticed me yet",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I see. It's common to feel unnoticed or invisible when you have a crush on someone. Have you thought about ways to start a conversation or get to know this person better? It might help to take small steps to interact with them to see if there is a connection. What are some things you have in common with this person?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Well, the problem is I`m gay and I don`t think he is",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm glad you shared that with me. It can be challenging when you have feelings for someone who may not share the same orientation. It's important to remember that everyone's journey and experiences are different. Have you considered exploring your own feelings and understanding more about your sexual orientation before approaching this person? It's important to feel comfortable and confident in who you are. What support systems do you have in place for discussing your sexual orientation and feelings?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, I`m seeking some help",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Of course! I'm here to help. Can you tell me a bit more about what's been going on? How old are you, and what's been on your mind lately?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m 14 years old and I have a crush on someone but I fear of being rejected",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's completely normal to feel nervous about expressing your feelings to someone you have a crush on. Have you talked to anyone about these feelings, like a friend or family member? How do you think this person feels about you?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, I didn`t try to talk to anyone just to you. I think he didn`t even noticed me yet",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I see. It's common to feel unnoticed or invisible when you have a crush on someone. Have you thought about ways to start a conversation or get to know this person better? It might help to take small steps to interact with them to see if there is a connection. What are some things you have in common with this person?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Well, the problem is I`m gay and I don`t think he is",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm glad you shared that with me. It can be challenging when you have feelings for someone who may not share the same orientation. It's important to remember that everyone's journey and experiences are different. Have you considered exploring your own feelings and understanding more about your sexual orientation before approaching this person? It's important to feel comfortable and confident in who you are. What support systems do you have in place for discussing your sexual orientation and feelings?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Noone knows I didn`t even tell my parents",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It sounds like you're carrying a lot on your own, and it must be difficult to keep this to yourself. It's okay to take your time in sharing this aspect of yourself with others. Have you thought about how your parents might react if you were to tell them about your sexual orientation? It might help to find someone you trust, like a close friend or a supportive adult, to talk to about these feelings. It's important to have a support system in place before opening up to your parents. How do you feel about the idea of talking to someone you trust about this?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, I`m seeking some help",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Of course! I'm here to help. Can you tell me a bit more about what's been going on? How old are you, and what's been on your mind lately?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m 14 years old and I have a crush on someone but I fear of being rejected",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's completely normal to feel nervous about expressing your feelings to someone you have a crush on. Have you talked to anyone about these feelings, like a friend or family member? How do you think this person feels about you?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, I didn`t try to talk to anyone just to you. I think he didn`t even noticed me yet",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I see. It's common to feel unnoticed or invisible when you have a crush on someone. Have you thought about ways to start a conversation or get to know this person better? It might help to take small steps to interact with them to see if there is a connection. What are some things you have in common with this person?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Well, the problem is I`m gay and I don`t think he is",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm glad you shared that with me. It can be challenging when you have feelings for someone who may not share the same orientation. It's important to remember that everyone's journey and experiences are different. Have you considered exploring your own feelings and understanding more about your sexual orientation before approaching this person? It's important to feel comfortable and confident in who you are. What support systems do you have in place for discussing your sexual orientation and feelings?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Noone knows I didn`t even tell my parents",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It sounds like you're carrying a lot on your own, and it must be difficult to keep this to yourself. It's okay to take your time in sharing this aspect of yourself with others. Have you thought about how your parents might react if you were to tell them about your sexual orientation? It might help to find someone you trust, like a close friend or a supportive adult, to talk to about these feelings. It's important to have a support system in place before opening up to your parents. How do you feel about the idea of talking to someone you trust about this?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I think my friend would reject me so as my father my mom might support me",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's understandable to feel unsure about how people might react, especially when it comes to something as personal as sexual orientation. It's important to remember that you deserve love and acceptance for who you are. Your mom's potential support could be a source of strength for you. Have you considered starting the conversation with her first, since you feel she might be supportive? It might also help to have a plan in place for self-care and support in case the reactions are not what you hope for. How do you think you would feel if you were able to share this part of yourself with your mom?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, I`m seeking some help",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Of course! I'm here to help. Can you tell me a bit more about what's been going on? How old are you, and what's been on your mind lately?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m 14 years old and I have a crush on someone but I fear of being rejected",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's completely normal to feel nervous about expressing your feelings to someone you have a crush on. Have you talked to anyone about these feelings, like a friend or family member? How do you think this person feels about you?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "No, I didn`t try to talk to anyone just to you. I think he didn`t even noticed me yet",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I see. It's common to feel unnoticed or invisible when you have a crush on someone. Have you thought about ways to start a conversation or get to know this person better? It might help to take small steps to interact with them to see if there is a connection. What are some things you have in common with this person?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Well, the problem is I`m gay and I don`t think he is",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm glad you shared that with me. It can be challenging when you have feelings for someone who may not share the same orientation. It's important to remember that everyone's journey and experiences are different. Have you considered exploring your own feelings and understanding more about your sexual orientation before approaching this person? It's important to feel comfortable and confident in who you are. What support systems do you have in place for discussing your sexual orientation and feelings?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Noone knows I didn`t even tell my parents",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It sounds like you're carrying a lot on your own, and it must be difficult to keep this to yourself. It's okay to take your time in sharing this aspect of yourself with others. Have you thought about how your parents might react if you were to tell them about your sexual orientation? It might help to find someone you trust, like a close friend or a supportive adult, to talk to about these feelings. It's important to have a support system in place before opening up to your parents. How do you feel about the idea of talking to someone you trust about this?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I think my friend would reject me so as my father my mom might support me",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's understandable to feel unsure about how people might react, especially when it comes to something as personal as sexual orientation. It's important to remember that you deserve love and acceptance for who you are. Your mom's potential support could be a source of strength for you. Have you considered starting the conversation with her first, since you feel she might be supportive? It might also help to have a plan in place for self-care and support in case the reactions are not what you hope for. How do you think you would feel if you were able to share this part of yourself with your mom?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "I`m really scared",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's completely normal to feel scared about opening up, especially when it involves something so personal. It's important to remember that you are brave for even considering sharing this part of yourself with someone else. Take your time and only share when you feel ready. Have you thought about writing down your thoughts and feelings before talking to your mom? Sometimes putting things on paper can help organize your thoughts and make the conversation feel more manageable. What are some things that might help you feel more prepared and supported before having this conversation?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    }
+  ]
+}

@@ -40,21 +40,37 @@ function Help() {
       <div className="relative w-full bg-white px-6 pt-10 pb-8 mt-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10">
         <div className="mx-auto px-5">
           <div className="flex flex-col items-center">
-            <Text className="text-2xl text-primary"> FAQ</Text>
+            <Text className="text-2xl text-primary">FAQ</Text>
             <Text className="mt-3 text-md text-neutral-500 md:text-lg">
               Frequently asked questions
             </Text>
           </div>
-          <div className="mx-auto mt-8 grid max-w-xl divide-y divide-neutral-200">
+          <div className="mx-auto mt-8 grid max-w-xl gap-y-6 divide-y divide-neutral-200">
             <FAQItem
-              question="How does the billing work?"
-              answer="Springerdata offers a variety of billing options, including monthly and annual subscription plans, as well as pay-as-you-go pricing for certain services. Payment is typically made through a credit card or other secure online payment method."
+              question="What subscription plans are available?"
+              answer="We offer a range of subscription options to meet your needs, including hourly, weekly, and monthly plans. Subscriptions do not auto-renew, and you'll need to purchase again once your current plan expires."
             />
             <FAQItem
-              question="Can I get a refund for my subscription?"
-              answer="We offer a 30-day money-back guarantee for most of its subscription plans. If you are not satisfied with your subscription within the first 30 days, you can request a full refund. Refunds for subscriptions that have been active for longer than 30 days may be considered on a case-by-case basis."
+              question="Can I trust that my data is safe?"
+              answer="Absolutely. We take your privacy seriously and never sell your data to anyone. Your conversations and data are your own."
             />
-            {/* Other FAQItems */}
+            <FAQItem
+              question="What happens to my data if I delete my profile?"
+              answer="When you choose to delete your profile, all your saved conversations are permanently deleted from our servers as part of our commitment to your privacy and data security."
+            />
+            <FAQItem
+              question="What are the operating hours of the service?"
+              answer="Our service is available 24/7, ensuring that you can access support whenever you need it, with no additional fees."
+            />
+            <FAQItem
+              question="Why should I use this service?"
+              answer="Our service is designed for individuals seeking an alternative to traditional psychological services. It's perfect for those looking to save money on therapy, those who prefer not to talk to a real person, or anyone in need of a non-biased opinion."
+            />
+            <FAQItem
+              question="Is there a refund policy?"
+              answer="You are entitled to a refund if there is a service downtime that affects your access. Please report the issue immediately to qualify for a refund, which we will process swiftly after verification."
+            />
+            {/* Add more FAQItems as needed */}
           </div>
         </div>
       </div>

@@ -9,7 +9,9 @@ class StripeConfig extends BaseRoute {
 
   initializeRoutes() {
     this.router.post("/", async (req, res) => {
-      console.log("Received item:", req.body.item);
+      const { _id } = req.session.user;
+      const userId = _id;
+
       const storeItems = new Map([
         [1, { priceInCents: 1000, name: "Focus Hour" }],
         [2, { priceInCents: 4000, name: "Discovery Week" }],
@@ -44,6 +46,7 @@ class StripeConfig extends BaseRoute {
           line_items: line_items,
           success_url: `${process.env.CLIENT_URL}/`,
           cancel_url: `${process.env.CLIENT_URL}/my-subscription`,
+          metadata: { userId: userId },
         });
 
         res.json({ url: session.url });

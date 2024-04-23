@@ -13,6 +13,7 @@ class User extends BaseRoute {
   initializeRoutes() {
     this.router.post("/", upload.single("image"), async (request, response) => {
       const { email, name, profession, bio } = request.body;
+      console.log(email, name, profession, bio);
       let updateObj = {
         name,
         profession,

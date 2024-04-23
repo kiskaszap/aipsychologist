@@ -21,15 +21,15 @@ function ProfileDashNav() {
     : {};
 
   return (
-    <div className="flex gap-x-3 items-center justify-end">
-      <img
+    <div className="flex gap-x-3 items-center justify-end  ">
+      {/* <img
         src={user.image || ""}
         alt="profile"
         className="rounded-full h-10 w-10"
       />
       <Text size="lg" weight="bold" className="text-primary font-medium">
         {user.name || ""}
-      </Text>
+      </Text> */}
     </div>
   );
 }

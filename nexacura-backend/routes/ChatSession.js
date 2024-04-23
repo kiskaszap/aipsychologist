@@ -53,7 +53,6 @@ class ChatSession extends BaseRoute {
           );
         }
 
-        console.log("Conversation updated successfully at:", filePath);
         response
           .status(200)
           .json({ message: "Conversation updated successfully." });

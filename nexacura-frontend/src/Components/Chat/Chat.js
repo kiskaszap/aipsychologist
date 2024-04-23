@@ -1,6 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
+import Text from "../../Components/Text/Text";
+import subscriptions from "../../data/subscriptions";
+import SubscriptionCard from "../../Components/Card/SubscriptionCard";
 import {
   MainContainer,
   ChatContainer,
@@ -15,6 +18,25 @@ const API_KEY = "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"; // Be cau
 function Chat() {
   const [typing, setTyping] = useState(false);
   const [messages, setMessages] = useState([]);
+  const [hasSubscription, setHasSubscription] = useState(false); // State to track subscription status
+  const messagesEndRef = useRef(null);
+
+  useEffect(() => {
+    const checkSubscription = async () => {
+      try {
+        const res = await axios.get("http://localhost:4000/checkSubscription", {
+          withCredentials: true,
+        });
+        console.log(res.data);
+        setHasSubscription(res.data.hasSubscription);
+        console.log(res.data.hasSubscription);
+      } catch (error) {
+        console.error("Failed to check subscription status:", error);
+      }
+    };
+
+    checkSubscription(); // Check subscription on component mount
+  }, [typing]);
 
   useEffect(() => {
     const fetchPastConversations = async () => {
@@ -27,6 +49,7 @@ function Chat() {
           }
         );
         if (response.data && response.data.conversation) {
+          console.log(response.data.conversation);
           setMessages(response.data.conversation);
         } else {
           // Set a default message if no past conversation data is found
@@ -60,6 +83,13 @@ function Chat() {
 
     fetchPastConversations();
   }, []);
+  useEffect(() => {
+    scrollToBottom(); // Scroll to bottom every time messages update
+  }, [hasSubscription, messages]);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView();
+  };
 
   const handleSend = async (messageText) => {
     const userMessage = {
@@ -98,7 +128,7 @@ function Chat() {
     const systemMessage = {
       role: "system",
       content:
-        "Explain all concept as you are a psychologist. Give short answers and always try to dig deeper into a problem. Try to be as compassionate as you can and always try to understand the user's problem. Always try to direct to the user to understand how to solve the problem by him/herself",
+        "Explain all concept as you are a psychologist. Give short answers and always try to dig deeper into a problem. Try to be as compassionate as you can and always try to understand the user's problem. Always try to direct to the user to understand how to solve the problem by him/herself, never give bulletpoints, instead try to make the user understand the problem and how to solve it by asking questions, always ask questions to understand the user's problem. Don`t tell them to seek professional help from psychologists that`s why they are using your service. At the beginning of the conversation ask user how old are they, are they girls boys or something else. Always ask about the user`s first name",
     };
 
     try {
@@ -145,37 +175,74 @@ function Chat() {
   }
 
   return (
-    <div className="flex flex-col h-full p-4">
-      <MainContainer>
-        <ChatContainer>
-          <MessageList
-            typingIndicator={
-              typing ? <TypingIndicator content="Sophia is typing..." /> : null
-            }
-          >
-            {messages.map((message, index) => (
-              <div
-                key={index}
-                className={`mb-8 w-3/4 ${
-                  message.sender === "user" ? "ml-auto" : ""
-                }`}
+    <div style={{ height: "calc(100vh - 3rem)" }} className="flex flex-col ">
+      {" "}
+      {/* h-screen to take full viewport height */}
+      {hasSubscription ? (
+        <div className="flex flex-col flex-grow">
+          {" "}
+          {/* flex-grow to fill the space */}
+          <MainContainer className="flex flex-col flex-grow">
+            {" "}
+            {/* Ensure MainContainer is flex and takes available height */}
+            <ChatContainer className="flex flex-col flex-grow">
+              {" "}
+              {/* Flex container for chat */}
+              <MessageList
+                className="flex-grow overflow-auto"
+                typingIndicator={
+                  typing ? (
+                    <TypingIndicator content="Sophia is typing..." />
+                  ) : null
+                }
               >
-                <Message
-                  model={{
-                    message: message.message,
-                    sentTime: message.sentTime,
-                    sender: message.sender,
-                    direction:
-                      message.sender === "user" ? "outgoing" : "incoming",
-                  }}
-                />
-              </div>
-            ))}
-          </MessageList>
-
+                {messages.map((message, index) => {
+                  // Check if message is null or message is not an object with a 'sender' property
+                  if (
+                    message == null ||
+                    typeof message !== "object" ||
+                    !message.hasOwnProperty("sender")
+                  ) {
+                    // Skip rendering this message
+                    return null;
+                  }
+                  return (
+                    <div
+                      key={index}
+                      className={`mb-8 w-3/4 ${
+                        message.sender === "user" ? "ml-auto" : ""
+                      }`}
+                    >
+                      <Message
+                        model={{
+                          message: message.message,
+                          sentTime: message.sentTime,
+                          sender: message.sender,
+                          direction:
+                            message.sender === "user" ? "outgoing" : "incoming",
+                        }}
+                      />
+                    </div>
+                  );
+                })}
+                <div ref={messagesEndRef} />
+              </MessageList>
+            </ChatContainer>
+          </MainContainer>
           <MessageInput placeholder="Type message here" onSend={handleSend} />
-        </ChatContainer>
-      </MainContainer>
+        </div>
+      ) : (
+        <div className=" h-full  pt-9 pb-20">
+          <Text className="text-2xl text-primary font-semibold">
+            My Subscription
+          </Text>
+          <div className="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 mt-6 ">
+            {subscriptions.map((subscription) => (
+              <SubscriptionCard key={subscription.id} {...subscription} />
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
