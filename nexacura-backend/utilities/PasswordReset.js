@@ -1,11 +1,27 @@
 const nodemailer = require("nodemailer");
 const crypto = require("crypto");
 const bcrypt = require("bcrypt");
-const UserModel = require("../models/User"); // Ensure this path is correct
+const UserModel = require("../models/User");
+const fs = require("fs");
+const handlebars = require("handlebars");
+const path = require("path");
 
 class PasswordReset {
   constructor(userEmail) {
     this.userEmail = userEmail;
+    this.transporter = this.configureMailTransporter();
+  }
+
+  configureMailTransporter() {
+    return nodemailer.createTransport({
+      host: "smtp.ionos.co.uk",
+      port: 465,
+      secure: true,
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
   }
 
   async resetUserPassword() {
@@ -22,7 +38,7 @@ class PasswordReset {
   }
 
   generateRandomPassword() {
-    return crypto.randomBytes(8).toString("hex"); // Generates a simple 16-character hex password
+    return crypto.randomBytes(8).toString("hex");
   }
 
   async hashPassword(password) {
@@ -33,7 +49,7 @@ class PasswordReset {
   async updateUserPasswordInDb(hashedPassword) {
     try {
       const updatedUser = await UserModel.findOneAndUpdate(
-        { email: this.userEmail }, // Assumes email is the unique identifier in your schema
+        { email: this.userEmail },
         { $set: { password: hashedPassword } },
         { new: true }
       );
@@ -49,26 +65,27 @@ class PasswordReset {
     }
   }
 
-  async sendEmail(password) {
-    let transporter = nodemailer.createTransport({
-      host: "smtp.ionos.co.uk", // SMTP server
-      port: 465, // Standard port for SSL/TLS
-      secure: true, // true for 465, false for other ports
-      auth: {
-        user: process.env.EMAIL_USER, // Your IONOS email address
-        pass: process.env.EMAIL_PASS, // Your IONOS password
-      },
-    });
-
-    let mailOptions = {
-      from: process.env.EMAIL_USER, // This should be the same as `auth.user`
-      to: this.userEmail,
-      subject: "Your New Password",
-      text: `You are receiving this email because a request was made to reset your password.\n\nHere is your new password: ${password}\n\nPlease change it after you log in for increased security.\n\nIf you did not request this, please contact support immediately.`,
-    };
-
+  async sendEmail(newPassword) {
     try {
-      await transporter.sendMail(mailOptions);
+      const source = fs.readFileSync(
+        path.join(__dirname, "../forgotPassword.html"),
+        "utf-8"
+      );
+      const template = handlebars.compile(source);
+      const replacements = {
+        newPassword: newPassword,
+      };
+      const htmlToSend = template(replacements);
+
+      const mailOptions = {
+        from: process.env.EMAIL_USER,
+        to: this.userEmail,
+        subject: "Your New Password",
+        html: htmlToSend,
+      };
+
+      await this.transporter.sendMail(mailOptions);
+      console.log("Password reset email sent successfully");
       return { success: true, message: "Email sent successfully." };
     } catch (error) {
       console.error("Failed to send email:", error);
