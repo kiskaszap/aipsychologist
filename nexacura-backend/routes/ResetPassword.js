@@ -17,7 +17,9 @@ class ResetPassword extends BaseRoute {
         const doesEmailExistInDb = await new EmailChecker().checkEmail(email);
         if (doesEmailExistInDb) {
           // Send password reset link
-          const passwordReset = await new PasswordReset(email).sendResetLink();
+          const passwordReset = await new PasswordReset(
+            email
+          ).resetUserPassword(); // Corrected method call here
           if (passwordReset.success) {
             response.json({
               status: "success",

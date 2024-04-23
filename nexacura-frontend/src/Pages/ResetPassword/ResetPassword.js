@@ -1,5 +1,5 @@
-import React from "react";
-import { FaEnvelope } from "react-icons/fa"; // Using the envelope icon for the email input
+import React, { useState } from "react";
+import { FaEnvelope } from "react-icons/fa";
 import Text from "../../Components/Text/Text";
 import OutlineButton from "../../Components/Button/OutlineButton";
 import { useForm } from "react-hook-form";
@@ -14,16 +14,30 @@ function ResetPassword() {
   } = useForm();
   const navigate = useNavigate();
 
+  const [popupMessage, setPopupMessage] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
+
   const onSubmit = async (data) => {
     try {
       const response = await axios.post(
         "http://localhost:4000/reset-password",
         data
       );
-      console.log("Reset link sent:", response.data);
-      // Optionally navigate to a "Reset Email Sent" page or display a message
+      if (response.data.status === "success") {
+        setPopupMessage("New password sent to your email.");
+        setShowPopup(true);
+        // Optionally navigate after a delay
+        setTimeout(() => {
+          navigate("/login"); // Redirect to login page
+        }, 3000);
+      } else {
+        setPopupMessage("Email not found in our database.");
+        setShowPopup(true);
+      }
     } catch (error) {
       console.error("Failed to send reset link:", error);
+      setPopupMessage("An error occurred while sending the reset link.");
+      setShowPopup(true);
     }
   };
 
@@ -36,8 +50,22 @@ function ResetPassword() {
               Reset Your Password
             </Text>
 
+            {showPopup && (
+              <div className="absolute top-0 left-0 w-full h-full bg-gray-600 bg-opacity-50 flex items-center justify-center z-10">
+                <div className="bg-white p-4 rounded-lg shadow-lg text-center">
+                  <p>{popupMessage}</p>
+                  <button
+                    onClick={() => setShowPopup(false)}
+                    className="mt-4 px-4 py-2 bg-primary text-white rounded hover:bg-secondary"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            )}
+
             <form onSubmit={handleSubmit(onSubmit)}>
-              <div>
+              <div className="mt-8">
                 {errors.email && (
                   <span className="text-xs text-red-600">
                     {errors.email.message}
