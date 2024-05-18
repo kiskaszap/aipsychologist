@@ -2,6 +2,7 @@ const subscriptions = [
   {
     id: 1,
     name: "Focus hour",
+    type: "hourly",
     price: "$10",
     duration: "1 hour",
     benefits: [
@@ -13,6 +14,7 @@ const subscriptions = [
   {
     id: 2,
     name: "Discovery Week",
+    type: "weekly",
     price: "$40",
     duration: "7 days",
     benefits: [
@@ -20,11 +22,11 @@ const subscriptions = [
       "Quick response speed",
       "Available 24/7 ",
     ],
-    popular: true,
   },
   {
     id: 3,
     name: "Pathfinder Month",
+    type: "monthly",
     price: "$100",
     duration: "30 days",
     benefits: [

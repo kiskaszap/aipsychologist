@@ -1,9 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
-import Text from "../../Components/Text/Text";
-import subscriptions from "../../data/subscriptions";
-import SubscriptionCard from "../../Components/Card/SubscriptionCard";
 import {
   MainContainer,
   ChatContainer,
@@ -12,21 +9,24 @@ import {
   MessageInput,
   TypingIndicator,
 } from "@chatscope/chat-ui-kit-react";
+import subscriptions from "../../data/subscriptions";
+import SubscriptionCard from "../../Components/Card/SubscriptionCard";
+import Text from "../../Components/Text/Text";
 
-const API_KEY = "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"; // Be cautious with exposing API keys
-
-function Chat() {
+const Chat = () => {
   const [typing, setTyping] = useState(false);
   const [messages, setMessages] = useState([]);
-  const [hasSubscription, setHasSubscription] = useState(false); // State to track subscription status
   const messagesEndRef = useRef(null);
-
+  const [hasSubscription, setHasSubscription] = useState(false);
   useEffect(() => {
     const checkSubscription = async () => {
       try {
-        const res = await axios.get("http://localhost:4000/checkSubscription", {
-          withCredentials: true,
-        });
+        const res = await axios.get(
+          "https://nexacura-f522fa3d182e.herokuapp.com/checkSubscription",
+          {
+            withCredentials: true,
+          }
+        );
         console.log(res.data);
         setHasSubscription(res.data.hasSubscription);
         console.log(res.data.hasSubscription);
@@ -42,7 +42,7 @@ function Chat() {
     const fetchPastConversations = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/pastConversation",
+          "https://nexacura-f522fa3d182e.herokuapp.com/pastConversation",
           {
             headers: { "Content-Type": "application/json" },
             withCredentials: true, // Ensures cookies, such as session cookies, are sent with the request
@@ -91,6 +91,8 @@ function Chat() {
     messagesEndRef.current?.scrollIntoView();
   };
 
+  // Function to handle sending messages
+  // Function to handle sending messages
   const handleSend = async (messageText) => {
     const userMessage = {
       message: messageText,
@@ -99,70 +101,54 @@ function Chat() {
       direction: "outgoing",
     };
 
-    // Update messages state with user message
-    setMessages((prevMessages) => [...prevMessages, userMessage]);
-
     setTyping(true);
 
-    // Process the response from ChatGPT
-    const chatGPTMessage = await processMessageToChatGPT([
-      ...messages,
-      userMessage,
-    ]);
-    if (chatGPTMessage) {
-      setMessages((prevMessages) => [...prevMessages, chatGPTMessage]);
-    }
-
-    setTyping(false);
-
-    // Send conversation to backend
-    sendConversationToBackend([...messages, userMessage, chatGPTMessage]);
-  };
-
-  async function processMessageToChatGPT(chatMessages) {
-    let apiMessages = chatMessages.map((msg) => ({
-      role: msg.sender === "agent" ? "assistant" : "user",
-      content: msg.message,
-    }));
-
-    const systemMessage = {
-      role: "system",
-      content:
-        "Explain all concept as you are a psychologist. Give short answers and always try to dig deeper into a problem. Try to be as compassionate as you can and always try to understand the user's problem. Always try to direct to the user to understand how to solve the problem by him/herself, never give bulletpoints, instead try to make the user understand the problem and how to solve it by asking questions, always ask questions to understand the user's problem. Don`t tell them to seek professional help from psychologists that`s why they are using your service. At the beginning of the conversation ask user how old are they, are they girls boys or something else. Always ask about the user`s first name",
-    };
-
     try {
-      const response = await fetch(
-        "https://api.openai.com/v1/chat/completions",
+      // Process the message through your backend and get the response
+      const response = await axios.post(
+        "https://nexacura-f522fa3d182e.herokuapp.com/chatbot",
         {
-          method: "POST",
-          headers: {
-            Authorization: `Bearer ${API_KEY}`,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            model: "gpt-3.5-turbo",
-            messages: [systemMessage, ...apiMessages],
-          }),
+          chatMessages: [...messages, userMessage].map((msg) => ({
+            sender: msg.sender === "user" ? "user" : "assistant",
+            content: msg.message,
+          })),
         }
       );
 
-      const data = await response.json();
-      return {
-        message: data.choices[0].message.content,
-        sentTime: "Just now",
-        sender: "agent",
-      };
-    } catch (error) {
-      console.error("Error processing message with ChatGPT:", error);
-      return null;
-    }
-  }
+      let chatGPTMessage = {};
+      if (response.data && response.data.choices) {
+        chatGPTMessage = {
+          message: response.data.choices[0].message.content,
+          sentTime: "Just now",
+          sender: "agent",
+          direction: "incoming",
+        };
+      }
 
+      // Update local messages state with both user and ChatGPT messages
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        userMessage,
+        chatGPTMessage,
+      ]);
+
+      // Optionally, send the updated conversation to the backend
+      sendConversationToBackend([...messages, userMessage, chatGPTMessage]);
+    } catch (error) {
+      console.error("Error processing message:", error);
+    } finally {
+      setTyping(false);
+    }
+  };
+
+  // Scroll to the bottom whenever messages update
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
   async function sendConversationToBackend(conversation) {
     try {
       await axios.post(
-        "http://localhost:4000/chat",
+        "https://nexacura-f522fa3d182e.herokuapp.com/chat",
         { conversation: conversation },
         {
           headers: { "Content-Type": "application/json" },
@@ -245,6 +231,6 @@ function Chat() {
       )}
     </div>
   );
-}
+};
 
 export default Chat;

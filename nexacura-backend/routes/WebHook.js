@@ -1,5 +1,5 @@
 const BaseRoute = require("./BaseRoute");
-const stripe = require("stripe")(process.env.STRIPE_TEST_KEY);
+const stripe = require("stripe")(process.env.STRIPE_SIGNING_KEY);
 const express = require("express");
 const User = require("../models/User");
 
@@ -18,8 +18,7 @@ class StripeWebhook extends BaseRoute {
         const rawBody = request.body;
 
         let event;
-        const endpointSecret =
-          "whsec_2b56554e84a4b91d08b2013999b55de05ad382a3cb3a890158c1e3862f954f82";
+        const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
 
         try {
           event = stripe.webhooks.constructEvent(rawBody, sig, endpointSecret);

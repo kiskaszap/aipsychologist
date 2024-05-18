@@ -1,6 +1,6 @@
 /* The Authentification class is used for verifying user credentials by comparing the input password
 with the hashed password stored in the database using bcrypt. */
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const GetUser = require("./GetUser");
 class Authentification {
   constructor(userInputPassword, email) {

@@ -11,6 +11,7 @@ import OutlineButton from "../../Components/Button/OutlineButton";
 import { FaEarthAfrica, FaLocationArrow } from "react-icons/fa6";
 import Footer from "../../Components/Footer/Footer";
 import { useForm } from "react-hook-form";
+import axios from "axios";
 
 const IconsContact = ({ title, reactIcon }) => {
   return (
@@ -33,17 +34,30 @@ function Contact() {
     reset,
   } = useForm();
   const [data, setData] = React.useState("");
-  const onSubmit = (data) => {
-    setData(data.name);
-    reset();
-  };
-  // settimeout function to remove the message after 5 seconds
-  React.useEffect(() => {
-    const timeout = setTimeout(() => {
+  const onSubmit = async (formData) => {
+    try {
+      const response = await axios.post(
+        "https://nexacura-f522fa3d182e.herokuapp.com/contact",
+        formData
+      );
+      if (response.status === 201) {
+        setData("Thank you for your message, " + formData.name);
+        reset();
+      } else {
+        setData("Failed to send message. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Error submitting the form:", error);
+      setData(
+        "Failed to send message due to an error. Please try again later."
+      );
+    }
+
+    // Set timeout function to remove the message after 5 seconds
+    setTimeout(() => {
       setData("");
-    }, 3000);
-    return () => clearTimeout(timeout);
-  }, [data]);
+    }, 5000);
+  };
   return (
     <div>
       <Text
@@ -54,8 +68,8 @@ function Contact() {
         Contact Us
       </Text>
       <Text className="text-gray-500 text-lg text-center mb-10">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry.
+        Feel free to reach out with any questions or feedback through our
+        contact form on the website.
       </Text>
       <div className="my-6  xl:px-32 ">
         <div className="grid lg:grid-cols-12 xl:p-2  mx-auto   bg-white lg:shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md text-[#333] font-[sans-serif]">
@@ -63,21 +77,21 @@ function Contact() {
             <div>
               <Text className=" text-3xl text-white">Contact Information</Text>
               <Text className="text-white text-lg">
-                Say something to start a live chat!
+                Say something to start a chat!
               </Text>
             </div>
             <div className=" flex flex-col gap-y-5">
               <IconsContact
-                title="Address: Glasgow, United Kingdom"
+                title="Address: Glasgow, United Kingdom G131JP"
                 reactIcon={<FaLocationArrow />}
               />
               <IconsContact
-                title="Email: aipscycholohist@gmail.com"
+                title="Email: support@nexacura.chat"
                 reactIcon={<FaEnvelope />}
               />
 
               <IconsContact
-                title="Website: www.aipscycholohist.com"
+                title="Website: www.nexacura.chat"
                 reactIcon={<FaEarthAfrica />}
               />
             </div>

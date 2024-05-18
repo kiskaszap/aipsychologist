@@ -66,7 +66,7 @@ function Register() {
   const onSubmit = async (data) => {
     try {
       const response = await axios.post(
-        "http://localhost:4000/registration",
+        "https://nexacura-f522fa3d182e.herokuapp.com/registration",
         data
       );
       console.log("Response:", response.data);

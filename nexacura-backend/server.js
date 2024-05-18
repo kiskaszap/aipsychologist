@@ -18,6 +18,10 @@ const StripeConfig = require("./routes/StripeConfig");
 const StripeWebhook = require("./routes/WebHook");
 const CheckSubscription = require("./routes/CheckSubscription");
 const ResetPassword = require("./routes/ResetPassword");
+const NewPassword = require("./routes/NewPassword");
+const SubscriptionFocus = require("./routes/SubscriptionFocus");
+const Contact = require("./routes/Contact");
+const Chatbot = require("./routes/Chatbot");
 
 express.use("/webhook", new StripeWebhook().router);
 // instantiate the global middlewares
@@ -34,6 +38,11 @@ express.use("/pastConversation", new PastConversation().router);
 express.use("/stripe", new StripeConfig().router);
 express.use("/checkSubscription", new CheckSubscription().router);
 express.use("/reset-password", new ResetPassword().router);
+express.use("/new-password", new NewPassword().router);
+express.use("/active", new SubscriptionFocus().router);
+express.use("/contact", new Contact().router);
+express.use("/chatbot", new Chatbot().router);
+
 // create a route for the home page
 express.get("/", (req, res) => {
   res.send("Welcome to Nexacura");

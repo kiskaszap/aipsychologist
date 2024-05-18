@@ -20,7 +20,7 @@ function ResetPassword() {
   const onSubmit = async (data) => {
     try {
       const response = await axios.post(
-        "http://localhost:4000/reset-password",
+        "https://nexacura-f522fa3d182e.herokuapp.com/reset-password",
         data
       );
       if (response.data.status === "success") {

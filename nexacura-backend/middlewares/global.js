@@ -13,16 +13,22 @@ class GlobalMiddlewares {
   }
 
   setup() {
+    this.app.use(
+      cors({
+        origin: [
+          "https://www.nexacura.chat",
+          "https://nexacura.chat",
+          "https://6647ee79a4f26b4abdbcf50e--splendorous-belekoy-610158.netlify.app",
+        ],
+        methods: ["POST", "PUT", "GET", "OPTIONS", "HEAD", "PATCH", "DELETE"],
+        credentials: true,
+        preflightContinue: false,
+        optionsSuccessStatus: 204,
+      })
+    );
     this.app.use(bodyParser.json({ limit: "50mb" }));
     this.app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
     this.app.use(cookieParser());
-    this.app.use(
-      cors({
-        origin: "http://localhost:3000",
-        methods: ["POST", "PUT", "GET", "OPTIONS", "HEAD", "PATCH", "DELETE"],
-        credentials: true,
-      })
-    );
     this.app.use(
       session({
         secret: "12345",
@@ -30,15 +36,13 @@ class GlobalMiddlewares {
         resave: false,
         saveUninitialized: true,
         cookie: {
-          secure: false,
+          secure: false, // Consider using 'true' if you are in a production environment using HTTPS
           maxAge: 24 * 60 * 60 * 1000,
         },
         rolling: true,
       })
     );
-
     this.app.use(express.static("uploads"));
-
     this.app.use(
       express.json({
         verify: (req, res, buf) => {

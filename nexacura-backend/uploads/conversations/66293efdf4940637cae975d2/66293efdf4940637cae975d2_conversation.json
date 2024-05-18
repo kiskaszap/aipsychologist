@@ -1,0 +1,20 @@
+{
+  "conversation": [
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi, I`m fine",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's great to hear that you're feeling fine! Is there anything in particular that you would like to talk about or any thoughts on your mind that you'd like to share?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    }
+  ]
+}

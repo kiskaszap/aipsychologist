@@ -20,11 +20,6 @@ function Testimonial({ name, rating, review }) {
         {review}
       </Text>
       <div className="flex gap-x-5 items-center">
-        <img
-          src={image}
-          alt="user"
-          className=" h-10 w-10 rounded-full object-cover"
-        />
         <Text size="txtPoppinsMedium16Gray90001">- {name}</Text>
       </div>
     </div>

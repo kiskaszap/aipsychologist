@@ -16,7 +16,7 @@ import Text from "../Text/Text";
  * container with the team member's image on the left and their details on the right. The details
  * include the team member's name, position, a brief description, and social links.
  */
-function TeamMember({ name, position, imageSrc, socialLinks }) {
+function TeamMember({ name, position, imageSrc, description, socialLinks }) {
   return (
     <div className=" w-full lg:max-w-full lg:flex mx-auto my-10">
       <div
@@ -30,9 +30,7 @@ function TeamMember({ name, position, imageSrc, socialLinks }) {
             {name}
           </p>
           <Text className="text-sm text-gray-600">{position}</Text>
-          <Text className="text-gray-500 text-base mt-4">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          </Text>
+          <Text className="text-gray-500 text-base mt-4">{description}</Text>
 
           <div className="my-4 flex text-secondary">
             {socialLinks.map((link, index) => (

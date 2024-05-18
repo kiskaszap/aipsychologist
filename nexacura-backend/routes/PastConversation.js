@@ -11,6 +11,7 @@ class PastConversation extends BaseRoute {
 
   initializeRoutes() {
     this.router.get("/", async (request, response) => {
+      console.log(request.session.user, "This is Pastconversation");
       // Assumes user session is already set
       const id = request.session.user._id;
 

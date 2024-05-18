@@ -22,7 +22,7 @@ class User extends BaseRoute {
 
       if (request.file) {
         const path = request.file.path.replace("uploads/", "");
-        const imagePath = `http://localhost:4000/${path}`;
+        const imagePath = `https://nexacura-f522fa3d182e.herokuapp.com/${path}`;
         updateObj.image = imagePath;
       }
 

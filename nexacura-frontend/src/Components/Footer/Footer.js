@@ -39,8 +39,11 @@ function Footer() {
             Nexa<span className="text-white font-semibold">Cura</span>
           </div>
           <Text className="text-white">
-            Our cutting-edge AI technology brings these historical figures to
-            life in interactive and educational chats.
+            Our cutting-edge AI technology offers compassionate and interactive
+            therapy sessions, designed to bring personalized psychological
+            support to life. Experience engaging and educational conversations
+            that help you navigate life's challenges with newfound clarity and
+            insight.
           </Text>
           <div className="flex text-white text-xl gap-3 ">
             <a href="https://www.linkedin.com/">

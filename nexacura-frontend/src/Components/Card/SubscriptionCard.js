@@ -8,20 +8,20 @@
  */
 import React from "react";
 import { FaCheck } from "react-icons/fa";
-import OutlineButton from "../Button/OutlineButton";
+
 import Text from "../Text/Text";
-import { NavLink, useNavigate } from "react-router-dom";
+
 import axios from "axios";
 
-function SubscriptionCard({ name, price, duration, benefits, popular, id }) {
-  const navigate = useNavigate();
+function SubscriptionCard({ name, price, duration, benefits, id, isActive }) {
+  console.log(isActive, "SubscriptionCard");
 
   const handleSelectPlan = () => {
     console.log(id); // Correctly logs the ID when the button is clicked.
 
     axios
       .post(
-        "http://localhost:4000/stripe",
+        "https://nexacura-f522fa3d182e.herokuapp.com/stripe",
         { item: [id] },
         {
           headers: { "Content-Type": "application/json" },
@@ -47,7 +47,7 @@ function SubscriptionCard({ name, price, duration, benefits, popular, id }) {
   return (
     <div
       className={`shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] rounded-md overflow-hidden transition-all duration-500 hover:scale-105 ${
-        popular ? "ring ring-primary" : ""
+        isActive ? "ring-4 ring-primary" : ""
       }`}
     >
       <div className="text-center p-4 bg-gradient-to-r from-primary to-[#11a5e9]">

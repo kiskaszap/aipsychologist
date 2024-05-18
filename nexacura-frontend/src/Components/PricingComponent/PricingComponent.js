@@ -7,7 +7,7 @@
  */
 import React from "react";
 import Text from "../Text/Text";
-import SubscriptionCard from "../Card/SubscriptionCard";
+import SubscriptionCard2 from "../Card/SubsciptionCard2";
 import subscriptions from "../../data/subscriptions";
 
 function PricingComponent() {
@@ -22,8 +22,8 @@ function PricingComponent() {
           Choose your plan
         </Text>
         <Text className="text-gray-500 text-lg text-center">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
+          Select the plan that best fits your needs to start your journey
+          towards better mental health with personalized AI support
         </Text>
       </div>
       <div className="font-[sans-serif] text-[#333]">
@@ -31,7 +31,7 @@ function PricingComponent() {
           <div className="text-center"></div>
           <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-8 mt-6 max-sm:max-w-sm max-sm:mx-auto">
             {subscriptions.map((subscription) => (
-              <SubscriptionCard
+              <SubscriptionCard2
                 key={subscription.id}
                 {...subscription}
                 id={subscription.id}
