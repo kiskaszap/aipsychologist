@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
+import { io } from "socket.io-client";
 import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 import {
   MainContainer,
@@ -7,92 +8,105 @@ import {
   MessageList,
   Message,
   MessageInput,
-  TypingIndicator,
 } from "@chatscope/chat-ui-kit-react";
+import { FaCommentAlt, FaMicrophone } from "react-icons/fa";
 import subscriptions from "../../data/subscriptions";
 import SubscriptionCard from "../../Components/Card/SubscriptionCard";
 import Text from "../../Components/Text/Text";
+import AITalkVisualizer from "../SpeachVisualiser/SpeachVisualiser";
+
+const socket = io("http://localhost:5000");
 
 const Chat = () => {
   const [typing, setTyping] = useState(false);
   const [messages, setMessages] = useState([]);
+  const [isRecording, setIsRecording] = useState(false);
+  const [isSpeaking, setIsSpeaking] = useState(false);
+  const [isUserSpeaking, setIsUserSpeaking] = useState(false);
   const messagesEndRef = useRef(null);
   const [hasSubscription, setHasSubscription] = useState(false);
+  const [activeTab, setActiveTab] = useState("chat");
+
   useEffect(() => {
     const checkSubscription = async () => {
       try {
-        const res = await axios.get(
-          "https://nexacura-f522fa3d182e.herokuapp.com/checkSubscription",
-          {
-            withCredentials: true,
-          }
-        );
-        console.log(res.data);
+        const res = await axios.get("http://localhost:4000/checkSubscription", {
+          withCredentials: true,
+        });
         setHasSubscription(res.data.hasSubscription);
-        console.log(res.data.hasSubscription);
       } catch (error) {
         console.error("Failed to check subscription status:", error);
       }
     };
-
-    checkSubscription(); // Check subscription on component mount
-  }, [typing]);
-
-  useEffect(() => {
-    const fetchPastConversations = async () => {
-      try {
-        const response = await axios.get(
-          "https://nexacura-f522fa3d182e.herokuapp.com/pastConversation",
-          {
-            headers: { "Content-Type": "application/json" },
-            withCredentials: true, // Ensures cookies, such as session cookies, are sent with the request
-          }
-        );
-        if (response.data && response.data.conversation) {
-          console.log(response.data.conversation);
-          setMessages(response.data.conversation);
-        } else {
-          // Set a default message if no past conversation data is found
-          setMessages([
-            {
-              message:
-                "Hi, it's Sophia your AI psychologist. How can I help you today?",
-              sentTime: "Just now",
-              sender: "agent",
-            },
-          ]);
-        }
-      } catch (error) {
-        // console.error("Failed to fetch past conversations:", error);
-        // Handle 404 and 500 status with a default message
-        if (
-          error.response &&
-          (error.response.status === 404 || error.response.status === 500)
-        ) {
-          setMessages([
-            {
-              message:
-                "Hi, this is Sophia your AI psychologist. How can I help you today?",
-              sentTime: "Just now",
-              sender: "agent",
-            },
-          ]);
-        }
-      }
-    };
-
-    fetchPastConversations();
+    checkSubscription();
   }, []);
-  useEffect(() => {
-    scrollToBottom(); // Scroll to bottom every time messages update
-  }, [hasSubscription, messages]);
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView();
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
+
+  useEffect(() => {
+    socket.on("tts-audio", (audioData) => {
+      console.log("Received AI-generated audio data.");
+
+      try {
+        const blob = new Blob([audioData], { type: "audio/mpeg" });
+
+        setTimeout(() => {
+          setIsSpeaking(true);
+        }, 200); // ✅ Small delay for sync
+
+        const audioURL = URL.createObjectURL(blob);
+        const audio = new Audio(audioURL);
+
+        audio.play();
+        audio.onended = () => {
+          setIsSpeaking(false); // ✅ Stops exactly when AI finishes speaking
+        };
+      } catch (error) {
+        console.error("Error playing AI audio:", error);
+      }
+    });
+
+    return () => {
+      socket.off("tts-audio");
+    };
+  }, []);
+
+  const startRecording = async () => {
+    setIsRecording(true);
+    setIsUserSpeaking(true);
+
+    try {
+      const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+      recognition.lang = "en-US";
+      recognition.interimResults = false;
+      recognition.maxAlternatives = 1;
+
+      recognition.start();
+
+      recognition.onresult = (event) => {
+        const transcript = event.results[0][0].transcript;
+        setIsRecording(false);
+        setIsUserSpeaking(false);
+        handleSend(transcript);
+      };
+
+      recognition.onerror = () => {
+        setIsRecording(false);
+        setIsUserSpeaking(false);
+      };
+
+      recognition.onend = () => {
+        setIsRecording(false);
+        setIsUserSpeaking(false);
+      };
+    } catch (error) {
+      setIsRecording(false);
+      console.error("Microphone access error:", error);
+    }
   };
 
-  // Function to handle sending messages
-  // Function to handle sending messages
   const handleSend = async (messageText) => {
     const userMessage = {
       message: messageText,
@@ -101,19 +115,16 @@ const Chat = () => {
       direction: "outgoing",
     };
 
+    setMessages((prevMessages) => [...prevMessages, userMessage]);
     setTyping(true);
 
     try {
-      // Process the message through your backend and get the response
-      const response = await axios.post(
-        "https://nexacura-f522fa3d182e.herokuapp.com/chatbot",
-        {
-          chatMessages: [...messages, userMessage].map((msg) => ({
-            sender: msg.sender === "user" ? "user" : "assistant",
-            content: msg.message,
-          })),
-        }
-      );
+      const response = await axios.post("http://localhost:4000/chatbot", {
+        chatMessages: [...messages, userMessage].map((msg) => ({
+          sender: msg.sender === "user" ? "user" : "assistant",
+          content: msg.message,
+        })),
+      });
 
       let chatGPTMessage = {};
       if (response.data && response.data.choices) {
@@ -123,17 +134,13 @@ const Chat = () => {
           sender: "agent",
           direction: "incoming",
         };
+
+        setMessages((prevMessages) => [...prevMessages, chatGPTMessage]);
+
+        if (activeTab === "voice") {
+          speakText(chatGPTMessage.message);
+        }
       }
-
-      // Update local messages state with both user and ChatGPT messages
-      setMessages((prevMessages) => [
-        ...prevMessages,
-        userMessage,
-        chatGPTMessage,
-      ]);
-
-      // Optionally, send the updated conversation to the backend
-      sendConversationToBackend([...messages, userMessage, chatGPTMessage]);
     } catch (error) {
       console.error("Error processing message:", error);
     } finally {
@@ -141,88 +148,84 @@ const Chat = () => {
     }
   };
 
-  // Scroll to the bottom whenever messages update
-  useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
-  async function sendConversationToBackend(conversation) {
+  const speakText = async (text) => {
+    setIsSpeaking(true);
     try {
-      await axios.post(
-        "https://nexacura-f522fa3d182e.herokuapp.com/chat",
-        { conversation: conversation },
-        {
-          headers: { "Content-Type": "application/json" },
-          withCredentials: true, // This allows cookies to be sent along with the request
-        }
+      const response = await axios.post(
+        "http://localhost:4000/whisper-tts",
+        { text, voice: "alloy" },
+        { responseType: "blob" }
       );
+
+      if (!response.data || !(response.data instanceof Blob)) {
+        throw new Error("Invalid response from server");
+      }
+
+      const audioURL = URL.createObjectURL(response.data);
+      const audio = new Audio(audioURL);
+      audio.play();
+      audio.onended = () => setIsSpeaking(false);
     } catch (error) {
-      console.error("Error sending conversation to backend:", error);
+      console.error("Error generating speech:", error);
+      setIsSpeaking(false);
     }
-  }
+  };
 
   return (
-    <div style={{ height: "calc(100vh - 3rem)" }} className="flex flex-col ">
-      {" "}
-      {/* h-screen to take full viewport height */}
+    <div style={{ height: "calc(100vh - 3rem)" }} className="flex flex-col">
       {hasSubscription ? (
-        <div className="flex flex-col flex-grow">
-          {" "}
-          {/* flex-grow to fill the space */}
-          <MainContainer className="flex flex-col flex-grow">
-            {" "}
-            {/* Ensure MainContainer is flex and takes available height */}
-            <ChatContainer className="flex flex-col flex-grow">
-              {" "}
-              {/* Flex container for chat */}
-              <MessageList
-                className="flex-grow overflow-auto"
-                typingIndicator={
-                  typing ? (
-                    <TypingIndicator content="Sophia is typing..." />
-                  ) : null
-                }
-              >
-                {messages.map((message, index) => {
-                  // Check if message is null or message is not an object with a 'sender' property
-                  if (
-                    message == null ||
-                    typeof message !== "object" ||
-                    !message.hasOwnProperty("sender")
-                  ) {
-                    // Skip rendering this message
-                    return null;
-                  }
-                  return (
-                    <div
-                      key={index}
-                      className={`mb-8 w-3/4 ${
-                        message.sender === "user" ? "ml-auto" : ""
-                      }`}
-                    >
-                      <Message
-                        model={{
-                          message: message.message,
-                          sentTime: message.sentTime,
-                          sender: message.sender,
-                          direction:
-                            message.sender === "user" ? "outgoing" : "incoming",
-                        }}
-                      />
-                    </div>
-                  );
-                })}
-                <div ref={messagesEndRef} />
-              </MessageList>
-            </ChatContainer>
-          </MainContainer>
-          <MessageInput placeholder="Type message here" onSend={handleSend} />
+        <div className="flex flex-col flex-grow mr-16">
+          <div className="fixed top-10 right-10 flex flex-col space-y-4 bg-white p-4 rounded-lg shadow-lg">
+            <button
+              className={`p-3 rounded-full ${activeTab === "chat" ? "bg-blue-500 text-white" : "bg-gray-200"}`}
+              onClick={() => setActiveTab("chat")}
+            >
+              <FaCommentAlt className="text-2xl" />
+            </button>
+            <button
+              className={`p-3 rounded-full ${activeTab === "voice" ? "bg-green-500 text-white" : "bg-gray-200"}`}
+              onClick={() => setActiveTab("voice")}
+            >
+              <FaMicrophone className="text-2xl" />
+            </button>
+          </div>
+
+          {activeTab === "chat" ? (
+            <>
+              <MainContainer className="flex flex-col flex-grow">
+                <ChatContainer className="flex flex-col flex-grow">
+                  <MessageList className="flex-grow overflow-auto">
+                    {messages.map((message, index) => (
+                      <div key={index} className={`mb-8 w-3/4 ${message.sender === "user" ? "ml-auto" : ""}`}>
+                        <Message model={message} />
+                      </div>
+                    ))}
+                    <div ref={messagesEndRef} />
+                  </MessageList>
+                </ChatContainer>
+              </MainContainer>
+              <MessageInput placeholder="Type message here" onSend={handleSend} />
+            </>
+          ) : (
+            <div className="flex items-center justify-center flex-grow">
+              {isSpeaking || isUserSpeaking ? (
+                <AITalkVisualizer isSpeaking={isSpeaking || isUserSpeaking} isUser={isUserSpeaking} />
+              ) : (
+                <button
+                  className="bg-blue-500 text-white p-4 rounded-full shadow-lg flex items-center justify-center"
+                  onClick={startRecording}
+                  disabled={isRecording}
+                >
+                  <FaMicrophone className="text-3xl" />
+                </button>
+              )}
+            </div>
+          )}
         </div>
       ) : (
-        <div className=" h-full  pt-9 pb-20">
-          <Text className="text-2xl text-primary font-semibold">
-            My Subscription
-          </Text>
-          <div className="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 mt-6 ">
+        <div className="h-full pt-9 pb-20">
+          <Text className="text-2xl text-primary font-semibold">My Subscription</Text>
+          <div className="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 mt-6">
             {subscriptions.map((subscription) => (
               <SubscriptionCard key={subscription.id} {...subscription} />
             ))}

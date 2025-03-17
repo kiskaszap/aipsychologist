@@ -10,10 +10,12 @@ class SubscriptionChecker extends BaseRoute {
 
   initializeRoutes() {
     this.router.get("/", async (req, res) => {
+    
       if (!req.session || !req.session.user) {
         res.json({
           hasSubscription: false,
-          message: "User not logged in.",
+          message: "User not logged in. ",
+          message2: req.session,
         });
         return;
       }

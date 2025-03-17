@@ -1,6 +1,4 @@
-/* The Login class handles user authentication by checking email existence, verifying passwords, and
-setting user session data. */
-const BaseRoute = require("./Baseroute");
+const BaseRoute = require("./BaseRoute");
 const EmailChecker = require("../utilities/EmailChecker");
 const Authentification = require("../utilities/Authentification");
 
@@ -12,39 +10,54 @@ class Login extends BaseRoute {
 
   initializeRoutes() {
     this.router.post("/", async (request, response) => {
-      try {
-        const { email, password } = request.body;
-        // Check if the email exists in the database
-        const doesEmailExistInDb = await new EmailChecker().checkEmail(email);
-        if (doesEmailExistInDb) {
-          // false if the password is incorrect, otherwise it returns the user data
-          const getUserData = await new Authentification(
-            password,
-            email
-          ).verifyUser();
-          if (!getUserData) {
-            response.json({
-              isAuthenticated: false,
-              message: "Invalid credentials!",
-            });
-          } else {
-            const { password, ...userData } = getUserData;
-            request.session.user = userData;
-            console.log("User data:", userData);
+      const { email, password } = request.body;
 
-            response.json({
-              isAuthenticated: true,
-              message: userData,
-            });
-          }
-        } else {
-          response.json({
+      try {
+        // Check if the email exists in the database
+        const doesEmailExist = await new EmailChecker().checkEmail(email);
+        if (!doesEmailExist) {
+          return response.status(401).json({
+            isAuthenticated: false,
+            message: "Invalid email address!",
+          });
+        }
+
+        // Authenticate the user
+        const userData = await new Authentification(
+          password,
+          email
+        ).verifyUser();
+        if (!userData) {
+          return response.status(401).json({
             isAuthenticated: false,
             message: "Invalid credentials!",
           });
         }
+
+        // Set user session details
+        const { password: userPassword, _id, ...userDetails } = userData;
+        request.session.user = {
+          _id: _id.toString(), // Convert MongoDB ObjectId to string
+          ...userDetails,
+        };
+
+        // Save the session to ensure it's stored properly
+        request.session.save((err) => {
+          if (err) {
+            throw new Error("Session save failed.");
+          }
+
+          
+          response.json({
+            isAuthenticated: true,
+            message: request.session.user,
+          });
+        });
       } catch (error) {
-        console.log(error);
+        console.error("Login error:", error);
+        response
+          .status(500)
+          .json({ error: "Internal server error", details: error.message });
       }
     });
   }

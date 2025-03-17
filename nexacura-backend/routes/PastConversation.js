@@ -11,9 +11,15 @@ class PastConversation extends BaseRoute {
 
   initializeRoutes() {
     this.router.get("/", async (request, response) => {
-      console.log(request.session.user, "This is Pastconversation");
-      // Assumes user session is already set
+     
+
+      if (!request.session.user) {
+        console.log("No user in session.");
+        return response.status(401).json({ message: "Unauthorized" });
+      }
+
       const id = request.session.user._id;
+     
 
       // Use DynamicFolderCreator to get the folder path for storing conversations
       const dynamicFolderCreator = new DynamicFolderCreator(
@@ -24,11 +30,10 @@ class PastConversation extends BaseRoute {
 
       // Construct the file path where the conversation would be stored
       const filePath = path.join(folderPath, `${id}_conversation.json`);
+      console.log(`File path for conversation: ${filePath}`);
 
       // Attempt to read the conversation file
       try {
-        console.log("Attempting to retrieve conversation from path:", filePath);
-
         if (fs.existsSync(filePath)) {
           // File exists, read and parse the JSON file
           const fileData = fs.readFileSync(filePath);
@@ -40,6 +45,7 @@ class PastConversation extends BaseRoute {
           });
         } else {
           // No conversation file exists for the user
+          console.log("No conversation file found for user ID:", id);
           response.status(404).json({ message: "No conversation found." });
         }
       } catch (error) {

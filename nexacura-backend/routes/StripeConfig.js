@@ -1,5 +1,5 @@
 const BaseRoute = require("./BaseRoute");
-const stripe = require("stripe")(process.env.STRIPE_TEST_KEY);
+const stripe = require("stripe")(process.env.STRIPE_SECRET_TEST_KEY_1);
 
 class StripeConfig extends BaseRoute {
   constructor() {
@@ -9,6 +9,8 @@ class StripeConfig extends BaseRoute {
 
   initializeRoutes() {
     this.router.post("/", async (req, res) => {
+      
+      
       const { _id } = req.session.user;
       const userId = _id;
 

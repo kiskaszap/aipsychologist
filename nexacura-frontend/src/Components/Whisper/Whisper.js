@@ -32,7 +32,7 @@ function Whisper() {
               // Use axios to send the FormData
               const response = await axios({
                 method: "post",
-                url: "https://nexacura-f522fa3d182e.herokuapp.com/speechToText",
+                url: "http://localhost:3000/speechToText",
                 data: formData,
                 headers: { "Content-Type": "multipart/form-data" },
                 withCredentials: true,

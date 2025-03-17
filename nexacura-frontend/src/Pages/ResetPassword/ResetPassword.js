@@ -1,43 +1,47 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaEnvelope } from "react-icons/fa";
 import Text from "../../Components/Text/Text";
 import OutlineButton from "../../Components/Button/OutlineButton";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function ResetPassword() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    reset,
   } = useForm();
   const navigate = useNavigate();
 
-  const [popupMessage, setPopupMessage] = useState("");
-  const [showPopup, setShowPopup] = useState(false);
-
   const onSubmit = async (data) => {
+    // 🚀 **Validation before submission**
+    if (!data.email.trim()) {
+      toast.warning("Email is required!");
+      return;
+    }
+    if (!/^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/.test(data.email)) {
+      toast.warning("Invalid email format!");
+      return;
+    }
+
+    toast.loading("Sending reset link...");
+
     try {
-      const response = await axios.post(
-        "https://nexacura-f522fa3d182e.herokuapp.com/reset-password",
-        data
-      );
+      const response = await axios.post("http://localhost:4000/reset-password", data);
+      toast.dismiss();
+
       if (response.data.status === "success") {
-        setPopupMessage("New password sent to your email.");
-        setShowPopup(true);
-        // Optionally navigate after a delay
-        setTimeout(() => {
-          navigate("/login"); // Redirect to login page
-        }, 3000);
+        toast.success("A new password has been sent to your email!");
+        reset();
+        setTimeout(() => navigate("/login"), 2000);
       } else {
-        setPopupMessage("Email not found in our database.");
-        setShowPopup(true);
+        toast.error("Email not found in our database!");
       }
     } catch (error) {
-      console.error("Failed to send reset link:", error);
-      setPopupMessage("An error occurred while sending the reset link.");
-      setShowPopup(true);
+      toast.dismiss();
+      toast.error("Something went wrong. Please try again.");
     }
   };
 
@@ -45,32 +49,14 @@ function ResetPassword() {
     <div className="font-[sans-serif] text-[#333]">
       <div className="min-h-screen flex flex-col items-center justify-center">
         <div className="px-10 lg:px-0 lg:max-w-3xl w-full shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md">
-          <div className="py-4 lg:px-6 w-full ">
+          <div className="py-4 lg:px-6 w-full">
             <Text className="text-3xl font-extrabold text-primary py-6">
               Reset Your Password
             </Text>
 
-            {showPopup && (
-              <div className="absolute top-0 left-0 w-full h-full bg-gray-600 bg-opacity-50 flex items-center justify-center z-10">
-                <div className="bg-white p-4 rounded-lg shadow-lg text-center">
-                  <p>{popupMessage}</p>
-                  <button
-                    onClick={() => setShowPopup(false)}
-                    className="mt-4 px-4 py-2 bg-primary text-white rounded hover:bg-secondary"
-                  >
-                    Close
-                  </button>
-                </div>
-              </div>
-            )}
-
             <form onSubmit={handleSubmit(onSubmit)}>
+              {/* Email Input */}
               <div className="mt-8">
-                {errors.email && (
-                  <span className="text-xs text-red-600">
-                    {errors.email.message}
-                  </span>
-                )}
                 <label className="text-xs block mb-2">Email</label>
                 <div className="relative flex items-center">
                   <input
@@ -78,17 +64,13 @@ function ResetPassword() {
                     type="text"
                     className="w-full text-sm border-b border-gray-300 focus:border-secondary px-2 py-3 outline-none"
                     placeholder="Enter your email"
-                    {...register("email", {
-                      required: "Email is required",
-                      pattern: {
-                        value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
-                        message: "Invalid email format",
-                      },
-                    })}
+                    {...register("email")}
                   />
                   <FaEnvelope className="text-[#bbb] absolute right-2" />
                 </div>
               </div>
+
+              {/* Submit Button */}
               <div className="mt-12">
                 <OutlineButton
                   borderColor="border-primary"

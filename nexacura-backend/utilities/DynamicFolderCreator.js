@@ -7,11 +7,12 @@ class DynamicFolderCreator {
     this.request = request;
     this.uploadsPath = `uploads/${folder}`;
   }
+ 
 
   createFolder() {
     let dynamicFolder;
     let folderPath;
-    // console.log(this.request.session.user, "session data");
+    console.log(this.request.session.user, "Dynamic folder creator was called");
 
     if (this.request.session.user.email) {
       dynamicFolder = this.request.session.user._id;

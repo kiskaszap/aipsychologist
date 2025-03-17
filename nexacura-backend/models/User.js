@@ -10,6 +10,7 @@ const userSchema = new mongoose.Schema({
   profession: String,
   bio: String,
   image: String,
+  googleId: String,
   subscription: {
     type: {
       type: String, // Type of subscription (e.g., 'hourly', 'weekly', 'monthly')

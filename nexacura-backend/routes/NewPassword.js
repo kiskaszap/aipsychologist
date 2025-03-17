@@ -1,4 +1,4 @@
-const BaseRoute = require("./Baseroute");
+const BaseRoute = require("./BaseRoute");
 const PasswordHash = require("../utilities/PasswordHashing");
 const UserModel = require("../models/User"); // Adjust the path as per your project structure
 

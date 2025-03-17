@@ -1,4 +1,4 @@
-const BaseRoute = require("./Baseroute");
+const BaseRoute = require("./BaseRoute");
 const nodemailer = require("nodemailer");
 const fs = require("fs");
 const handlebars = require("handlebars");
@@ -12,16 +12,16 @@ class ContactHandler extends BaseRoute {
   }
 
   configureMailTransporter() {
-    return nodemailer.createTransport({
-      host: "smtp.ionos.co.uk",
-      port: 465,
-      secure: true,
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
-  }
+      return nodemailer.createTransport({
+        host: "smtp.gmail.com",
+        port: 465,
+        secure: true,
+        auth: {
+          user: process.env.EMAIL_USER,
+          pass: process.env.EMAIL_PASS,
+        },
+      });
+    }
 
   initializeRoutes() {
     this.router.post("/", async (request, response) => {

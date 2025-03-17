@@ -1,5 +1,5 @@
 /* The ResetPassword class handles the process of sending a password reset link to users who have forgotten their passwords. */
-const BaseRoute = require("./Baseroute");
+const BaseRoute = require("./BaseRoute");
 const EmailChecker = require("../utilities/EmailChecker");
 const PasswordReset = require("../utilities/PasswordReset");
 

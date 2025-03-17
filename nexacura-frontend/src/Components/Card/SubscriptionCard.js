@@ -20,28 +20,29 @@ function SubscriptionCard({ name, price, duration, benefits, id, isActive }) {
     console.log(id); // Correctly logs the ID when the button is clicked.
 
     axios
-      .post(
-        "https://nexacura-f522fa3d182e.herokuapp.com/stripe",
-        { item: [id] },
-        {
-          headers: { "Content-Type": "application/json" },
-          withCredentials: true, // Correctly allows cookies to be sent along with the request.
-        }
-      )
-      .then((res) => {
-        if (res.status === 200) {
-          // Check if the HTTP status code is 200 for success.
-          return res.data; // Use res.data to access the response body.
-        } else {
-          throw new Error("Network response was not ok.");
-        }
-      })
-      .then((data) => {
-        window.location.href = data.url; // Assuming data.url is the redirect URL from your server.
-      })
-      .catch((error) => {
-        console.error("Error during plan selection:", error);
-      });
+    .post(
+      "http://localhost:4000/stripe",
+      { item: [id] },
+      {
+        headers: { "Content-Type": "application/json" },
+        withCredentials: true, // Ensures cookies are sent
+        
+      }
+    )
+    .then((res) => {
+      if (res.status === 200) {
+        return res.data; // Access response body
+      } else {
+        throw new Error("Network response was not ok.");
+      }
+    })
+    .then((data) => {
+      window.location.href = data.url; // Assuming redirect to Stripe URL
+    })
+    .catch((error) => {
+      console.error("Error during plan selection:", error);
+    });
+  
   };
 
   return (

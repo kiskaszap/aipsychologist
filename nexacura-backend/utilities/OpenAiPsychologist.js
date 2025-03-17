@@ -3,7 +3,7 @@ maintains conversation history. */
 const axios = require("axios");
 const DynamicFolderCreator = require("./DynamicFolderCreator");
 const ConversationHistoryManager = require("./ConversationHistoryManager");
-const initialPrompt = require("../prompt/initialPrompt");
+const initialPrompt = require("../prompt/initialPrompt").default;
 
 class OpenAiPsychologist {
   constructor(request) {
@@ -40,6 +40,7 @@ class OpenAiPsychologist {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${this.apiKey}`,
+            withCredentials: true,
           },
         }
       );

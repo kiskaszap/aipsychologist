@@ -1,0 +1,91 @@
+{
+  "conversation": [
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello, it's nice to meet you. How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent",
+      "direction": "incoming"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello, it's nice to meet you. How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent",
+      "direction": "incoming"
+    },
+    {
+      "message": "I was bullied today",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you had to go through that. Bullying can be really tough to deal with. How are you feeling about what happened?",
+      "sentTime": "Just now",
+      "sender": "agent",
+      "direction": "incoming"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Hi",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello, it's nice to meet you. How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent",
+      "direction": "incoming"
+    },
+    {
+      "message": "I was bullied today",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you had to go through that. Bullying can be really tough to deal with. How are you feeling about what happened?",
+      "sentTime": "Just now",
+      "sender": "agent",
+      "direction": "incoming"
+    },
+    {
+      "message": "I want to punch the guy face",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I can understand that you must be feeling a lot of anger right now. It's natural to feel that way when we're mistreated. However, it's important to find healthier ways to cope with those feelings. Have you tried any coping mechanisms in the past that have helped you manage your anger?",
+      "sentTime": "Just now",
+      "sender": "agent",
+      "direction": "incoming"
+    }
+  ]
+}

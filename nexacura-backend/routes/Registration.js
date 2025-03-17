@@ -1,4 +1,4 @@
-const BaseRoute = require("./Baseroute");
+const BaseRoute = require("./BaseRoute");
 const PasswordHash = require("../utilities/PasswordHashing");
 const User = require("../models/User");
 const EmailChecker = require("../utilities/EmailChecker");
@@ -7,6 +7,7 @@ const fs = require("fs");
 const handlebars = require("handlebars");
 const path = require("path");
 
+
 class UserRegistration extends BaseRoute {
   constructor() {
     super();
@@ -14,9 +15,10 @@ class UserRegistration extends BaseRoute {
     this.transporter = this.configureMailTransporter();
   }
 
+  
   configureMailTransporter() {
     return nodemailer.createTransport({
-      host: "smtp.ionos.co.uk",
+      host: "smtp.gmail.com",
       port: 465,
       secure: true,
       auth: {
@@ -44,6 +46,7 @@ class UserRegistration extends BaseRoute {
 
           // Send welcome email if user is successfully registered
           const emailSent = await this.sendWelcomeEmail(name, email);
+
 
           if (emailSent) {
             response.status(201).json({
@@ -75,6 +78,7 @@ class UserRegistration extends BaseRoute {
   }
 
   async sendWelcomeEmail(name, email) {
+    console.log("Sending welcome email to:", email);
     try {
       const source = fs.readFileSync(
         path.join(__dirname, "../welcome.html"),
@@ -95,6 +99,7 @@ class UserRegistration extends BaseRoute {
 
       await this.transporter.sendMail(mailOptions);
       console.log("Welcome email sent successfully");
+      console.log("Email sent to:", email);
       return true;
     } catch (error) {
       console.error("Error sending welcome email:", error);

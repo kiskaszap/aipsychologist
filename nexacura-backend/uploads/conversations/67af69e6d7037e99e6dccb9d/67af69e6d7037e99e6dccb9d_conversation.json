@@ -1,0 +1,296 @@
+{
+  "conversation": [
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Segg",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It seems like there might have been a typo in your message. Please feel free to clarify or ask any questions you may have. I'm here to help.",
+      "sentTime": "Just now",
+      "sender": "agent",
+      "direction": "incoming"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Segg",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It seems like there might have been a typo in your message. Please feel free to clarify or ask any questions you may have. I'm here to help.",
+      "sentTime": "Just now",
+      "sender": "agent",
+      "direction": "incoming"
+    },
+    {
+      "message": "how are you?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm just a virtual assistant, so I don't have feelings, but I'm here and ready to assist you. How can I support you today?",
+      "sentTime": "Just now",
+      "sender": "agent",
+      "direction": "incoming"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Segg",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It seems like there might have been a typo in your message. Please feel free to clarify or ask any questions you may have. I'm here to help.",
+      "sentTime": "Just now",
+      "sender": "agent",
+      "direction": "incoming"
+    },
+    {
+      "message": "how are you?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm just a virtual assistant, so I don't have feelings, but I'm here and ready to assist you. How can I support you today?",
+      "sentTime": "Just now",
+      "sender": "agent",
+      "direction": "incoming"
+    },
+    {
+      "message": "hey",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent",
+      "direction": "incoming"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Segg",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It seems like there might have been a typo in your message. Please feel free to clarify or ask any questions you may have. I'm here to help.",
+      "sentTime": "Just now",
+      "sender": "agent",
+      "direction": "incoming"
+    },
+    {
+      "message": "how are you?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm just a virtual assistant, so I don't have feelings, but I'm here and ready to assist you. How can I support you today?",
+      "sentTime": "Just now",
+      "sender": "agent",
+      "direction": "incoming"
+    },
+    {
+      "message": "hey",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent",
+      "direction": "incoming"
+    },
+    {
+      "message": "I`m a bit sad",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling sad. Would you like to talk about what's been on your mind lately? Sometimes sharing your feelings can help lighten the emotional burden.",
+      "sentTime": "Just now",
+      "sender": "agent",
+      "direction": "incoming"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Segg",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It seems like there might have been a typo in your message. Please feel free to clarify or ask any questions you may have. I'm here to help.",
+      "sentTime": "Just now",
+      "sender": "agent",
+      "direction": "incoming"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Segg",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It seems like there might have been a typo in your message. Please feel free to clarify or ask any questions you may have. I'm here to help.",
+      "sentTime": "Just now",
+      "sender": "agent",
+      "direction": "incoming"
+    },
+    {
+      "message": "how are you?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm just a virtual assistant, so I don't have feelings, but I'm here and ready to assist you. How can I support you today?",
+      "sentTime": "Just now",
+      "sender": "agent",
+      "direction": "incoming"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Segg",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It seems like there might have been a typo in your message. Please feel free to clarify or ask any questions you may have. I'm here to help.",
+      "sentTime": "Just now",
+      "sender": "agent",
+      "direction": "incoming"
+    },
+    {
+      "message": "how are you?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm just a virtual assistant, so I don't have feelings, but I'm here and ready to assist you. How can I support you today?",
+      "sentTime": "Just now",
+      "sender": "agent",
+      "direction": "incoming"
+    },
+    {
+      "message": "hey",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent",
+      "direction": "incoming"
+    },
+    {
+      "message": "Hi, this is Sophia your AI psychologist. How can I help you today?",
+      "sentTime": "Just now",
+      "sender": "agent"
+    },
+    {
+      "message": "Segg",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It seems like there might have been a typo in your message. Please feel free to clarify or ask any questions you may have. I'm here to help.",
+      "sentTime": "Just now",
+      "sender": "agent",
+      "direction": "incoming"
+    },
+    {
+      "message": "how are you?",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm just a virtual assistant, so I don't have feelings, but I'm here and ready to assist you. How can I support you today?",
+      "sentTime": "Just now",
+      "sender": "agent",
+      "direction": "incoming"
+    },
+    {
+      "message": "hey",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "Hello! How are you feeling today?",
+      "sentTime": "Just now",
+      "sender": "agent",
+      "direction": "incoming"
+    },
+    {
+      "message": "I`m a bit sad",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "I'm sorry to hear that you're feeling sad. Would you like to talk about what's been on your mind lately? Sometimes sharing your feelings can help lighten the emotional burden.",
+      "sentTime": "Just now",
+      "sender": "agent",
+      "direction": "incoming"
+    },
+    {
+      "message": "I`m just sad about school",
+      "sentTime": "Just now",
+      "sender": "user",
+      "direction": "outgoing"
+    },
+    {
+      "message": "It's understandable to feel sad about school, as it can be a source of stress and pressure. What specifically is bothering you about school? Is it the workload, social interactions, or something else?",
+      "sentTime": "Just now",
+      "sender": "agent",
+      "direction": "incoming"
+    }
+  ]
+}

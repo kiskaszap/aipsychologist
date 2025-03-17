@@ -1,7 +1,7 @@
 /* The User class extends a BaseRoute class and handles updating user data including image upload
 functionality. */
 const UserModel = require("../models/User");
-const BaseRoute = require("../routes/Baseroute");
+const BaseRoute = require("./BaseRoute");
 const upload = require("../middlewares/multer");
 
 class User extends BaseRoute {
@@ -22,7 +22,7 @@ class User extends BaseRoute {
 
       if (request.file) {
         const path = request.file.path.replace("uploads/", "");
-        const imagePath = `https://nexacura-f522fa3d182e.herokuapp.com/${path}`;
+        const imagePath = `http://localhost:3000/${path}`;
         updateObj.image = imagePath;
       }
 
