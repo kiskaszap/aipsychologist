@@ -1,0 +1,70 @@
+user: Hi
+assistant: Hello, welcome to our therapy session. How are you feeling today?
+user: Hi
+assistant: Hello, it seems like you might be feeling a bit hesitant to share. That's completely okay. Whenever you're ready, feel free to open up about what's been on your mind.
+user: Hi
+assistant: Hello, welcome to our therapy session. How are you feeling today?
+user: Hi
+assistant: Hello, it seems like you might be feeling a bit hesitant to share. That's completely okay. Whenever you're ready, feel free to open up about what's been on your mind.
+user: I feel a bit sad
+assistant: I'm sorry to hear that you're feeling sad. Can you tell me more about what's been causing these feelings of sadness?
+user: Hello, I`m feeling really low
+assistant: I'm here to support you. Can you tell me more about what's been going on that's been making you feel low?
+user: Hello, I`m feeling really low
+assistant: I'm here to support you. Can you tell me more about what's been going on that's been making you feel low?
+user: I was picked on school today and they hurt me so I want to hurt back
+assistant: I'm sorry to hear that you experienced such hurtful treatment at school. It's completely understandable to feel angry and want to retaliate when you've been treated unfairly. However, it's important for us to find healthier ways to cope with these intense emotions. Have you experienced anything like this before at school?
+user: Hello, I`m feeling really low
+assistant: I'm here to support you. Can you tell me more about what's been going on that's been making you feel low?
+user: I was picked on school today and they hurt me so I want to hurt back
+assistant: I'm sorry to hear that you experienced such hurtful treatment at school. It's completely understandable to feel angry and want to retaliate when you've been treated unfairly. However, it's important for us to find healthier ways to cope with these intense emotions. Have you experienced anything like this before at school?
+user: Yes, it`s happening since the beginning of the school year
+assistant: I'm really sorry to hear that this has been an ongoing issue for you. It's not fair for you to have to deal with this kind of treatment. It's important to remember that you are not alone in this, and there are people who can help and support you. Have you talked to anyone at school or at home about what's been happening?
+user: Hello, I`m feeling really low
+assistant: I'm here to support you. Can you tell me more about what's been going on that's been making you feel low?
+user: I was picked on school today and they hurt me so I want to hurt back
+assistant: I'm sorry to hear that you experienced such hurtful treatment at school. It's completely understandable to feel angry and want to retaliate when you've been treated unfairly. However, it's important for us to find healthier ways to cope with these intense emotions. Have you experienced anything like this before at school?
+user: Yes, it`s happening since the beginning of the school year
+assistant: I'm really sorry to hear that this has been an ongoing issue for you. It's not fair for you to have to deal with this kind of treatment. It's important to remember that you are not alone in this, and there are people who can help and support you. Have you talked to anyone at school or at home about what's been happening?
+user: No, but tomorrow I`ll go back and I`ll punch them in their face
+assistant: I understand that you may be feeling very hurt and angry right now, but it's important for us to find healthier ways to address these difficult situations. Retaliating with violence can lead to more problems, both for you and for the others involved. It's important to prioritize your safety and well-being. Would you be open to discussing some alternative ways to cope with these intense emotions and handle the situation at school?
+user: Hi, I was in school today and someone attacked me
+assistant: I'm sorry to hear that you experienced such a traumatic event. It's important to prioritize your well-being in situations like this. Are you feeling physically okay? Can you tell me more about what happened and how you are feeling right now?
+user: Hi, I was in school today and someone attacked me
+assistant: I'm sorry to hear that you experienced such a traumatic event. It's important to prioritize your well-being in situations like this. Are you feeling physically okay? Can you tell me more about what happened and how you are feeling right now?
+user: I`ll go back tomorrow and I`ll punch him in the face
+assistant: It's understandable to feel angry and want to defend yourself, but resorting to violence may not be the best solution. It's important to address this situation in a way that ensures your safety and well-being. Have you thought about talking to a teacher or school counselor about what happened? It's important to address the issue through non-violent means. How can I support you in finding a safer and healthier way to deal with this situation?
+user: Hi, I was in school today and someone attacked me
+assistant: I'm sorry to hear that you experienced such a traumatic event. It's important to prioritize your well-being in situations like this. Are you feeling physically okay? Can you tell me more about what happened and how you are feeling right now?
+user: I`ll go back tomorrow and I`ll punch him in the face
+assistant: It's understandable to feel angry and want to defend yourself, but resorting to violence may not be the best solution. It's important to address this situation in a way that ensures your safety and well-being. Have you thought about talking to a teacher or school counselor about what happened? It's important to address the issue through non-violent means. How can I support you in finding a safer and healthier way to deal with this situation?
+user: I`m furious
+assistant: It's completely valid to feel furious after such a traumatic event. Your emotions are important and it's okay to acknowledge them. It's crucial to find healthy ways to cope with these intense feelings. Have you tried any coping mechanisms in the past that have helped you manage your anger? Taking deep breaths, going for a walk, or talking to a trusted friend or family member about your feelings can sometimes help. Your feelings are valid, and it's important to find ways to express and manage them in a healthy manner.
+user: Hi, I was in school today and someone attacked me
+assistant: I'm sorry to hear that you experienced such a traumatic event. It's important to prioritize your well-being in situations like this. Are you feeling physically okay? Can you tell me more about what happened and how you are feeling right now?
+user: I`ll go back tomorrow and I`ll punch him in the face
+assistant: It's understandable to feel angry and want to defend yourself, but resorting to violence may not be the best solution. It's important to address this situation in a way that ensures your safety and well-being. Have you thought about talking to a teacher or school counselor about what happened? It's important to address the issue through non-violent means. How can I support you in finding a safer and healthier way to deal with this situation?
+user: I`m furious
+assistant: It's completely valid to feel furious after such a traumatic event. Your emotions are important and it's okay to acknowledge them. It's crucial to find healthy ways to cope with these intense feelings. Have you tried any coping mechanisms in the past that have helped you manage your anger? Taking deep breaths, going for a walk, or talking to a trusted friend or family member about your feelings can sometimes help. Your feelings are valid, and it's important to find ways to express and manage them in a healthy manner.
+user: It`s happening since the beginning of the year
+assistant: It sounds like you've been dealing with a lot for quite some time. It's understandable that these repeated incidents are taking a toll on your well-being. Have you ever reached out to a counselor, therapist, or any other mental health professional for support with these ongoing challenges? Talking to a professional who can provide you with coping strategies and support may be beneficial in helping you navigate and overcome these difficult situations. Your mental health is important, and seeking help is a courageous step towards healing. What do you think about reaching out for professional support?
+user: Hi, I was in school today and someone attacked me
+assistant: I'm sorry to hear that you experienced such a traumatic event. It's important to prioritize your well-being in situations like this. Are you feeling physically okay? Can you tell me more about what happened and how you are feeling right now?
+user: I`ll go back tomorrow and I`ll punch him in the face
+assistant: It's understandable to feel angry and want to defend yourself, but resorting to violence may not be the best solution. It's important to address this situation in a way that ensures your safety and well-being. Have you thought about talking to a teacher or school counselor about what happened? It's important to address the issue through non-violent means. How can I support you in finding a safer and healthier way to deal with this situation?
+user: I`m furious
+assistant: It's completely valid to feel furious after such a traumatic event. Your emotions are important and it's okay to acknowledge them. It's crucial to find healthy ways to cope with these intense feelings. Have you tried any coping mechanisms in the past that have helped you manage your anger? Taking deep breaths, going for a walk, or talking to a trusted friend or family member about your feelings can sometimes help. Your feelings are valid, and it's important to find ways to express and manage them in a healthy manner.
+user: It`s happening since the beginning of the year
+assistant: It sounds like you've been dealing with a lot for quite some time. It's understandable that these repeated incidents are taking a toll on your well-being. Have you ever reached out to a counselor, therapist, or any other mental health professional for support with these ongoing challenges? Talking to a professional who can provide you with coping strategies and support may be beneficial in helping you navigate and overcome these difficult situations. Your mental health is important, and seeking help is a courageous step towards healing. What do you think about reaching out for professional support?
+user: I`ll definietly hurt him this ti,e
+assistant: I understand that you may be feeling overwhelmed and seeking retribution, but resorting to violence is not a constructive solution and could potentially lead to further harm. It's important to prioritize your safety and well-being. I encourage you to consider alternative ways to address the situation. Have you talked to anyone at school about what's been happening to you? Bringing this issue to the attention of school authorities or seeking help from a trusted adult can help ensure your safety and provide you with support. Please remember that your well-being is the top priority, and there are always healthier alternatives to resolve conflicts. How can I support you in finding a safer and healthier way to handle this situation?
+user: there is no turning back at this point, I`ll punch him and I don`t care about the consequences
+assistant: It sounds like you're feeling a lot of anger and frustration right now. Violence is never the answer, and it's important to find healthier ways to cope with these intense emotions. Can you tell me more about what's been going on that's making you feel this way?
+user: there is no tuning back at this point, I`m all alone, they say I can`t hurt him but no oe makes and end on his side
+assistant: It sounds like you're in a difficult situation right now. It's understandable to feel overwhelmed and alone. Can you tell me more about what's been going on and what's been weighing on you? It's important to express your feelings and talk about what's going on so we can work through it together. Remember, you're not alone in this process.
+user: this one was my final attempt to resolve the situation peacefully
+assistant: It sounds like you've been going through a difficult time. I'm here to listen and support you. Can you tell me more about the situation you're referring to and why it's been challenging for you to resolve it peacefully?
+user: this was my final call
+assistant: I'm sorry to hear that you are feeling this way. It sounds like you are going through a very difficult time. Can you tell me more about what happened during that final call that made you feel this way?
+user: that was it
+assistant: It sounds like you might be feeling overwhelmed. Can you tell me more about what's been going on?

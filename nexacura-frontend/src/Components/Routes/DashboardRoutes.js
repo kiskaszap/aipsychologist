@@ -9,6 +9,7 @@ import Mysubscription from "../../Pages/MySubscription/Mysubscription";
 import Nav from "../Nav/Nav";
 import Help from "../../Pages/Help/Help";
 import MyAccount from "../../Pages/MyAccount/MyAccount";
+
 import NotFound from "../../Pages/NotFound/NotFound";
 
 function DashboardRoutes() {
@@ -24,6 +25,7 @@ function DashboardRoutes() {
           <Route path="/purchase-successful" element={<PurchaseSuccessful />} />
           <Route path="/help" element={<Help />} />
           <Route path="/my-account" element={<MyAccount />} />
+          
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>

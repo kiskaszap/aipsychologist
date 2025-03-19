@@ -41,6 +41,9 @@ class SubscriptionChecker extends BaseRoute {
           });
           return;
         }
+        else{
+          console.log("User has subscription details.");
+        }
 
         // Check if the subscription is active and not expired
         const now = new Date();

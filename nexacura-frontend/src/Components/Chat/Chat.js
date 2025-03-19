@@ -114,18 +114,25 @@ const Chat = () => {
       sender: "user",
       direction: "outgoing",
     };
-
+  
     setMessages((prevMessages) => [...prevMessages, userMessage]);
     setTyping(true);
-
+  
     try {
-      const response = await axios.post("http://localhost:4000/chatbot", {
-        chatMessages: [...messages, userMessage].map((msg) => ({
-          sender: msg.sender === "user" ? "user" : "assistant",
-          content: msg.message,
-        })),
-      });
-
+      // ✅ Send message to AI chatbot (with credentials)
+      const response = await axios.post(
+        "http://localhost:4000/chatbot",
+        {
+          chatMessages: [...messages, userMessage].map((msg) => ({
+            sender: msg.sender === "user" ? "user" : "assistant",
+            content: msg.message,
+          })),
+        },
+        {
+          withCredentials: true, // 🔥 Ensure session is included
+        }
+      );
+  
       let chatGPTMessage = {};
       if (response.data && response.data.choices) {
         chatGPTMessage = {
@@ -134,19 +141,36 @@ const Chat = () => {
           sender: "agent",
           direction: "incoming",
         };
-
+  
         setMessages((prevMessages) => [...prevMessages, chatGPTMessage]);
-
+  
+        // 📌 🔥 Save the conversation to the backend (with credentials)
+        await axios.post(
+          "http://localhost:4000/chat",
+          {
+            conversation: [...messages, userMessage, chatGPTMessage].map((msg) => ({
+              sender: msg.sender === "user" ? "user" : "assistant",
+              content: msg.message,
+            })),
+          },
+          {
+            withCredentials: true, // ✅ Ensure session is attached
+          }
+        );
+  
+        // ✅ If voice mode is active, read out the AI response
         if (activeTab === "voice") {
           speakText(chatGPTMessage.message);
         }
       }
     } catch (error) {
-      console.error("Error processing message:", error);
+      console.error("❌ Error processing message:", error);
     } finally {
       setTyping(false);
     }
   };
+  
+  
 
   const speakText = async (text) => {
     setIsSpeaking(true);

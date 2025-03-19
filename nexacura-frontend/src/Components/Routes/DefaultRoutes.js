@@ -13,6 +13,7 @@ import Nav from "../Nav/Nav";
 import Terms from "../../Pages/Terms/Terms";
 import Privacy from "../../Pages/Privacy/Privacy";
 import ResetPassword from "../../Pages/ResetPassword/ResetPassword";
+import Admindashboard from "../../Pages/Admin-dashboard/Admindashboard";
 
 function DefaultRoutes() {
   return (
@@ -31,6 +32,7 @@ function DefaultRoutes() {
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/reset-password" element={<ResetPassword />} />
+         
         </Route>
       </Routes>
     </BrowserRouter>

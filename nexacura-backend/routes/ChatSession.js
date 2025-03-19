@@ -11,6 +11,10 @@ class ChatSession extends BaseRoute {
 
   initializeRoutes() {
     this.router.post("/", async (request, response) => {
+      console.log("📢 ChatSession API called");
+      console.log("Request body:", request.body.conversation);
+      console.log("Session user:", request.session);
+      
       const id = request.session.user._id;
 
       const newConversationData = request.body.conversation;
