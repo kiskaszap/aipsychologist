@@ -9,6 +9,7 @@ const MedicalRecordSchema = new mongoose.Schema({
     enum: ["Critical - Immediate Attention Required", "Moderate - Needs Monitoring", "Low - Routine Checkup"],
     required: true,
   },
+  appointmentDate: { type: Date, default: null },
   createdAt: { type: Date, default: Date.now },
 });
 

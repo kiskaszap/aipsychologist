@@ -1,0 +1,34 @@
+user: Hi
+assistant: Hello, it's nice to see you. How are you feeling today?
+user: Hi
+assistant: Hello, welcome to our therapy session. How are you feeling today?
+user: Hi
+assistant: Hello, welcome to our therapy session. How are you feeling today?
+user: I feel a bit low
+assistant: I'm sorry to hear that you're feeling that way. Can you tell me more about what's been going on for you lately?
+user: Hi
+assistant: Hello, welcome to our therapy session. How are you feeling today?
+user: I feel a bit low
+assistant: I'm sorry to hear that you're feeling that way. Can you tell me more about what's been going on for you lately?
+user: Just work, nothing serious really just makes be a bit upset
+assistant: It's completely understandable to feel that way when work is stressing you out. It's important to address these feelings before they start affecting other aspects of your life. Have you noticed any specific triggers at work that make you feel this way?
+user: Hi
+assistant: Hello, welcome to our therapy session. How are you feeling today?
+user: I feel a bit low
+assistant: I'm sorry to hear that you're feeling that way. Can you tell me more about what's been going on for you lately?
+user: Just work, nothing serious really just makes be a bit upset
+assistant: It's completely understandable to feel that way when work is stressing you out. It's important to address these feelings before they start affecting other aspects of your life. Have you noticed any specific triggers at work that make you feel this way?
+user: I just really want to get promoted
+assistant: It's great that you have a goal in mind. Seeking a promotion can be both exciting and stressful at the same time. It's important to remember that the path to a promotion may involve challenges and setbacks. Have you spoken to your supervisor about your goals and what steps you can take to achieve them?
+user: Hi
+assistant: Hello, welcome to our therapy session. How are you feeling today?
+user: I feel a bit low
+assistant: I'm sorry to hear that you're feeling that way. Can you tell me more about what's been going on for you lately?
+user: Just work, nothing serious really just makes be a bit upset
+assistant: It's completely understandable to feel that way when work is stressing you out. It's important to address these feelings before they start affecting other aspects of your life. Have you noticed any specific triggers at work that make you feel this way?
+user: I just really want to get promoted
+assistant: It's great that you have a goal in mind. Seeking a promotion can be both exciting and stressful at the same time. It's important to remember that the path to a promotion may involve challenges and setbacks. Have you spoken to your supervisor about your goals and what steps you can take to achieve them?
+user: No, not really
+assistant: I encourage you to schedule a meeting with your supervisor to discuss your career goals and express your interest in a promotion. This can open up a dialogue about what you need to work on and what areas you can improve in order to reach your goal. Remember, effective communication is key in any professional setting. How do you feel about scheduling a meeting with your supervisor?
+user: hello how are you
+assistant: Hello, I'm here to help you. How are you feeling today?
