@@ -8,7 +8,7 @@ function Review() {
     <div>
       <Text
         size="txtOpenSansBold50"
-        className="lg:pl-0 text-left lg:text-center text-5xl text-primary mt-16 px-10 mb-20"
+        className="lg:pl-0 text-left lg:text-center text-2xl text-primary mt-16 px-10 mb-20"
       >
         What our clients say
       </Text>

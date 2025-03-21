@@ -57,7 +57,7 @@ function About() {
       <div className=" xl:mt-20 flex flex-col xl:flex-row xl:px-32 gap-x-10 ">
         <div className="flex flex-col gap-y-5 justify-center   px-10 xl:px-0 pt-16 pb-8 xl:pt-0 xl:pb-0">
           <Text
-            className="text-5xl text-primary"
+            className="text-2xl text-primary"
             size="txtOpenSansBold50"
             htmlTag="h1"
           >
@@ -106,7 +106,7 @@ function About() {
       <div className=" xl:mt-20 flex flex-col xl:flex-row gap-10 xl:px-32 gap-x-10">
         <div className="flex flex-col gap-y-5 justify-center px-10 xl:px-0 pt-8 xl:pt-0 xl:pb-0">
           <Text
-            className="text-5xl text-primary"
+            className="text-2xl text-primary"
             size="txtOpenSansBold50"
             htmlTag="h1"
           >

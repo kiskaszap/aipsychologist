@@ -60,7 +60,6 @@ export default function GoogleButton() {
               onClick={renderProps.onClick}
               disabled={renderProps.disabled}
               type="button"
-              className="bg-primary outline-none mr-1 mb-1 border border-solid border-primary w-full rounded px-6 py-3 text-sm font-bold text-white uppercase flex items-center justify-center gap-1.5 focus:outline-none hover:border-secondary hover:text-secondary hover:bg-transparent transition-all duration-150 ease-in-out"
             >
               <svg
                 className="w-4 h-4"

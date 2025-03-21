@@ -46,6 +46,7 @@ const GoogleAuth = require("./routes/GoogleAuth");
 const WhisperTTSRoute = require("./routes/WhisperTTS");
 const AdminDashboard = require("./routes/AdminDashboard");
 const Logout = require("./routes/Logout");
+const GithubAuth = require("./routes/GithubAuth");
 
 // ✅ WebSocket Setup (Moved to a Route)
 const WebSocketRoute = require("./routes/WebSocketRoute");
@@ -67,6 +68,8 @@ app.use("/active", new SubscriptionFocus().router);
 app.use("/contact", new Contact().router);
 app.use("/chatbot", new Chatbot().router);
 app.use("/google", new GoogleAuth().router);
+app.use("/github", new GithubAuth().router);
+
 app.use("/whisper-tts", new WhisperTTSRoute().router);
 app.use("/admin-dashboard", new AdminDashboard().router);
 app.use("/logout", new Logout().router);

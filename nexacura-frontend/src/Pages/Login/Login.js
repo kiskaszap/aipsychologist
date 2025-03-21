@@ -8,6 +8,7 @@ import axios from "axios";
 import authenticationContext from "../../context/authenticationContext";
 import GoogleButton from "../../Components/Button/GoogleButton";
 import { toast } from "react-toastify"; // Import Toastify
+import GitHubButton from "../../Components/Button/GithubButton";
 
 function Login() {
   const { dispatch } = React.useContext(authenticationContext);
@@ -154,6 +155,11 @@ function Login() {
               <div className="mt-5">
                 <GoogleButton />
               </div>
+              <div className="mt-5">
+                <GitHubButton />
+              </div>
+     
+
 
               <Text className="text-md text-gray-500 text-center my-5">
                 By continuing, you agree to accept our{" "}

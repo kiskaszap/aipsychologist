@@ -82,7 +82,7 @@ function Contact() {
   return (
     <div>
       <Text
-        className="text-5xl text-center text-primary mt-24 mb-5"
+        className="text-2xl text-center text-primary mt-24 mb-5"
         size="txtOpenSansBold50"
         htmlTag="h1"
       >

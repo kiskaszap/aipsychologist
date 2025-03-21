@@ -83,7 +83,7 @@ function HomePage() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-20 px-10 xl:px-32">
         <div className="flex flex-col gap-y-3 z-10 justify-center">
           <Text
-            className="text-5xl text-primary"
+            className="text-2xl text-primary"
             size="txtOpenSansBold50"
             htmlTag="h4"
           >
@@ -122,7 +122,7 @@ function HomePage() {
       <div class=" px-10 xl:px-32">
         <Text
           size="txtOpenSansBold50"
-          className=" text-center text-5xl text-primary"
+          className=" text-center text-2xl text-primary"
         >
           Advanced AI Therapy Sessions
         </Text>
@@ -157,7 +157,7 @@ function HomePage() {
       {/* <!-- Fifth Section --> */}
       <Text
         size="txtOpenSansBold50"
-        className="lg:pl-0 text-left lg:text-center text-5xl text-primary mt-16 px-10"
+        className="lg:pl-0 text-left lg:text-center text-2xl text-primary mt-16 px-10"
       >
         Have a question ? Look here ...
       </Text>

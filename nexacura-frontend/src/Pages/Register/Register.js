@@ -7,6 +7,8 @@ import OutlineButton from "../../Components/Button/OutlineButton";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { toast } from "react-toastify";
+import GoogleButton from "../../Components/Button/GoogleButton";
+import GitHubButton from "../../Components/Button/GithubButton";
 
 // Function to get appropriate icons
 const iconSelector = (name) => {
@@ -171,7 +173,10 @@ function Register() {
                   hoverBackgroundColor="hover:bg-transparent"
                   backgroundColor="bg-primary"
                   width="w-full"
+                  
                 />
+                
+                
               </div>
 
               <Text className="text-md text-gray-500 text-center my-5">

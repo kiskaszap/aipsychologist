@@ -10,7 +10,7 @@ function Pricing() {
       <PricingComponent />
       <Text
         size="txtOpenSansBold50"
-        className="lg:pl-0 text-left lg:text-center text-5xl text-primary mt-16 px-10"
+        className="lg:pl-0 text-left lg:text-center text-2xl text-primary mt-16 px-10"
       >
         Have a question ? Look here ...
       </Text>

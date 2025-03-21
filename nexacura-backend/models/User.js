@@ -11,6 +11,7 @@ const userSchema = new mongoose.Schema({
   bio: String,
   image: String,
   googleId: String,
+  githubId: String,
   subscription: {
     type: {
       type: String, // Type of subscription (e.g., 'hourly', 'weekly', 'monthly')
