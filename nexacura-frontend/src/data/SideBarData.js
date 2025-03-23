@@ -7,20 +7,20 @@ export const sidebarItems = [
   {
     icon: IoChatboxEllipses,
     label: "Chat",
-    colour: "hover:bg-primary bg-blue-200",
-    onClick: () => console.log("Video clicked"),
+    lightColour: "hover:bg-primary bg-blue-200 text-black",
+    darkColour: "hover:bg-primary bg-gray-800 text-white",
   },
   {
     icon: FaMedal,
     label: "My Subscription",
-    colour: "hover:bg-primary bg-blue-200",
-    onClick: () => console.log("My Subscription clicked"),
+    lightColour: "hover:bg-primary bg-blue-200 text-black",
+    darkColour: "hover:bg-primary bg-gray-800 text-white",
   },
   {
     icon: MdLiveHelp,
     label: "Help",
-    colour: "hover:bg-primary bg-blue-200",
-    onClick: () => console.log("Help clicked"),
+    lightColour: "hover:bg-primary bg-blue-200 text-black",
+    darkColour: "hover:bg-primary bg-gray-800 text-white",
   },
 ];
 
@@ -28,13 +28,13 @@ export const bottomSidebarItems = [
   {
     icon: FaUser,
     label: "My Account",
-    colour: "hover:bg-primary bg-blue-200",
-    onClick: () => console.log("My Account clicked"),
+    lightColour: "hover:bg-primary bg-blue-200 text-black",
+    darkColour: "hover:bg-primary bg-gray-800 text-white",
   },
   {
     icon: BiSolidExit,
     label: "Logout",
-    colour: "hover:bg-red-800 bg-red-200",
-    onClick: () => console.log("Logout clicked"),
+    lightColour: "hover:bg-red-800 bg-red-200 text-black",
+    darkColour: "hover:bg-red-700 bg-gray-800 text-white",
   },
 ];

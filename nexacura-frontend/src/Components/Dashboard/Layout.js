@@ -1,16 +1,17 @@
-/**
- * The Layout function in React renders a profile dashboard navigation component and its children
- * within a styled container.
- * @returns The Layout component is being returned, which includes a div element with the class names
- * "p-3 lg:pr-10 h-screen overflow-scroll w-full lg:w-custom", the ProfileDashNav component, and the
- * children components passed to the Layout component.
- */
-import React from "react";
+import React, { useContext } from "react";
 import ProfileDashNav from "../ProfileDashNav/ProfileDashNav";
+import ThemeContext from "../../context/ThemeContext";
 
 function Layout({ children }) {
+  const { theme, fontSize } = useContext(ThemeContext);
+  const isDark = theme === "dark";
+
   return (
-    <div className="p-3 lg:pr-10 h-screen  overflow-scroll w-full lg:w-custom">
+    <div
+      className={`p-3 lg:pr-10 h-screen overflow-scroll w-full lg:w-custom transition-colors duration-300 ${
+        isDark ? "bg-gray-900 text-white" : "bg-white text-black"
+      } ${fontSize}`}
+    >
       <ProfileDashNav />
       {children}
     </div>

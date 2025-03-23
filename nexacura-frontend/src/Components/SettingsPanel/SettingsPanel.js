@@ -49,7 +49,7 @@ export default function SettingsPanel() {
           onChange={(e) => setFontSize(e.target.value)}
           className="w-full p-2 border rounded mt-1 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200"
         >
-          <option value="text-sm">Small</option>
+          
           <option value="text-base">Normal</option>
           <option value="text-lg">Large</option>
         </select>

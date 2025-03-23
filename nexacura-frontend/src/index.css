@@ -9,3 +9,189 @@
 .bg-custom-image {
   background-image: url("../public/img/bg.jpeg");
 }
+.bg-custom-image-dark {
+  background-image: url("../public/img/ai-gb.jpg");
+}
+
+/* index.css vagy App.css */
+.dark .cs-message__content {
+  background-color: #2d3748 !important;
+  color: #f7fafc !important;
+}
+.dark .cs-message-input__content-editor-wrapper {
+  background-color: #1a202c !important;
+  color: #f7fafc !important;
+}
+.dark .cs-message__content-header {
+  color: #cbd5e0 !important;
+}
+
+/* Alap világos háttér */
+.chat-wrapper .cs-main-container {
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Sötét mód támogatás */
+.chat-wrapper.dark .cs-main-container {
+  background-color: #1a202c !important;
+  color: #f7fafc !important;
+}
+
+/* Sötét mód scroll részek */
+.chat-wrapper.dark .cs-message-list {
+  background-color: #1a202c !important;
+}
+
+/* Világos mód scroll részek */
+.chat-wrapper .cs-message-list {
+  background-color: #fff;
+}
+/* Világos mód - MessageInput szerkesztő */
+.chat-wrapper .cs-message-input__content-editor-wrapper {
+  background-color: #ffffff !important;
+  color: #333333 !important;
+}
+
+/* Sötét mód - MessageInput szerkesztő */
+.chat-wrapper.dark .cs-message-input__content-editor-wrapper {
+  background-color: #2d3748 !important;
+  color: #f7fafc !important;
+}
+/* App.css vagy index.css fájlban */
+.cs-message-input__content-editor {
+  background-color: #f0f9ff !important; /* világoskék háttér */
+  color: #1a202c !important; /* szöveg szín */
+}
+
+.dark .cs-message-input__content-editor {
+  background-color: #2d3748 !important; /* sötétszürke háttér */
+  color: #f7fafc !important; /* világos szöveg */
+}
+
+.cs-message-input__content-editor::before {
+  color: #94a3b8 !important; /* placeholder világos szürke */
+  opacity: 1 !important;
+  font-size: 0.875rem !important;
+}
+
+.dark .cs-message-input__content-editor::before {
+  color: #cbd5e0 !important; /* világosabb placeholder dark módban */
+  opacity: 1 !important;
+}
+/* Placeholder szín */
+.dark .cs-message-input__content-editor::placeholder {
+  color: #a0aec0 !important; /* pl. Tailwind text-gray-400 */
+}
+
+/* Input háttér */
+.dark .cs-message-input__content-editor {
+  background-color: #1a202c !important; /* Tailwind bg-gray-900 */
+  color: #f7fafc !important; /* Tailwind text-gray-100 */
+  border-radius: 0.375rem; /* optional: ha lekerekítést akarsz */
+}
+
+/* Light mode korrekció (ha override kell) */
+.cs-message-input__content-editor {
+  background-color: #f8fafc !important; /* light háttér */
+  color: #1a202c !important;
+}
+.dark .cs-message-input__content-editor-wrapper {
+  background-color: #1a202c !important; /* Tailwind bg-gray-900 */
+  border-radius: 0.5rem !important;     /* lekerekítés harmonizálása */
+  overflow: hidden;
+}
+
+.dark .cs-message-input__content-editor {
+  background-color: #1a202c !important;
+  color: #f7fafc !important;
+  border-radius: 0.5rem !important;
+}
+
+.dark .cs-message-input__content-editor::placeholder {
+  color: #a0aec0 !important; /* text-gray-400 */
+}
+.dark .cs-message-input__content-editor:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.dark .cs-message-input {
+  background-color: #1a202c !important; /* bg-gray-900 */
+  border-radius: 0.5rem !important;
+}
+.dark .cs-message-input__content-editor-wrapper {
+  background-color: #1a202c !important;
+  border-radius: 0.5rem !important;
+  padding: 0.25rem;
+}
+
+.dark .cs-message-input__content-editor {
+  background-color: #1a202c !important;
+  color: #f7fafc !important;
+  border-radius: 0.5rem !important;
+}
+
+.dark .cs-message-input__content-editor::placeholder {
+  color: #a0aec0 !important; /* text-gray-400 */
+}
+.dark .cs-message-input__content {
+  background-color: #1a202c !important;
+  border-radius: 0.5rem !important;
+  overflow: hidden;
+}
+.dark .cs-message-input__content-editor-wrapper {
+  background-color: #1a202c !important;
+  border-radius: 0.5rem !important;
+  padding: 0.25rem;
+}
+
+.dark .cs-message-input__content-editor textarea {
+  background-color: #1a202c !important;
+  color: #f7fafc !important;
+  border-radius: 0.5rem !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.dark .cs-message-input__content-editor textarea::placeholder {
+  color: #a0aec0 !important;
+}
+.cs-message-input__content-editor textarea {
+  all: unset;
+}
+.cs-message-input__content-editor textarea {
+  all: unset;
+}
+
+.dark .cs-message-input__content-editor {
+  background-color: #1a202c !important; /* dark háttér */
+  color: #f7fafc !important; /* világos szöveg */
+  border-radius: 0.5rem !important; /* sarkok */
+  padding: 8px 12px !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Placeholder szín fix */
+.dark .cs-message-input__content-editor::before {
+  color: #a0aec0 !important; /* halvány placeholder */
+}
+.dark .cs-message-input__content-editor-container {
+  background-color: #1a202c !important; /* sötét háttér */
+  border-radius: 0.5rem !important; /* lekerekítés */
+  padding: 4px !important;
+}
+
+/* Belső szerkesztő fix */
+.dark .cs-message-input__content-editor {
+  background-color: transparent !important;
+  color: #f7fafc !important;
+  border-radius: 0.5rem !important;
+  padding: 8px 12px !important;
+}
+
+/* Placeholder (pseudo-element) fix, ha láthatóvá válik */
+.dark .cs-message-input__content-editor::before {
+  color: #a0aec0 !important;
+}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import axios from "axios";
 import { io } from "socket.io-client";
 import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
@@ -14,10 +14,14 @@ import subscriptions from "../../data/subscriptions";
 import SubscriptionCard from "../../Components/Card/SubscriptionCard";
 import Text from "../../Components/Text/Text";
 import AITalkVisualizer from "../SpeachVisualiser/SpeachVisualiser";
+import  ThemeContext  from "../../context/ThemeContext";
+
 
 const socket = io("http://localhost:5000");
 
 const Chat = () => {
+  const { theme, fontSize } = useContext(ThemeContext);
+const isDark = theme === "dark";
   const [typing, setTyping] = useState(false);
   const [messages, setMessages] = useState([]); // Store chat messages
   const [isRecording, setIsRecording] = useState(false);
@@ -204,127 +208,137 @@ const Chat = () => {
   };
 
   return (
-    // <div className="flex flex-col h-screen">
-    //   {hasSubscription ? (
-    //     <div className="flex flex-col flex-grow">
-    //       <MainContainer className="flex flex-col flex-grow">
-    //         <ChatContainer className="flex flex-col flex-grow">
-    //           <MessageList className="flex-grow overflow-auto">
-    //             {messages.map((message, index) => (
-    //               <div
-    //                 key={index}
-    //                 className={`mb-8 w-3/4 ${message.sender === "user" ? "ml-auto" : ""}`}
-    //               >
-    //                 <Message model={message} />
-    //               </div>
-    //             ))}
-    //             <div ref={messagesEndRef} />
-    //           </MessageList>
-    //         </ChatContainer>
-    //       </MainContainer>
-
-    //       {/* Redesigned Input / Mic Section */}
-    //       <div className="flex justify-center items-center px-4 py-3 bg-gray-100">
-    //         <div className="relative flex items-center w-full max-w-3xl">
-    //           {activeTab === "chat" && (
-    //             <MessageInput
-    //               className="w-full"
-    //               placeholder="Type message here..."
-    //               onSend={handleSend}
-    //               attachButton={false}
-    //             />
-    //           )}
-
-    //           {/* Toggle Buttons */}
-    //           <div className="absolute right-3 flex items-center space-x-2">
-    //             <button
-    //               onClick={() => setActiveTab("chat")}
-    //               className={`p-2 rounded-full ${
-    //                 activeTab === "chat" ? "bg-gray-300" : "bg-gray-200"
-    //               } transition-all`}
-    //             >
-    //               <FaCommentAlt className="text-black text-lg" />
-    //             </button>
-    //             <button
-    //               onClick={() => setActiveTab("voice")}
-    //               className={`p-2 rounded-full ${
-    //                 activeTab === "voice" ? "bg-green-500 text-white" : "bg-gray-200"
-    //               } transition-all`}
-    //             >
-    //               <FaMicrophone className="text-lg" />
-    //             </button>
-    //           </div>
-    //         </div>
-    //       </div>
-
-    //       {/* Voice Mode: Show Mic Button / Wave Animation */}
-    //       {activeTab === "voice" && (
-    //         <div ref={end} className="flex items-center justify-center flex-grow">
-    //           <div className="relative">
-    //             <button
-    //               className="bg-blue-500 text-white p-5 rounded-full shadow-lg flex items-center justify-center"
-    //               onClick={startRecording}
-    //               disabled={isRecording}
-    //               style={{ width: "50px", height: "50px" }}
-    //             >
-    //               {!isUserSpeaking && !isSpeaking ? (
-    //                 <FaMicrophone className="text-3xl" />
-    //               ) : (
-    //                 <div className="absolute inset-0 flex items-center justify-center">
-    //                   {/* Display wave animation via AITalkVisualizer */}
-    //                   <AITalkVisualizer
-    //                     isSpeaking={isSpeaking || isUserSpeaking}
-    //                     // Pass a prop to distinguish user vs AI wave if needed
-    //                     color={isUserSpeaking ? "blue" : "green"}
-    //                     size={50}
-    //                   />
-    //                 </div>
-    //               )}
-    //             </button>
-    //           </div>
-    //         </div>
-    //       )}
-    //     </div>
-    //   ) : (
-    //     <div className="h-full pt-9 pb-20">
-    //       <Text className="text-2xl text-primary font-semibold">My Subscription</Text>
-    //       <div className="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 mt-6">
-    //         {subscriptions.map((subscription) => (
-    //           <SubscriptionCard key={subscription.id} {...subscription} />
-    //         ))}
-    //       </div>
-    //     </div>
-    //   )}
-    // </div>
-   
-    <div className="flex flex-col h-screen">
-    {hasSubscription ? (
-      <div className="flex flex-col flex-grow">
-        <MainContainer className="flex flex-col flex-grow">
-          <ChatContainer className="flex flex-col flex-grow">
-            <MessageList className="flex-grow overflow-auto">
-              {messages.map((message, index) => (
-                <div
-                  key={index}
-                  className={`mb-8 w-3/4 ${message.sender === "user" ? "ml-auto" : ""}`}
-                >
-                  <Message model={message} />
-                </div>
-              ))}
-              <div ref={messagesEndRef} />
-            </MessageList>
-          </ChatContainer>
-        </MainContainer>
   
-        {/* ✅ Chat Mode: Input Field with Mic Icon */}
-        {activeTab === "chat" && (
-          <div className="flex justify-center items-center px-4 py-3">
-            <div
-              ref={endofPageRef}
-              className="relative flex items-center w-full max-w-3xl bg-white px-3 py-2 rounded-lg shadow-md gap-2 overflow-hidden"
-            >
-              {/* ✅ Responsive Chat Input */}
-              <MessageInput
+   
+  //   <div className="flex flex-col h-screen">
+  //   {hasSubscription ? (
+  //     <div className="flex flex-col flex-grow">
+  //       <MainContainer className="flex flex-col flex-grow">
+  //         <ChatContainer className="flex flex-col flex-grow">
+  //           <MessageList className="flex-grow overflow-auto">
+  //             {messages.map((message, index) => (
+  //               <div
+  //                 key={index}
+  //                 className={`mb-8 w-3/4 ${message.sender === "user" ? "ml-auto" : ""}`}
+  //               >
+  //                 <Message model={message} />
+  //               </div>
+  //             ))}
+  //             <div ref={messagesEndRef} />
+  //           </MessageList>
+  //         </ChatContainer>
+  //       </MainContainer>
+  
+  //       {/* ✅ Chat Mode: Input Field with Mic Icon */}
+  //       {activeTab === "chat" && (
+  //         <div className="flex justify-center items-center px-4 py-3">
+  //           <div
+  //             ref={endofPageRef}
+  //             className="relative flex items-center w-full max-w-3xl bg-white px-3 py-2 rounded-lg shadow-md gap-2 overflow-hidden"
+  //           >
+  //             {/* ✅ Responsive Chat Input */}
+  //             <MessageInput
+  //               className="w-auto flex-grow bg-white"
+  //               placeholder="Type message here..."
+  //               onSend={handleSend}
+  //               attachButton={false}
+  //               sendButton={false}
+  //             />
+  
+  //             {/* ✅ Microphone Icon (Only in Chat Mode) */}
+  //             <div className="h-14 flex items-center">
+  //               {!isSpeaking && !isUserSpeaking && (
+  //                 <button
+  //                   onClick={() => setActiveTab("voice")}
+  //                   className="p-2 rounded-full bg-primary flex-shrink-0 transition-all"
+  //                 >
+  //                   <FaMicrophone className="text-lg text-white" />
+  //                 </button>
+  //               )}
+  //             </div>
+  //           </div>
+  //         </div>
+  //       )}
+  
+  //       {/* ✅ Voice Mode: Large Mic Button with Chat Icon */}
+  //       {activeTab === "voice" && (
+  //         <div ref={endofPageRef} className="flex items-center justify-center flex-grow">
+  //           <div className="relative h-14 flex items-center">
+  //             {!isSpeaking && !isUserSpeaking ? (
+  //               <button
+  //                 className="bg-blue-500 text-white p-3 rounded-full shadow-lg flex items-center justify-center"
+  //                 onClick={startRecording}
+  //                 disabled={isRecording}
+  //                 style={{ width: "50px", height: "50px" }}
+  //               >
+  //                 <FaMicrophone className="text-xl" />
+  //               </button>
+  //             ) : (
+  //               <div className="absolute inset-0 flex items-center justify-center">
+  //                 <AITalkVisualizer
+  //                   isSpeaking={isSpeaking || isUserSpeaking}
+  //                   isUser={isUserSpeaking }
+  //                   size={50}
+  //                 />
+  //               </div>
+  //             )}
+  
+  //             {/* ✅ Chat Icon (Only in Voice Mode) */}
+  //             {!isSpeaking && !isUserSpeaking && (
+  //               <button
+  //                 onClick={() => setActiveTab("chat")}
+  //                 className="absolute -right-14 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-green-500 flex-shrink-0 transition-all"
+  //               >
+  //                 <FaCommentAlt className="text-sm text-white m-1" />
+  //               </button>
+  //             )}
+  //           </div>
+  //         </div>
+  //       )}
+  //     </div>
+  //   ) : (
+  //     <div className="h-full pt-9 pb-20">
+  //       <Text className="text-2xl text-primary font-semibold">My Subscription</Text>
+  //       <div className="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 mt-6">
+  //         {subscriptions.map((subscription) => (
+  //           <SubscriptionCard key={subscription.id} {...subscription} />
+  //         ))}
+  //       </div>
+  //     </div>
+  //   )}
+  // </div>
+  
+  
+ 
+  
+<div className={`chat-wrapper flex flex-col h-screen ${fontSize} ${isDark ? "dark" : ""}`}>
+      {hasSubscription ? (
+        <div className={`flex flex-col flex-grow ${isDark ? "bg-gray-900 text-white" : "bg-white text-[#333]"}`}>
+          <MainContainer className={`flex flex-col flex-grow ${fontSize} ${isDark ? "bg-gray-900 text-white" : "bg-white text-[#333]"} `}>
+            <ChatContainer className={`flex flex-col flex-grow ${fontSize} ${isDark ? "bg-gray-900 text-white" : "bg-white text-[#333]"}`}>
+              <MessageList className={`flex-grow overflow-auto ${fontSize} ${isDark ? "text-white" : "text-[#333]"}`}>
+                {messages.map((message, index) => (
+                  <div
+                    key={index}
+                    className={`mb-8 w-3/4 ${message.sender === "user" ? "ml-auto" : ""} ${fontSize} ${isDark ? "text-white" : "text-[#333]"}`}
+                  >
+                    <Message model={message} />
+                  </div>
+                ))}
+                <div ref={messagesEndRef} />
+              </MessageList>
+            </ChatContainer>
+          </MainContainer>
+  
+          {/* ✅ Chat Mode: Input Field with Mic Icon */}
+          {activeTab === "chat" && (
+            <div className={`flex justify-center items-center px-4 py-3 ${fontSize}`}>
+              <div
+                ref={endofPageRef}
+                className={`relative flex items-center w-full max-w-3xl px-3 py-2 rounded-lg shadow-md gap-2 overflow-hidden
+                ${fontSize} ${isDark ? "bg-gray-800 text-white" : "bg-white text-[#333]"}`}
+              >
+                <MessageInput
                 className="w-auto flex-grow bg-white"
                 placeholder="Type message here..."
                 onSend={handleSend}
@@ -332,73 +346,72 @@ const Chat = () => {
                 sendButton={false}
               />
   
-              {/* ✅ Microphone Icon (Only in Chat Mode) */}
-              <div className="h-14 flex items-center">
+                {/* ✅ Microphone Icon (Only in Chat Mode) */}
+                <div className="h-14 flex items-center">
+                  {!isSpeaking && !isUserSpeaking && (
+                    <button
+                      onClick={() => setActiveTab("voice")}
+                      className={`p-2 rounded-full bg-primary flex-shrink-0 transition-all`}
+                    >
+                      <FaMicrophone className={`text-lg text-white ${fontSize}`} />
+                    </button>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
+  
+          {/* ✅ Voice Mode: Large Mic Button with Chat Icon */}
+          {activeTab === "voice" && (
+            <div ref={endofPageRef} className={`flex items-center justify-center flex-grow ${fontSize}`}>
+              <div className="relative h-14 flex items-center">
+                {!isSpeaking && !isUserSpeaking ? (
+                  <button
+                    className="bg-blue-500 text-white p-3 rounded-full shadow-lg flex items-center justify-center"
+                    onClick={startRecording}
+                    disabled={isRecording}
+                    style={{ width: "50px", height: "50px" }}
+                  >
+                    <FaMicrophone className={`text-xl ${fontSize}`} />
+                  </button>
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <AITalkVisualizer
+                      isSpeaking={isSpeaking || isUserSpeaking}
+                      isUser={isUserSpeaking}
+                      size={50}
+                    />
+                  </div>
+                )}
+  
                 {!isSpeaking && !isUserSpeaking && (
                   <button
-                    onClick={() => setActiveTab("voice")}
-                    className="p-2 rounded-full bg-primary flex-shrink-0 transition-all"
+                    onClick={() => setActiveTab("chat")}
+                    className="absolute -right-14 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-green-500 flex-shrink-0 transition-all"
                   >
-                    <FaMicrophone className="text-lg text-white" />
+                    <FaCommentAlt className={`text-sm text-white m-1 ${fontSize}`} />
                   </button>
                 )}
               </div>
             </div>
-          </div>
-        )}
-  
-        {/* ✅ Voice Mode: Large Mic Button with Chat Icon */}
-        {activeTab === "voice" && (
-          <div ref={endofPageRef} className="flex items-center justify-center flex-grow">
-            <div className="relative h-14 flex items-center">
-              {!isSpeaking && !isUserSpeaking ? (
-                <button
-                  className="bg-blue-500 text-white p-3 rounded-full shadow-lg flex items-center justify-center"
-                  onClick={startRecording}
-                  disabled={isRecording}
-                  style={{ width: "50px", height: "50px" }}
-                >
-                  <FaMicrophone className="text-xl" />
-                </button>
-              ) : (
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <AITalkVisualizer
-                    isSpeaking={isSpeaking || isUserSpeaking}
-                    isUser={isUserSpeaking }
-                    size={50}
-                  />
-                </div>
-              )}
-  
-              {/* ✅ Chat Icon (Only in Voice Mode) */}
-              {!isSpeaking && !isUserSpeaking && (
-                <button
-                  onClick={() => setActiveTab("chat")}
-                  className="absolute -right-14 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-green-500 flex-shrink-0 transition-all"
-                >
-                  <FaCommentAlt className="text-sm text-white m-1" />
-                </button>
-              )}
-            </div>
-          </div>
-        )}
-      </div>
-    ) : (
-      <div className="h-full pt-9 pb-20">
-        <Text className="text-2xl text-primary font-semibold">My Subscription</Text>
-        <div className="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 mt-6">
-          {subscriptions.map((subscription) => (
-            <SubscriptionCard key={subscription.id} {...subscription} />
-          ))}
+          )}
         </div>
-      </div>
-    )}
-  </div>
+      ) : (
+        <div className={`h-full pt-9 pb-20 ${fontSize} ${isDark ? "bg-gray-900 text-white" : "bg-white text-[#333]"}`}>
+          <Text className={`text-2xl text-primary font-semibold ${fontSize}`}>My Subscription</Text>
+          <div className="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 mt-6">
+            {subscriptions.map((subscription) => (
+              <SubscriptionCard key={subscription.id} {...subscription} />
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
   
   
+  );
   
-  
-    );
+    
     
     
   

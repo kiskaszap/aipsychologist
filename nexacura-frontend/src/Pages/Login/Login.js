@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import { FaEnvelope, FaLock } from "react-icons/fa";
 import Text from "../../Components/Text/Text";
 import { NavLink, useNavigate } from "react-router-dom";
@@ -9,11 +9,14 @@ import authenticationContext from "../../context/authenticationContext";
 import GoogleButton from "../../Components/Button/GoogleButton";
 import { toast } from "react-toastify"; // Import Toastify
 import GitHubButton from "../../Components/Button/GithubButton";
+import ThemeContext from "../../context/ThemeContext";
 
 function Login() {
   const { dispatch } = React.useContext(authenticationContext);
   const navigate = useNavigate();
   const { register, handleSubmit, reset } = useForm();
+  const { theme, fontSize } = useContext(ThemeContext);
+  const isDark = theme === "dark";
 
   const onSubmit = async (data) => {
     // **Client-side validation before API request**
@@ -82,86 +85,86 @@ function Login() {
   };
 
   return (
-    <div className="font-[sans-serif] text-[#333]">
+    <div className={`font-[sans-serif] ${isDark ? "bg-gray-900 text-white" : "text-[#333]"}`}>
       <div className="min-h-screen flex flex-col items-center justify-center">
-        <div className="items-center gap-4 px-10 lg:px-0 lg:max-w-3xl w-full shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md">
+        <div className={`items-center gap-4 px-10 lg:px-0 lg:max-w-3xl w-full shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md ${isDark ? "bg-gray-800" : "bg-white"}`}>
           <div className="w-full lg:px-6 py-4">
-            <Text className="text-3xl font-extrabold text-primary">Welcome Back</Text>
-
+            <Text className={`text-3xl font-extrabold text-primary ${fontSize}`}>
+              Welcome Back
+            </Text>
+  
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="mb-12">
-                <Text className="text-md text-gray-500 mt-2">
+                <Text className={`text-md mt-2 ${fontSize} ${isDark ? "text-gray-300" : "text-gray-500"}`}>
                   Don't have an account?{" "}
                   <NavLink to="/register" className="text-secondary">
                     Register here
                   </NavLink>
                 </Text>
               </div>
-
+  
               {/* Email Input */}
               <div>
-                <label className="text-xs block mb-2">Email</label>
+                <label className={`text-xs block mb-2 ${fontSize} ${isDark ? "text-gray-300" : "text-gray-700"}`}>Email</label>
                 <div className="relative flex items-center">
                   <input
                     {...register("email")}
                     type="text"
-                    className="w-full text-sm border-b border-gray-300 focus:border-secondary px-2 py-3 outline-none"
+                    className={`w-full border-b px-2 py-3 outline-none ${fontSize} ${isDark ? "bg-transparent border-gray-600 text-white focus:border-secondary" : "border-gray-300 text-black focus:border-secondary"}`}
                     placeholder="Enter email"
                   />
-                  <FaEnvelope className="text-[#bbb] absolute right-2" />
+                  <FaEnvelope className={`absolute right-2 ${isDark ? "text-gray-400" : "text-[#bbb]"}`} />
                 </div>
               </div>
-
+  
               {/* Password Input */}
               <div className="mt-8">
-                <label className="text-xs block mb-2">Password</label>
+                <label className={`text-xs block mb-2 ${fontSize} ${isDark ? "text-gray-300" : "text-gray-700"}`}>Password</label>
                 <div className="relative flex items-center">
                   <input
                     {...register("password")}
                     type="password"
-                    className="w-full text-sm border-b border-gray-300 focus:border-secondary px-2 py-3 outline-none"
+                    className={`w-full border-b px-2 py-3 outline-none ${fontSize} ${isDark ? "bg-transparent border-gray-600 text-white focus:border-secondary" : "border-gray-300 text-black focus:border-secondary"}`}
                     placeholder="Enter password"
                   />
-                  <FaLock className="text-[#bbb] absolute right-2 cursor-pointer" />
+                  <FaLock className={`absolute right-2 cursor-pointer ${isDark ? "text-gray-400" : "text-[#bbb]"}`} />
                 </div>
               </div>
-
+  
               {/* Forgot Password */}
               <div className="flex items-center justify-between gap-2 mt-5">
                 <div>
-                  <Text className="text-lg text-gray-500">
+                  <Text className={`text-lg ${fontSize} ${isDark ? "text-gray-300" : "text-gray-500"}`}>
                     <NavLink to="/reset-password" className="text-primary text-sm">
                       Forgot password?
                     </NavLink>
                   </Text>
                 </div>
               </div>
-
+  
               {/* Login Button */}
               <div className="mt-12">
                 <OutlineButton
-                  borderColor="border-primary"
-                  hoverBorderColor="hover:border-secondary"
-                  textColor="text-white"
-                  hoverTextColor="hover:text-secondary"
+                  borderColor={isDark ? "border-gray-500" : "border-secondary"}
+                  hoverBorderColor={isDark ? "hover:border-gray-400" : "hover:border-secondary"}
+                  textColor="text-white w-full"
+                  hoverTextColor={isDark ? "hover:text-gray-300" : "hover:text-secondary"}
+                  backgroundColor={isDark ? "bg-gray-800" : "bg-secondary"}
+                  hoverBackgroundColor={isDark ? "hover:bg-gray-700" : "hover:bg-transparent"}
                   buttonText="Login"
-                  hoverBackgroundColor="hover:bg-transparent"
-                  backgroundColor="bg-primary"
-                  width="w-full"
                 />
               </div>
-
-              {/* Google Login */}
+  
+              {/* Google / GitHub */}
               <div className="mt-5">
                 <GoogleButton />
               </div>
               <div className="mt-5">
                 <GitHubButton />
               </div>
-     
-
-
-              <Text className="text-md text-gray-500 text-center my-5">
+  
+              {/* Terms */}
+              <Text className={`text-md text-center my-5 ${fontSize} ${isDark ? "text-gray-300" : "text-gray-500"}`}>
                 By continuing, you agree to accept our{" "}
                 <NavLink to="/terms" className="text-secondary">
                   Terms & Conditions
@@ -173,6 +176,8 @@ function Login() {
       </div>
     </div>
   );
+  
+  
 }
 
 export default Login;

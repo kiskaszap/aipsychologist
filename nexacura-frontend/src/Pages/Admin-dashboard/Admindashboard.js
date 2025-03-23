@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { FaSignOutAlt, FaDownload, FaFileAlt, FaClock } from "react-icons/fa";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import OutlineButton from "../../Components/Button/OutlineButton";
+import ThemeContext from "../../context/ThemeContext";
+
 
 const urgencyLevels = {
   "Critical - Immediate Attention Required": "🟥 Critical - Immediate Attention",
@@ -17,6 +19,8 @@ function AdminDashboard() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
   const [appointments, setAppointments] = useState({}); // Stores appointment dates per user
+  const { theme, fontSize } = useContext(ThemeContext);
+  const isDark = theme === "dark";
 
   useEffect(() => {
     fetchUsers();
@@ -114,10 +118,10 @@ function AdminDashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-5">
+    <div className={`min-h-screen p-5 ${isDark ? "bg-gray-900 text-white" : "bg-gray-100 text-[#161931]"} ${fontSize}`}>
       {/* Top Header with Logout Button */}
-      <div className="flex flex-col md:flex-row justify-between items-center pb-4 bg-white shadow-md p-4 rounded-lg">
-        <h1 className="text-2xl md:text-3xl font-bold text-primary">🏥 Admin Dashboard</h1>
+      <div className={`flex flex-col md:flex-row justify-between items-center pb-4 shadow-md p-4 rounded-lg ${isDark ? "bg-gray-800" : "bg-white"}`}>
+        <h1 className={`text-2xl md:text-3xl font-bold text-primary ${fontSize}`}>🏥 Admin Dashboard</h1>
         <OutlineButton
           buttonText="Logout"
           backgroundColor="bg-red-500"
@@ -131,26 +135,25 @@ function AdminDashboard() {
           }}
         />
       </div>
-
+  
       {/* Desktop Table */}
-      <div className="hidden md:block overflow-x-auto bg-white shadow-md rounded-lg p-5 mt-4">
+      <div className={`hidden md:block overflow-x-auto shadow-md rounded-lg p-5 mt-4 ${isDark ? "bg-gray-800" : "bg-white"}`}>
         {loading ? (
-          <p className="text-center text-lg text-gray-500">Loading users...</p>
+          <p className={`text-center text-lg ${isDark ? "text-gray-400" : "text-gray-500"}`}>Loading users...</p>
         ) : (
-          <table className="min-w-full bg-white">
+          <table className={`min-w-full ${isDark ? "bg-gray-800" : "bg-white"}`}>
             <thead>
-              <tr className="bg-gray-200 text-left text-sm uppercase tracking-wider">
+              <tr className={`${isDark ? "bg-gray-700 text-white" : "bg-gray-200 text-left text-sm uppercase tracking-wider"}`}>
                 <th className="py-3 px-4">Name</th>
                 <th className="py-3 px-4">Email</th>
                 <th className="py-3 px-4">Urgency Level</th>
                 <th className="py-3 px-4">Appointment</th>
-                
               </tr>
             </thead>
             <tbody>
               {users.length > 0 ? (
                 users.map((user) => (
-                  <tr key={user._id} className="border-b hover:bg-gray-100">
+                  <tr key={user._id} className={`${isDark ? "border-b border-gray-600 hover:bg-gray-700" : "border-b hover:bg-gray-100"}`}>
                     <td className="py-3 px-4">{user.name}</td>
                     <td className="py-3 px-4">{user.email}</td>
                     <td className="py-3 px-4 font-bold">{user.urgency}</td>
@@ -160,15 +163,15 @@ function AdminDashboard() {
                         onChange={(date) => handleDateChange(user._id, date)}
                         showTimeSelect
                         dateFormat="MMMM d, yyyy h:mm aa"
-                        className="border p-2 rounded-md"
+                        className={`border p-2 rounded-md ${isDark ? "bg-gray-900 text-white border-gray-600" : ""}`}
                       />
-                      <FaClock className="text-xl text-gray-600" />
+                      <FaClock className={`text-xl ${isDark ? "text-gray-400" : "text-gray-600"}`} />
                     </td>
                     <td className="py-3 px-4 flex justify-center space-x-4">
-                      <button className="text-blue-600 hover:text-blue-800" onClick={() => handleDownloadFullChat(user._id, user.name)}>
+                      <button className={`${isDark ? "text-blue-400 hover:text-blue-300" : "text-blue-600 hover:text-blue-800"}`} onClick={() => handleDownloadFullChat(user._id, user.name)}>
                         <FaDownload className="text-xl" title="Download Full Chat" />
                       </button>
-                      <button className="text-green-600 hover:text-green-800" onClick={() => handleDownloadAISummary(user._id, user.name)}>
+                      <button className={`${isDark ? "text-green-400 hover:text-green-300" : "text-green-600 hover:text-green-800"}`} onClick={() => handleDownloadAISummary(user._id, user.name)}>
                         <FaFileAlt className="text-xl" title="Download AI Summary" />
                       </button>
                     </td>
@@ -185,13 +188,13 @@ function AdminDashboard() {
           </table>
         )}
       </div>
-
+  
       {/* Mobile View */}
       <div className="md:hidden space-y-4 mt-4">
         {users.map((user) => (
-          <div key={user._id} className="bg-white p-4 rounded-lg shadow-md">
+          <div key={user._id} className={`p-4 rounded-lg shadow-md ${isDark ? "bg-gray-800" : "bg-white"}`}>
             <p className="font-bold">{user.name}</p>
-            <p className="text-gray-600">{user.email}</p>
+            <p className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>{user.email}</p>
             <p className="font-bold">{user.urgency}</p>
             <div className="flex items-center space-x-2 mt-2">
               <DatePicker
@@ -199,15 +202,16 @@ function AdminDashboard() {
                 onChange={(date) => handleDateChange(user._id, date)}
                 showTimeSelect
                 dateFormat="MMMM d, yyyy h:mm aa"
-                className="border p-2 rounded-md w-full"
+                className={`border p-2 rounded-md w-full ${isDark ? "bg-gray-900 text-white border-gray-600" : ""}`}
               />
-              <FaClock className="text-xl text-gray-600" />
+              <FaClock className={`text-xl ${isDark ? "text-gray-400" : "text-gray-600"}`} />
             </div>
           </div>
         ))}
       </div>
     </div>
   );
+  
 }
 
 export default AdminDashboard;

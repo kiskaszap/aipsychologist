@@ -6,21 +6,20 @@ export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState("light");
   const [fontSize, setFontSize] = useState("text-base");
 
-  // 🔹 Betöltjük az előző beállításokat, ha vannak
+  // Betöltjük a localStorage-ból
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") || "light";
-    const savedFontSize = localStorage.getItem("fontSize") || "text-base";
+    const savedTheme = localStorage.getItem("theme");
+    const savedFontSize = localStorage.getItem("fontSize");
 
-    setTheme(savedTheme);
-    setFontSize(savedFontSize);
+    if (savedTheme) setTheme(savedTheme);
+    if (savedFontSize) setFontSize(savedFontSize);
   }, []);
 
-  // 🔹 Mentjük a beállításokat localStorage-be
+  // Ha valami változik, elmentjük
   useEffect(() => {
     localStorage.setItem("theme", theme);
     localStorage.setItem("fontSize", fontSize);
 
-    // 🚀 Az osztályt hozzáadjuk a <html> elemhez, hogy alkalmazzuk a témát
     document.documentElement.classList.remove("light", "dark");
     document.documentElement.classList.add(theme);
   }, [theme, fontSize]);

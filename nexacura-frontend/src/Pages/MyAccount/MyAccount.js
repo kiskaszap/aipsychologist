@@ -6,26 +6,36 @@ import authenticationContext from "../../context/authenticationContext";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import ThemeContext from "../../context/ThemeContext";
 
 const InputField = ({ id, label, type, placeholder, register }) => {
+  const { theme, fontSize } = useContext(ThemeContext);
+  const isDark = theme === "dark";
   return (
-    <div className="">
-      <label className="text-xs block  ">{label}</label>
-      <div className="relative flex items-center ">
-        <input
-          type={type}
-          id={id}
-          name={id}
-          className="w-full text-sm focus:border-secondary px-2 py-3 outline-none "
-          placeholder={placeholder}
-          {...register}
-        />
-      </div>
-    </div>
+    <div className=" flex flex-col gap-2">
+  <label className={`text-xs block ${isDark ? "text-gray-300" : "text-gray-700"} ${fontSize}`}>
+    {label}
+  </label>
+  <div className="relative flex items-center">
+    <input
+      type={type}
+      id={id}
+      name={id}
+      className={`w-full text-sm focus:border-secondary px-2 py-3 outline-none rounded-md 
+        ${fontSize} 
+        ${isDark ? "bg-gray-800 border border-gray-600 text-white" : "bg-white border border-gray-300 text-[#333]"}`}
+      placeholder={placeholder}
+      {...register}
+    />
+  </div>
+</div>
+
   );
 };
 
 function MyAccount() {
+  const { theme, fontSize } = useContext(ThemeContext);
+  const isDark = theme === "dark";
   const { initial, dispatch } = useContext(authenticationContext);
   const [user, setUser] = useState(initial.user);
   const {
@@ -123,84 +133,88 @@ function MyAccount() {
 
   return (
     <Layout>
-      <div className="flex w-full flex-col gap-3 bg-white px-3 text-[#161931] md:flex-row">
-        <main className="h-full w-full py-1 xl:w-4/5">
-          <div className="w-full sm:max-w-xl sm:rounded-lg">
-            <Text className="text-2xl font-bold sm:text-xl text-primary">
-              Profile
-            </Text>
-
-            <form className="mx-auto mt-5 grid max-w-2xl " onSubmit={onSubmit}>
-              <InputField
-                id="name"
-                label="Your full name"
-                type="text"
-                placeholder={user.name || "Your full name"}
-                register={register("name")}
+    <div className={`flex w-full flex-col gap-3 px-3 md:flex-row ${isDark ? "bg-gray-900 text-white" : "bg-white text-[#161931]"} ${fontSize}`}>
+      <main className="h-full w-full py-1 xl:w-4/5">
+        <div className="w-full sm:max-w-xl sm:rounded-lg">
+          <Text className={`font-bold ${fontSize} sm:text-xl text-primary`}>Profile</Text>
+  
+          <form className="mx-auto mt-5 grid max-w-2xl flex flex-col gap-3" onSubmit={onSubmit}>
+            <InputField
+              id="name"
+              label="Your full name"
+              type="text"
+              placeholder={user.name || "Your full name"}
+              register={register("name")}
+              isDark={isDark}
+              fontSize={fontSize}
+             
+            />
+            <InputField
+              id="email"
+              label="Your email"
+              type="email"
+              placeholder={user.email || "Your email"}
+              register={register("email")}
+              
+            />
+            <InputField
+              id="profession"
+              label="Profession"
+              type="text"
+              placeholder={user.profession || "Profession"}
+              register={register("profession")}
+              
+            />
+  
+            <div className="flex justify-end mt-5">
+              <OutlineButton
+                borderColor={isDark ? "border-gray-500" : "border-primary"}
+                hoverBorderColor={isDark ? "hover:border-gray-400" : "hover:border-primary"}
+                textColor="text-white"
+                hoverTextColor={isDark ? "hover:text-gray-300" : "hover:text-primary"}
+                buttonText="Save"
+                hoverBackgroundColor={isDark ? "hover:bg-gray-700" : "hover:bg-transparent"}
+                backgroundColor={isDark ? "bg-gray-800" : "bg-primary"}
               />
-              <InputField
-                id="email"
-                label="Your email"
-                type="email"
-                placeholder={user.email || "Your email"}
-                register={register("email")}
+            </div>
+          </form>
+  
+          {/* Password Update Form */}
+          <form onSubmit={passwordSubmit} className="mt-5 gap-5 flex flex-col gap-3">
+            <InputField
+              id="password"
+              label="New Password"
+              type="password"
+              placeholder="Enter new password"
+              register={register("password")}
+              
+            />
+            <InputField
+              id="confirmPassword"
+              label="Confirm New Password"
+              type="password"
+              placeholder="Confirm new password"
+              register={register("confirmPassword")}
+             
+            />
+  
+            <div className="flex justify-end mt-5">
+              <OutlineButton
+                borderColor={isDark ? "border-gray-500" : "border-primary"}
+                hoverBorderColor={isDark ? "hover:border-gray-400" : "hover:border-secondary"}
+                textColor="text-white"
+                hoverTextColor={isDark ? "hover:text-gray-300" : "hover:text-secondary"}
+                buttonText="Save"
+                hoverBackgroundColor={isDark ? "hover:bg-gray-700" : "hover:bg-transparent"}
+                backgroundColor={isDark ? "bg-gray-800" : "bg-primary"}
               />
-              <InputField
-                id="profession"
-                label="Profession"
-                type="text"
-                placeholder={user.profession || "Profession"}
-                register={register("profession")}
-              />
-
-              <div className="flex justify-end mt-5">
-                <OutlineButton
-                  borderColor="border-primary"
-                  hoverBorderColor="hover:border-primary"
-                  textColor="text-white"
-                  hoverTextColor="hover:text-primary"
-                  buttonText="Save"
-                  hoverBackgroundColor="hover:bg-transparent"
-                  backgroundColor="bg-primary"
-                  
-                />
-              </div>
-            </form>
-
-            {/* Password Update Form */}
-            <form onSubmit={passwordSubmit} className="mt-5 gap-5">
-              <InputField
-                id="password"
-                label="New Password"
-                type="password"
-                placeholder="Enter new password"
-                register={register("password")}
-              />
-              <InputField
-                id="confirmPassword"
-                label="Confirm New Password"
-                type="password"
-                placeholder="Confirm new password"
-                register={register("confirmPassword")}
-              />
-
-              <div className="flex justify-end mt-5">
-                <OutlineButton
-                  borderColor="border-primary"
-                  hoverBorderColor="hover:border-secondary"
-                  textColor="text-white"
-                  hoverTextColor="hover:text-secondary"
-                  buttonText="Save"
-                  hoverBackgroundColor="hover:bg-transparent"
-                  backgroundColor="bg-primary"
-                  
-                />
-              </div>
-            </form>
-          </div>
-        </main>
-      </div>
-    </Layout>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+  </Layout>
+  
   );
 }
 

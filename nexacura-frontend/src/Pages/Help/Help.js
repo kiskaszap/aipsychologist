@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Layout from "../../Components/Dashboard/Layout";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import Text from "../../Components/Text/Text";
+import ThemeContext from "../../context/ThemeContext";
 
 function FAQItem({ question, answer }) {
   const [isOpen, setIsOpen] = useState(false);
+  const { theme, fontSize } = useContext(ThemeContext);
+  const isDark = theme === "dark";
 
   const toggleOpen = () => {
     setIsOpen(!isOpen);
@@ -14,7 +17,9 @@ function FAQItem({ question, answer }) {
     <div className="py-5">
       <details className="group">
         <summary
-          className="flex cursor-pointer list-none items-center justify-between font-medium"
+          className={`flex cursor-pointer list-none items-center justify-between font-medium ${fontSize} ${
+            isDark ? "text-white" : "text-gray-800"
+          }`}
           onClick={toggleOpen}
         >
           <span>{question}</span>
@@ -23,9 +28,9 @@ function FAQItem({ question, answer }) {
           </span>
         </summary>
         <p
-          className={`group-open:animate-fadeIn mt-3 text-neutral-600 ${
-            isOpen ? "block" : "hidden"
-          }`}
+          className={`group-open:animate-fadeIn mt-3 ${fontSize} ${
+            isDark ? "text-gray-300" : "text-neutral-600"
+          } ${isOpen ? "block" : "hidden"}`}
         >
           {answer}
         </p>
@@ -35,17 +40,30 @@ function FAQItem({ question, answer }) {
 }
 
 function Help() {
+  const { theme, fontSize } = useContext(ThemeContext);
+  const isDark = theme === "dark";
+
   return (
     <Layout>
-      <div className="relative w-full bg-white px-6 pt-10 pb-8 mt-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10">
+      <div
+        className={`relative w-full px-6 pt-10 pb-8 mt-8 shadow-xl ring-1 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10 ${
+          isDark
+            ? "bg-gray-900 ring-gray-700 text-white"
+            : "bg-white ring-gray-900/5 text-[#333]"
+        }`}
+      >
         <div className="mx-auto px-5">
           <div className="flex flex-col items-center">
-            <Text className="text-2xl text-primary">FAQ</Text>
-            <Text className="mt-3 text-md text-neutral-500 md:text-lg">
+            <Text className={`text-2xl text-primary ${fontSize}`}>FAQ</Text>
+            <Text
+              className={`mt-3 text-md md:text-lg ${fontSize} ${
+                isDark ? "text-gray-400" : "text-neutral-500"
+              }`}
+            >
               Frequently asked questions
             </Text>
           </div>
-          <div className="mx-auto mt-8 grid max-w-xl gap-y-6 divide-y divide-neutral-200">
+          <div className="mx-auto mt-8 grid max-w-xl gap-y-6 divide-y divide-neutral-200 dark:divide-gray-700">
             <FAQItem
               question="What subscription plans are available?"
               answer="We offer a range of subscription options to meet your needs, including hourly, weekly, and monthly plans. Subscriptions do not auto-renew, and you'll need to purchase again once your current plan expires."
@@ -70,7 +88,6 @@ function Help() {
               question="Is there a refund policy?"
               answer="You are entitled to a refund if there is a service downtime that affects your access. Please report the issue immediately to qualify for a refund, which we will process swiftly after verification."
             />
-            {/* Add more FAQItems as needed */}
           </div>
         </div>
       </div>

@@ -1,5 +1,4 @@
-
-import React from "react";
+import React, { useContext } from "react";
 import { FaEnvelope, FaLock, FaUser } from "react-icons/fa";
 import Text from "../../Components/Text/Text";
 import { NavLink, useNavigate } from "react-router-dom";
@@ -9,81 +8,64 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import GoogleButton from "../../Components/Button/GoogleButton";
 import GitHubButton from "../../Components/Button/GithubButton";
+import ThemeContext from "../../context/ThemeContext";
 
-// Function to get appropriate icons
-const iconSelector = (name) => {
+const iconSelector = (name, isDark) => {
+  const baseStyle = isDark ? "text-gray-400" : "text-[#bbb]";
   switch (name) {
     case "email":
-      return <FaEnvelope className="text-[#bbb] absolute right-2" />;
+      return <FaEnvelope className={`${baseStyle} absolute right-2`} />;
     case "fullName":
-      return <FaUser className="text-[#bbb] absolute right-2" />;
+      return <FaUser className={`${baseStyle} absolute right-2`} />;
     case "password":
     case "confirmPassword":
-      return <FaLock className="text-[#bbb] absolute right-2" />;
+      return <FaLock className={`${baseStyle} absolute right-2`} />;
     default:
       return null;
   }
 };
 
-// Input field component
-const FormInput = ({ label, name, type, placeholder, register }) => {
+const FormInput = ({ label, name, type, placeholder, register, isDark, fontSize }) => {
   return (
     <div>
-      <label className="text-xs block mb-2">{label}</label>
+      <label className={`text-xs block mb-2 ${isDark ? "text-gray-300" : "text-gray-700"}`}>
+        {label}
+      </label>
       <div className="relative flex items-center">
         <input
           name={name}
           type={type}
-          className="w-full text-sm border-b border-gray-300 focus:border-secondary px-2 py-3 outline-none"
+          className={`w-full border-b px-2 py-3 outline-none ${fontSize} ${
+            isDark
+              ? "bg-transparent border-gray-600 text-white focus:border-secondary"
+              : "border-gray-300 focus:border-secondary"
+          }`}
           placeholder={placeholder}
           {...register}
         />
-        {iconSelector(name)}
+        {iconSelector(name, isDark)}
       </div>
     </div>
   );
 };
 
-function Register() {
-  const navigate = useNavigate();
-  const {
-    register,
-    handleSubmit,
-    reset,
-    watch,
-  } = useForm();
 
+function Register() {
+  const { theme, fontSize } = useContext(ThemeContext);
+  const isDark = theme === "dark";
+  const navigate = useNavigate();
+  const { register, handleSubmit, reset, watch } = useForm();
   const password = watch("password", "");
 
   const onSubmit = async (data) => {
-    // 🚀 **Validation before submission**
-    if (!data.fullName.trim()) {
-      toast.warning("Full Name is required!");
-      return;
-    }
-    if (!data.email.trim()) {
-      toast.warning("Email is required!");
-      return;
-    }
-    if (!/^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/.test(data.email)) {
-      toast.warning("Invalid email format!");
-      return;
-    }
-    if (!data.password) {
-      toast.warning("Password is required!");
-      return;
-    }
-    if (data.password.length < 8) {
-      toast.warning("Password must be at least 8 characters long!");
-      return;
-    }
-    if (data.password !== data.confirmPassword) {
-      toast.warning("Passwords do not match!");
-      return;
-    }
+    if (!data.fullName.trim()) return toast.warning("Full Name is required!");
+    if (!data.email.trim()) return toast.warning("Email is required!");
+    if (!/^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/.test(data.email)) return toast.warning("Invalid email format!");
+    if (!data.password) return toast.warning("Password is required!");
+    if (data.password.length < 8) return toast.warning("Password must be at least 8 characters!");
+    if (data.password !== data.confirmPassword) return toast.warning("Passwords do not match!");
 
     toast.loading("Registering...");
-
     try {
       const formattedData = {
         name: data.fullName,
@@ -102,23 +84,20 @@ function Register() {
       }
     } catch (error) {
       toast.dismiss();
-
-      if (error.response?.status === 409) {
-        toast.error("Email is already in use!");
-      } else if (error.response?.status === 400) {
-        toast.warning(error.response.data.message || "Check your inputs!");
-      } else {
-        toast.error("Something went wrong. Please try again.");
-      }
+      if (error.response?.status === 409) toast.error("Email is already in use!");
+      else if (error.response?.status === 400) toast.warning(error.response.data.message || "Check your inputs!");
+      else toast.error("Something went wrong. Please try again.");
     }
   };
 
   return (
-    <div className="font-[sans-serif] text-[#333]">
+    <div className={`font-[sans-serif] ${isDark ? "bg-gray-900 text-white" : "text-[#333]"}`}>
       <div className="min-h-screen flex flex-col items-center justify-center">
-        <div className="items-center gap-4 px-10 lg:px-0 lg:max-w-3xl w-full shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md">
+        <div className={`items-center gap-4 px-10 lg:px-0 lg:max-w-3xl w-full shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md ${isDark ? "bg-gray-800" : "bg-white"}`}>
           <div className="w-full lg:px-6 py-4">
-            <Text className="text-3xl font-extrabold text-primary">Welcome</Text>
+            <Text className={`text-3xl font-extrabold text-primary ${fontSize}`}>
+              Welcome
+            </Text>
 
             <form className="mt-5" onSubmit={handleSubmit(onSubmit)}>
               <div className="flex flex-col gap-y-5">
@@ -128,6 +107,8 @@ function Register() {
                   type="text"
                   placeholder="Enter full name"
                   register={register("fullName")}
+                  isDark={isDark}
+                  fontSize={fontSize}
                 />
                 <FormInput
                   label="Email"
@@ -135,6 +116,8 @@ function Register() {
                   type="text"
                   placeholder="Enter email"
                   register={register("email")}
+                  isDark={isDark}
+                  fontSize={fontSize}
                 />
                 <FormInput
                   label="Password"
@@ -142,6 +125,8 @@ function Register() {
                   type="password"
                   placeholder="Enter password"
                   register={register("password")}
+                  isDark={isDark}
+                  fontSize={fontSize}
                 />
                 <FormInput
                   label="Confirm Password"
@@ -149,37 +134,41 @@ function Register() {
                   type="password"
                   placeholder="Confirm password"
                   register={register("confirmPassword")}
+                  isDark={isDark}
+                  fontSize={fontSize}
                 />
               </div>
 
               <div className="flex items-center justify-between gap-2 mt-5">
-                <div>
-                  <Text className="text-md text-gray-500 mt-2">
-                    Already have an account?{" "}
-                    <NavLink to="/login" className="text-secondary">
-                      Login here
-                    </NavLink>
-                  </Text>
-                </div>
+                <Text className={`text-md mt-2 ${isDark ? "text-gray-300" : "text-gray-500"}`}>
+                  Already have an account?{" "}
+                  <NavLink to="/login" className="text-secondary">
+                    Login here
+                  </NavLink>
+                </Text>
               </div>
 
               <div className="mt-12">
                 <OutlineButton
-                  borderColor="border-primary"
-                  hoverBorderColor="hover:border-secondary"
+                  borderColor={isDark ? "border-gray-500" : "border-primary"}
+                  hoverBorderColor={isDark ? "hover:border-gray-400" : "hover:border-secondary"}
                   textColor="text-white"
-                  hoverTextColor="hover:text-secondary"
+                  hoverTextColor={isDark ? "hover:text-gray-300" : "hover:text-secondary"}
                   buttonText="Register"
-                  hoverBackgroundColor="hover:bg-transparent"
-                  backgroundColor="bg-primary"
+                  hoverBackgroundColor={isDark ? "hover:bg-gray-700" : "hover:bg-transparent"}
+                  backgroundColor={isDark ? "bg-gray-800" : "bg-primary"}
                   width="w-full"
-                  
                 />
-                
-                
               </div>
 
-              <Text className="text-md text-gray-500 text-center my-5">
+              <div className="mt-5">
+                <GoogleButton />
+              </div>
+              <div className="mt-5">
+                <GitHubButton />
+              </div>
+
+              <Text className={`text-md text-center my-5 ${isDark ? "text-gray-300" : "text-gray-500"}`}>
                 By continuing, you agree to accept our{" "}
                 <NavLink to="/terms" className="text-secondary">
                   Terms & Conditions
