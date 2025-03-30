@@ -10,27 +10,15 @@ export default function GoogleButton() {
 
   const handleGoogleLogin = async (credentialResponse) => {
     try {
-      console.log("Google login started. Credential response:", credentialResponse);
-
       const { credential } = credentialResponse;
-
-      // Send Google token to backend for verification
-      console.log("Sending Google token to backend for verification...");
       const response = await axios.post("http://localhost:4000/google/verify-token", {
         token: credential, // Google ID token
       }, { withCredentials: true }
     );
 
-      console.log("Backend response:", response.data);
-
       if (response.data.isAuthenticated) {
-        console.log("User authenticated successfully.");
-
-        // Save user data to localStorage
         localStorage.setItem("NexaCuraIsAuthenticated", true);
         localStorage.setItem("userData", JSON.stringify(response.data.message));
-
-        // Update authentication context
         dispatch({
           type: "LOGIN",
           payload: {
@@ -38,8 +26,6 @@ export default function GoogleButton() {
             user: response.data.message,
           },
         });
-
-        // Redirect to home/dashboard
         navigate("/");
       } else {
         console.error("Authentication failed:", response.data.error);

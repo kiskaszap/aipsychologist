@@ -11,7 +11,6 @@ class PasswordReset {
     this.userEmail = userEmail;
     this.transporter = this.configureMailTransporter();
   }
-
   configureMailTransporter() {
      return nodemailer.createTransport({
            host: "smtp.gmail.com",
@@ -23,12 +22,10 @@ class PasswordReset {
            },
          });
   }
-
   async resetUserPassword() {
     const newPassword = this.generateRandomPassword();
     const hashedPassword = await this.hashPassword(newPassword);
     const updateResult = await this.updateUserPasswordInDb(hashedPassword);
-
     if (updateResult.success) {
       const emailSent = await this.sendEmail(newPassword);
       return emailSent;
@@ -36,16 +33,13 @@ class PasswordReset {
       return updateResult;
     }
   }
-
   generateRandomPassword() {
     return crypto.randomBytes(8).toString("hex");
   }
-
   async hashPassword(password) {
     const saltRounds = 10;
     return await bcrypt.hash(password, saltRounds);
   }
-
   async updateUserPasswordInDb(hashedPassword) {
     try {
       const updatedUser = await UserModel.findOneAndUpdate(
@@ -53,7 +47,6 @@ class PasswordReset {
         { $set: { password: hashedPassword } },
         { new: true }
       );
-
       if (updatedUser) {
         return { success: true, message: "Password updated successfully." };
       } else {

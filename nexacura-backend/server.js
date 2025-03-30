@@ -4,31 +4,18 @@ const express = require("express");
 const app = express();
 require("dotenv").config();
 const passport = require("passport");
-
-// ✅ Global Middlewares setup
 const GlobalMiddlewares = require("./middlewares/global");
-
-// ✅ Database Connection setup
 const DatabaseConnection = require("./db/DatabaseConnection");
 new DatabaseConnection();
-
-// ✅ Stripe Webhook Middleware for raw body capture
 const stripe = require("stripe")(process.env.STRIPE_SIGNING_KEY);
 const StripeWebhook = require("./routes/WebHook");
-
-// ✅ Middleware for webhook signature verification using raw body
 app.use("/webhook", express.raw({ type: "application/json" }), (req, res, next) => {
   req.rawBody = req.body; // Store raw body for Stripe verification
   next();
 });
-
-// ✅ Apply global middlewares
 new GlobalMiddlewares(app);
-
 app.use(passport.initialize());
 app.use(passport.session());
-
-// ✅ Routes setup
 const Registration = require("./routes/Registration");
 const Login = require("./routes/Login");
 const User = require("./routes/User");

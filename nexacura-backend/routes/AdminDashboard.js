@@ -25,18 +25,14 @@ class AdminDashboard extends BaseRoute {
   }
 
   initializeRoutes() {
-    // ✅ Fetch all users with urgency levels
     this.router.get("/", async (req, res) => {
-      console.log("📢 Admin Dashboard API called");
-
       try {
-        // ✅ Fetch users
         const users = await User.find({}, "name email");
-
-        // ✅ Attach urgency level from MedicalRecords
         const updatedUsers = await Promise.all(
           users.map(async (user) => {
-            const record = await MedicalRecords.findOne({ userId: user._id }).select("urgency appointmentDate");
+            const record = await MedicalRecords.findOne({
+              userId: user._id,
+            }).select("urgency appointmentDate");
             return {
               _id: user._id,
               name: user.name,
@@ -46,63 +42,56 @@ class AdminDashboard extends BaseRoute {
             };
           })
         );
-
-        console.log("✅ Users fetched with urgency:", updatedUsers);
-
         res.json({
           status: "success",
           users: updatedUsers,
         });
       } catch (error) {
-        console.error("❌ Error fetching users:", error);
-        res.status(500).json({ status: "error", message: "Internal Server Error" });
+        res
+          .status(500)
+          .json({ status: "error", message: "Internal Server Error" });
       }
     });
-
-    // ✅ Fetch Full Chat History as TXT
     this.router.get("/chat-history/:userId", async (req, res) => {
       const { userId } = req.params;
-      console.log(`📢 Fetching chat history for user: ${userId}`);
-
-      const transcriptPath = path.join(__dirname, "../uploads/conversations", userId, `${userId}_full.txt`);
-
+      const transcriptPath = path.join(
+        __dirname,
+        "../uploads/conversations",
+        userId,
+        `${userId}_full.txt`
+      );
       if (!fs.existsSync(transcriptPath)) {
         return res.status(404).json({ error: "Chat history not found" });
       }
-
       res.sendFile(transcriptPath);
     });
-
-    // ✅ Schedule Appointment & Notify User via Email
     this.router.post("/appointment", async (req, res) => {
       console.log("📢 Appointment Update API Called");
       const { userId, appointmentDate } = req.body;
-
       try {
-        // ✅ Fetch user email
         const user = await User.findById(userId);
         if (!user || !user.email) {
-          return res.status(404).json({ error: "User not found or has no email" });
+          return res
+            .status(404)
+            .json({ error: "User not found or has no email" });
         }
-
-        // ✅ Update the medical record with the new appointment date
         const updatedRecord = await MedicalRecords.findOneAndUpdate(
           { userId },
           { appointmentDate },
           { new: true }
         );
-
         if (!updatedRecord) {
-          return res.status(404).json({ error: "User medical record not found" });
+          return res
+            .status(404)
+            .json({ error: "User medical record not found" });
         }
 
-        // ✅ Send Appointment Email to User
         const transporter = this.configureMailTransporter();
-await transporter.sendMail({
-  from: `"NexaCura Support" <support@nexacura.co.uk>`,
-  to: user.email, // ✅ Send to the correct user
-  subject: "Your Mental Health Appointment Has Been Scheduled",
-  text: `Dear ${user.name || user.email},
+        await transporter.sendMail({
+          from: `"NexaCura Support" <support@nexacura.co.uk>`,
+          to: user.email, // Send to the correct user
+          subject: "Your Mental Health Appointment Has Been Scheduled",
+          text: `Dear ${user.name || user.email},
 
 We want to inform you that a mental health specialist has scheduled an appointment for you. This session, lasting approximately one hour, will take place at the following location:
 
@@ -118,23 +107,23 @@ Take care,
 **NexaCura Support Team**  
 support@nexacura.co.uk  
 `,
-});
-
-
-        console.log(`✅ Appointment updated & email sent to ${user.email}`);
+        });
         res.status(200).json({ message: "Appointment scheduled successfully" });
       } catch (error) {
         console.error("❌ Error updating appointment:", error);
         res.status(500).json({ error: "Internal Server Error" });
       }
     });
-
-    // ✅ Fetch AI Summary as TXT
     this.router.get("/summary/:userId", async (req, res) => {
       const { userId } = req.params;
       console.log(`📢 Fetching AI summary for user: ${userId}`);
 
-      const summaryPath = path.join(__dirname, "../uploads/conversations", userId, `${userId}_summary.txt`);
+      const summaryPath = path.join(
+        __dirname,
+        "../uploads/conversations",
+        userId,
+        `${userId}_summary.txt`
+      );
 
       if (!fs.existsSync(summaryPath)) {
         return res.status(404).json({ error: "Summary not found" });

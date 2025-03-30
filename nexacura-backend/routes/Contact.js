@@ -27,13 +27,8 @@ class ContactHandler extends BaseRoute {
     this.router.post("/", async (request, response) => {
       try {
         const { name, email, message } = request.body;
-
-        // Send confirmation email to the user
         const userNotified = await this.sendConfirmationEmail(name, email);
-
-        // Forward user's email to support
         const supportNotified = await this.sendToSupport(email, message);
-
         if (userNotified && supportNotified) {
           response.status(201).json({
             success: true,

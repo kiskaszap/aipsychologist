@@ -7,29 +7,23 @@ import { FaGithub } from "react-icons/fa";
 export default function GitHubButton() {
   const { dispatch } = React.useContext(authContext);
   const navigate = useNavigate();
-
   const handleGitHubLogin = () => {
     const githubWindow = window.open(
       "http://localhost:4000/github",
       "_blank",
       "width=500,height=600"
     );
-  
     let retries = 0;
-  
     const interval = setInterval(async () => {
       if (githubWindow.closed) {
         retries++;
-  
         try {
           const res = await axios.get("http://localhost:4000/github/user", {
             withCredentials: true,
           });
-  
           if (res.data && res.data.email) {
             localStorage.setItem("NexaCuraIsAuthenticated", true);
             localStorage.setItem("userData", JSON.stringify(res.data));
-  
             dispatch({
               type: "LOGIN",
               payload: {
@@ -37,7 +31,6 @@ export default function GitHubButton() {
                 user: res.data,
               },
             });
-  
             clearInterval(interval);
             navigate("/");
           } else {
@@ -46,7 +39,6 @@ export default function GitHubButton() {
         } catch (err) {
           console.error("GitHub fetch failed:", err);
         }
-  
         if (retries > 10) {
           clearInterval(interval);
           console.error("GitHub login failed after retries");

@@ -24,33 +24,21 @@ class ChatSession extends BaseRoute {
           .status(400)
           .json({ error: "Invalid or missing conversation data." });
       }
-
-      // Use DynamicFolderCreator to create a dynamic folder for storing the conversation
       const dynamicFolderCreator = new DynamicFolderCreator(
         request,
         "conversations"
       );
       const folderPath = dynamicFolderCreator.createFolder();
-
-      // Construct the file path where the conversation will be stored
       const filePath = path.join(folderPath, `${id}_conversation.json`);
 
       try {
-        console.log("Attempting to update conversation at path:", filePath);
 
-        // Check if the file exists
         if (fs.existsSync(filePath)) {
-          // Read the existing file
           const fileData = fs.readFileSync(filePath);
           const conversationData = JSON.parse(fileData.toString());
-
-          // Append new conversation data to existing array
           conversationData.conversation.push(...newConversationData);
-
-          // Write the updated conversation back to the file
           fs.writeFileSync(filePath, JSON.stringify(conversationData, null, 2));
         } else {
-          // Create new file with initial conversation data if not exist
           fs.writeFileSync(
             filePath,
             JSON.stringify({ conversation: newConversationData }, null, 2)

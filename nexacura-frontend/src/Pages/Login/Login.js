@@ -32,22 +32,16 @@ function Login() {
       toast.warning("Password is required!");
       return;
     }
-
     const toastId = toast.loading("Logging in...");
-
     try {
       const response = await axios.post("http://localhost:4000/login", data, {
         withCredentials: true,
       });
-
       toast.dismiss(toastId); // Remove loading toast
-
       if (response.data.isAuthenticated) {
         toast.success("Login successful!");
-
         localStorage.setItem("NexaCuraIsAuthenticated", response.data.isAuthenticated);
         localStorage.setItem("userData", JSON.stringify(response.data.message));
-
         dispatch({
           type: "LOGIN",
           payload: {
@@ -62,7 +56,6 @@ function Login() {
         } else {
           navigate("/");
         }
-
         reset();
       } else {
         toast.error("Invalid credentials, please try again.");

@@ -13,7 +13,6 @@ import Nav from "../Nav/Nav";
 import Terms from "../../Pages/Terms/Terms";
 import Privacy from "../../Pages/Privacy/Privacy";
 import ResetPassword from "../../Pages/ResetPassword/ResetPassword";
-import Admindashboard from "../../Pages/Admin-dashboard/Admindashboard";
 
 function DefaultRoutes() {
   return (

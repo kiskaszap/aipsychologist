@@ -1,5 +1,9 @@
 const BaseRoute = require("./BaseRoute");
+<<<<<<< HEAD
 const stripe = require("stripe")(process.env.STRIPE_SECRET_TEST_KEY_1);
+=======
+const stripe = require("stripe")(process.env.STRIPE_TEST_KEY);
+>>>>>>> main
 
 class StripeConfig extends BaseRoute {
   constructor() {
@@ -50,6 +54,7 @@ class StripeConfig extends BaseRoute {
           cancel_url: `${process.env.CLIENT_URL}/my-subscription`,
           metadata: { userId: userId },
         });
+        console.log("Stripe session created successfully:", session);
 
         res.json({ url: session.url });
       } catch (e) {

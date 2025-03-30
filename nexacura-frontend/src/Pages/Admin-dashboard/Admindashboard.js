@@ -73,7 +73,7 @@ function AdminDashboard() {
 
       toast.success("Appointment scheduled successfully!");
     } catch (error) {
-      console.error("❌ Error setting appointment:", error);
+      console.error(" Error setting appointment:", error);
       toast.error("Failed to schedule appointment.");
     }
   };

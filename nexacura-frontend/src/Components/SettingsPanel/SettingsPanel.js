@@ -15,20 +15,16 @@ export default function SettingsPanel() {
     <div
       className={`z-50 fixed right-0 top-1/4 bg-gray-100 dark:bg-gray-900 p-4 shadow-lg transition-transform duration-300
       ${isOpen ? "translate-x-0" : "translate-x-full"} w-52 h-auto`}
-      onMouseEnter={() => setIsOpen(true)} // 🖱️ Open on hover (for desktop)
-      onMouseLeave={() => setIsOpen(false)} // 🖱️ Close on mouse leave
+      onMouseEnter={() => setIsOpen(true)} //  Open on hover (for desktop)
+      onMouseLeave={() => setIsOpen(false)} //  Close on mouse leave
     >
-      {/* ⚙️ Settings button (Clickable for mobile/tablets) */}
       <button
         className="absolute -left-10 top-1/2 transform -translate-y-1/2 bg-gray-600 text-white p-2 rounded-full focus:outline-none"
         onClick={toggleSettings} // 📱 Click to open/close on mobile
       >
         <FaCog className="text-xl" />
       </button>
-
       <h3 className="text-lg font-bold mb-2 text-gray-800 dark:text-gray-200">Settings</h3>
-
-      {/* 🌙 Dark/Light Mode Toggle */}
       <label className="block mb-2">
         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Colours</span>
         <select
@@ -41,7 +37,7 @@ export default function SettingsPanel() {
         </select>
       </label>
 
-      {/* 🔤 Font Size Selector */}
+      {/*  Font Size Selector */}
       <label className="block mt-3">
         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Font-size</span>
         <select

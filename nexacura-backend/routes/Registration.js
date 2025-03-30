@@ -14,8 +14,6 @@ class UserRegistration extends BaseRoute {
     this.initializeRoutes();
     this.transporter = this.configureMailTransporter();
   }
-
-  
   configureMailTransporter() {
     return nodemailer.createTransport({
       host: "smtp.gmail.com",
@@ -46,8 +44,6 @@ class UserRegistration extends BaseRoute {
 
           // Send welcome email if user is successfully registered
           const emailSent = await this.sendWelcomeEmail(name, email);
-
-
           if (emailSent) {
             response.status(201).json({
               isRegistered: true,

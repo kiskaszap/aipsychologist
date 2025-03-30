@@ -26,7 +26,6 @@ class WhisperRoute extends BaseRoute {
 
         console.log("📝 Transcription:", transcription);
 
-        // ✅ Emit transcription result through WebSockets
         this.io.emit("transcription", transcription);
 
         res.json({ message: transcription });

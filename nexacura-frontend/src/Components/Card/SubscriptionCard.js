@@ -14,11 +14,7 @@ import Text from "../Text/Text";
 import axios from "axios";
 
 function SubscriptionCard({ name, price, duration, benefits, id, isActive }) {
-  console.log(isActive, "SubscriptionCard");
-
   const handleSelectPlan = () => {
-    console.log(id); // Correctly logs the ID when the button is clicked.
-
     axios
     .post(
       "http://localhost:4000/stripe",
@@ -26,7 +22,6 @@ function SubscriptionCard({ name, price, duration, benefits, id, isActive }) {
       {
         headers: { "Content-Type": "application/json" },
         withCredentials: true, // Ensures cookies are sent
-        
       }
     )
     .then((res) => {
