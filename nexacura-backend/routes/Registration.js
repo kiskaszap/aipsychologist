@@ -1,4 +1,4 @@
-const BaseRoute = require("./BaseRoute");
+const BaseRoute = require("./Baseroute");
 const PasswordHash = require("../utilities/PasswordHashing");
 const User = require("../models/User");
 const EmailChecker = require("../utilities/EmailChecker");
