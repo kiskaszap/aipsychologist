@@ -1,4 +1,4 @@
-const BaseRoute = require("./BaseRoute");
+const BaseRoute = require("./Baseroute");
 const MedicalRecords = require("../models/MedicalRecords");
 const fs = require("fs");
 const path = require("path");
