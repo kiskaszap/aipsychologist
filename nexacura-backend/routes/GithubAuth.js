@@ -1,4 +1,4 @@
-const BaseRoute = require("./BaseRoute");
+const BaseRoute = require("./Baseroute");
 const passport = require("passport");
 
 class GitHubAuth extends BaseRoute {
