@@ -1,5 +1,5 @@
 
-const BaseRoute = require("./BaseRoute");
+const BaseRoute = require("./Baseroute");
 const EmailChecker = require("../utilities/EmailChecker");
 const Authentication = require("../utilities/Authentification");
 
