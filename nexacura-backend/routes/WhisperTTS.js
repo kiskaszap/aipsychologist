@@ -1,4 +1,4 @@
-const BaseRoute = require("./BaseRoute");
+const BaseRoute = require("./Baseroute");
 const axios = require("axios");
 
 class WhisperTTSRoute extends BaseRoute {
