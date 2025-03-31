@@ -1,4 +1,4 @@
-const BaseRoute = require("./BaseRoute");
+const BaseRoute = require("./Baseroute");
 const multer = require("multer");
 const WhisperTranscriber = require("../utilities/WhisperTranscriber");
 
