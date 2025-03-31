@@ -36,7 +36,7 @@ const Logout = require("./routes/Logout");
 const GithubAuth = require("./routes/GithubAuth");
 
 // ✅ WebSocket Setup (Moved to a Route)
-const WebSocketRoute = require("./routes/WebSocketRoute");
+const WebSocketRoute = require("./routes/WebsocketRoute");
 WebSocketRoute(app); // Pass Express app to manage WebSocket separately
 
 // ✅ Apply Routes
