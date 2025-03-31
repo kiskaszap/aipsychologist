@@ -1,7 +1,7 @@
 /* The User class extends a BaseRoute class and handles updating user data including image upload
 functionality. */
 const UserModel = require("../models/User");
-const BaseRoute = require("./BaseRoute");
+const BaseRoute = require("./Baseroute");
 const upload = require("../middlewares/multer");
 
 class User extends BaseRoute {
