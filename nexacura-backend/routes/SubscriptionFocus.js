@@ -1,5 +1,5 @@
 const UserModel = require("../models/User");
-const BaseRoute = require("./BaseRoute");
+const BaseRoute = require("./Baseroute");
 
 class SubscriptionFocus extends BaseRoute {
   constructor() {
